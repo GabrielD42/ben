@@ -1,0 +1,37 @@
+/*
+ Theme Name:   DW Timeline Child
+ Description:  DW Timeline Child Theme
+ Author:       Gabriel Damon
+ Author URI:   http://gabriel-damon.com
+ Template:     dw-timeline
+ Version:      1.0.0
+ Text Domain:  dw-timeline-child
+*/
+
+@import url("../dw-timeline/style.css");
+
+body {
+	background: #005791;
+	}
+
+header.banner {
+	background-attachment: fixed !important;
+	}
+
+header.banner hgroup .page-title {
+	border: none !important;
+	}
+
+header.banner hgroup:after, .timeline-scrubber, .timeline-pale, #get-started {
+	display: none !important;
+	}
+
+.banner.cover:before {
+	background-attachment: fixed;
+	}
+
+.entry-title {
+	color: #333;
+	}
+
+@media screen and (min-device-width:768px){.jumbotron{padding-top:48px;padding-bottom:48px}.container .jumbotron{padding-left:60px;padding-right:60px}.jumbotron h1,.jumbotron .h1{font-size:63px}.modal-dialog{width:600px;margin:30px auto}.modal-content{-webkit-box-shadow:0 5px 15px rgba(0,0,0,0.5);box-shadow:0 5px 15px rgba(0,0,0,0.5)}.carousel-control .glyphicons-chevron-left,.carousel-control .glyphicons-chevron-right,.carousel-control .icon-prev,.carousel-control .icon-next{width:30px;height:30px;margin-top:-15px;margin-left:-15px;font-size:30px}.carousel-caption{left:20%;right:20%;padding-bottom:30px}.carousel-indicators{bottom:20px}}.carousel-indicators{bottom:10px}}
