@@ -1,4 +1,4 @@
 #!/bin/bash
-cd ~
+cd ~/ben
 git pull
-cp ben/* .
+cp * ~
