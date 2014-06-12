@@ -1,0 +1,43 @@
+ 
+ 
+import info.gridworld.actor.Bug; 
+import info.gridworld.grid.Location; 
+import java.awt.Color; 
+import java.lang.*; 
+ 
+public class MapBug extends Bug 
+{ 
+     private int step; 
+     private int map []; 
+      
+     public MapBug (int m[]){ 
+          setColor(new Color(210, 100, 210)); 
+          step = 0; 
+          map = m; 
+     } 
+      
+      
+     public MapBug (){ 
+          setColor(new Color(210, 100, 210)); 
+          step = 0; 
+          map = new int[10000]; 
+          for (int i = 0; i < map.length; i++) 
+               map[i] = 0; 
+     } 
+      
+     public void turn() 
+     { 
+           
+          setDirection(getDirection() + map[step]); 
+          step++; 
+     } 
+      
+     public void act() 
+     { 
+          turn(); 
+          if (canMove()) 
+                
+               move(); 
+ 
+     } 
+}

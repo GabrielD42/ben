@@ -1,0 +1,36 @@
+/************************************************************
+*                                                           *
+* GridWorld Practice: Lab 4                                 *
+*                                                           *
+* Week 12                                                   *
+*                                                           *
+* Mrs. Dovi                                                 *
+*                                                           *
+*                                                           *
+************************************************************/
+
+import info.gridworld.actor.ActorWorld;
+import info.gridworld.actor.Bug;
+import info.gridworld.grid.Location;
+
+
+
+
+
+public class GW_Lab4_Runner
+{
+    public static void main(String[] args)
+    {
+        ActorWorld world = new ActorWorld();
+        
+        int where [] = new int[100];
+        
+        for (int i =0; i < 100; i++)
+             where[i] = 45;
+        
+        world.add(new Location(5,1), new MapBug(where));
+
+
+        world.show();
+    }
+}
