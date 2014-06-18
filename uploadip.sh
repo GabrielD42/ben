@@ -5,7 +5,7 @@ newip=$(/sbin/ifconfig eth0 | awk '/inet addr:/ {print $2}' | awk -F: '{print $2
 echo "$newip" > ipaddress
 
 if [ "$newip" != "$oldip" ]; then
-./log.sh "uploaded Pi's new IP address, $newip, to members.cruzio.com/~laovel/ipaddress"
+./log.sh "uploaded Pi's new IP address, $newip, to gabriel-damon.com/ipaddress"
 
 HOST='gabriel-damon.com'
 USER='admin@gabriel-damon.com'
