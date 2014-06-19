@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-import time.sleep
+import time
 
 triggerPin = 24
 echoPin = 25
