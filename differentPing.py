@@ -25,6 +25,7 @@ def measure():
   GPIO.output(GPIO_TRIGGER, True)
   time.sleep(0.00001)
   GPIO.output(GPIO_TRIGGER, False)
+  time.sleep(0.00006)
   start = time.time()
 
   while GPIO.input(GPIO_ECHO)==0:
