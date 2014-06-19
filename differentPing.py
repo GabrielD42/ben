@@ -29,10 +29,10 @@ def measure():
   time.sleep(0.00006)
   start = time.time()
   print("waiting for echo pin to hit HIGH")
-  while GPIO.input(GPIO_ECHO)==0:
+  while GPIO.input(GPIO_ECHO)==GPIO.LOW:
 	start = time.time()
   print("waiting for echo pin to hit LOW")
-  while GPIO.input(GPIO_ECHO)==1:
+  while GPIO.input(GPIO_ECHO)==GPIO.HIGH:
 	stop = time.time()
   print("done timing")
   elapsed = stop-start
@@ -90,4 +90,4 @@ except KeyboardInterrupt:
   # User pressed CTRL-C
   # Reset GPIO settings
   GPIO.cleanup()
-  print("Safely ending...")
+  print("\nSafely ending...")
