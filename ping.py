@@ -15,6 +15,7 @@ def loop():
     GPIO.output(triggerPin, GPIO.HIGH)
     time.sleep(0.000005)
     GPIO.output(triggerPin, GPIO.LOW)
+    print("Sent out pulse")
     start = time.time()
     while GPIO.input(echoPin) == 0:
         start = time.time()
@@ -25,5 +26,6 @@ def loop():
 
 #main
 setup()
+
 while True:
     loop()
