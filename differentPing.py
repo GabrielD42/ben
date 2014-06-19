@@ -26,9 +26,6 @@ def measure():
   GPIO.output(GPIO_TRIGGER, True)
   time.sleep(0.00001)
   GPIO.output(GPIO_TRIGGER, False)
-  time.sleep(0.00006)
-  while True:
-    print(GPIO.input(GPIO_ECHO))
   start = time.time()
   print("waiting for echo pin to hit HIGH")
   while GPIO.input(GPIO_ECHO)==GPIO.LOW:
