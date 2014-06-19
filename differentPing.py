@@ -90,3 +90,4 @@ except KeyboardInterrupt:
   # User pressed CTRL-C
   # Reset GPIO settings
   GPIO.cleanup()
+  print("Safely ending...")
