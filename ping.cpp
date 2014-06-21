@@ -6,11 +6,14 @@
 
 using namespace std;
 
+// forward declarations
+void safeQuit(int signal);
+
 int main() {
 	if(wiringPiSetupGpio() != -1) {
 		struct sigaction sigIntHandler;
 
-  	sigIntHandler.sa_handler = my_handler;
+  	sigIntHandler.sa_handler = safeQuit;
   	sigemptyset(&sigIntHandler.sa_mask);
   	sigIntHandler.sa_flags = 0;
 
@@ -31,7 +34,7 @@ int main() {
 		}
 	}
 
-void safeQuit(int s){
-	cout << "Caught signal " << s << endl;
+void safeQuit(int signal){
+	cout << "Caught signal " << signal << endl;
   exit(1);
 	}
