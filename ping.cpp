@@ -14,9 +14,21 @@ long microsecondsToInches(long microseconds);
 long microsecondsToCentimeters(long microseconds);
 long pulseIn(int pin, int level, int timeout);
 
+PI_THREAD(myThread) {
+	while(1) {
+		delay(1000);
+		cout << "in myThread" << endl;
+		}
+	}
+
 void setup() {
 	pinMode(triggerPin, OUTPUT);
 	pinMode(echoPin, INPUT);
+
+	newThread = piThreadCreate(myThread);
+	if(newThread != 0) {
+		cout << "thread creation failed :(" << endl;
+		}
 	}
 
 void loop() {
