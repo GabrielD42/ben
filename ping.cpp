@@ -12,9 +12,10 @@ int main() {
 			digitalWrite(0, LOW);
 			delay(500);
 			}
+		return 0;
 		}
 	else {
 		cout << "GPIO pins could not be accessed. Are you running as root?" << endl;
-		return EXIT_FAILURE;
+		return -1;
 		}
 	}
