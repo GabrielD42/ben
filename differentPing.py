@@ -21,22 +21,17 @@ import RPi.GPIO as GPIO
 # -----------------------
 
 def measure():
-  print("at measure() top")
   # This function measures a distance
   GPIO.output(GPIO_TRIGGER, True)
   time.sleep(0.00001)
   GPIO.output(GPIO_TRIGGER, False)
   start = time.time()
-  print("waiting for echo pin to hit HIGH")
   while GPIO.input(GPIO_ECHO)==GPIO.LOW:
 	start = time.time()
-  print("waiting for echo pin to hit LOW")
   while GPIO.input(GPIO_ECHO)==GPIO.HIGH:
 	stop = time.time()
-  print("done timing")
   elapsed = stop-start
   distance = (elapsed * 34300)/2
-  print("distance: " + distance)
   return distance
 
 def measure_average():
