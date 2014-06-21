@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 	if(wiringPiSetupGpio() != -1) {
-		pinMod(0, OUTPUT);
+		pinMode(0, OUTPUT);
 		while(1) {
 			digitalWrite(0, HIGH);
 			delay(500);
