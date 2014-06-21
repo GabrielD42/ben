@@ -25,7 +25,7 @@ void setup() {
 	pinMode(triggerPin, OUTPUT);
 	pinMode(echoPin, INPUT);
 
-	newThread = piThreadCreate(myThread);
+	int newThread = piThreadCreate(myThread);
 	if(newThread != 0) {
 		cout << "thread creation failed :(" << endl;
 		}
