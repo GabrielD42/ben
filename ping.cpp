@@ -12,6 +12,7 @@ const int triggerPin = 24;
 
 long microsecondsToInches(long microseconds);
 long microsecondsToCentimeters(long microseconds);
+long pulseIn(int pin, int level, int timeout);
 
 void setup() {
 	pinMode(triggerPin, OUTPUT);
@@ -63,7 +64,7 @@ long microsecondsToCentimeters(long microseconds)	{
   return microseconds / 29 / 2;
 	}
 
-int pulseIn(int pin, int level, int timeout)	{
+long pulseIn(int pin, int level, int timeout)	{
 	struct timeval tn, t0, t1;
   long micros;
 
