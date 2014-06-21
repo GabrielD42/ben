@@ -6,35 +6,77 @@
 
 using namespace std;
 
-// forward declarations
+const int echoPin = 25;
+const int triggerPin = 24;
+
+void setup() {
+	pinMode(triggerPin, OUTPUT);
+	pinMode(echoPin, INPUT);
+	}
+
+void loop() {
+	long duration, inches, cm;
+
+  // The PING))) is triggered by a HIGH pulse of 2 or more microseconds.
+  // Give a short LOW pulse beforehand to ensure a clean HIGH pulse:
+  digitalWrite(triggerPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(triggerPin, HIGH);
+  delayMicroseconds(5);
+  digitalWrite(triggerPin, LOW);
+
+  // The echo pin is used to read the signal from the PING))): a HIGH
+  // pulse whose duration is the time (in microseconds) from the sending
+  // of the ping to the reception of its echo off of an object.
+  duration = pulseIn(echoPin, HIGH);
+
+  // convert the time into a distance
+  inches = microsecondsToInches(duration);
+  cm = microsecondsToCentimeters(duration);
+
+  cout << inches << "in, " << cm << "cm" << endl;
+
+  delay(100);
+	}
+
+void cleanup() {
+	// nothing to do
+	}
+
+/////////////////////////////////////////////
+//                                         //
+// DON"T TOUCH ANYTHING FROM THIS POINT ON //
+//                                         //
+/////////////////////////////////////////////
+
 void safeQuit(int signal);
 
 int main() {
 	if(wiringPiSetupGpio() != -1) {
+		// get set up to catch keyboard interrupts
 		struct sigaction sigIntHandler;
-
   	sigIntHandler.sa_handler = safeQuit;
   	sigemptyset(&sigIntHandler.sa_mask);
   	sigIntHandler.sa_flags = 0;
+  	sigaction(SIGINT, &sigIntHandler, NULL);
 
-   sigaction(SIGINT, &sigIntHandler, NULL);
-
-		pinMode(0, OUTPUT);
+  	// do arduino stuff
+  	setup();
 		while(1) {
-			digitalWrite(0, HIGH);
-			delay(500);
-			digitalWrite(0, LOW);
-			delay(500);
+			loop();
 			}
-		return 0;
+
+		exit(0) // return with errors (this should never be reached)
 		}
 	else {
 		cout << "wiringPi setup failed" << endl;
-		exit(1);
+		exit(1); // return with errors
 		}
 	}
 
+// catch keyboard interrupt (ctrl-c)
 void safeQuit(int signal){
-	cout << "Caught signal " << signal << endl;
-  exit(1);
+	cout << "\nCaught signal " << signal << "\nSafely exiting..." << endl;
+	cleanup();
+  exit(0); // return happily
 	}
