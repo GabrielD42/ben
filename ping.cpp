@@ -15,9 +15,12 @@ long microsecondsToCentimeters(long microseconds);
 long pulseIn(int pin, int level, int timeout);
 
 PI_THREAD(myThread) {
+	pinMode(23, OUTPUT);
 	while(1) {
+		digitalWrite(23, HIGH);
 		delay(1000);
-		cout << "in myThread" << endl;
+		digitalWrite(23, LOW);
+		delay(1000);
 		}
 	}
 
