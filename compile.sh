@@ -1,2 +1,2 @@
 #!/bin/bash
-g++ -o ping ping.cpp -lwiringPi
+g++ -o threaded threaded.cpp -lwiringPi
