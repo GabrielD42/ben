@@ -1,6 +1,6 @@
 #include "ping.h"
 #include "utils.h" // for pulseIn
-#include "wiringPi" // for digitalWrite, delayMicroseconds
+#include <wiringPi.h> // for digitalWrite, delayMicroseconds
 
 Ping::Ping(int tempTriggerPin, int tempEchoPin) {
 	triggerPin = tempTriggerPin;
@@ -34,7 +34,7 @@ long Ping::getReading() {
   // The echo pin is used to read the signal from the PING))): a HIGH
   // pulse whose duration is the time (in microseconds) from the sending
   // of the ping to the reception of its echo off of an object.
-  duration = pulseIn(echoPin, HIGH, 100000L);
+  duration = utils::pulseIn(echoPin, HIGH, 100000L);
 
   return duration;
 	}
