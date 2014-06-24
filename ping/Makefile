@@ -1,5 +1,7 @@
-ping: base.o main.o ping.o utils.o
-	g++ -o ping base.o main.o ping.o utils.o -lwiringPi
+objects = base.o main.o ping.o utils.o
+
+ping: $(objects)
+	g++ -o ping $(objects) -lwiringPi
 
 base.o: base.cpp base.h
 	g++ -c -o base.o base.cpp -lwiringPi
@@ -12,3 +14,7 @@ ping.o: ping.cpp ping.h
 
 utils.o: utils.cpp utils.h
 	g++ -c -o utils.o utils.cpp -lwiringPi
+
+.PHONY: clean
+clean:
+	rm ping $(objects)
