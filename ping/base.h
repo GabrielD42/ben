@@ -6,4 +6,6 @@ void setup();
 void loop();
 void cleanup();
 
+int main();
+
 #endif
