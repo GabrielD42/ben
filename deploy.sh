@@ -4,9 +4,9 @@
 green='\e[0;32m'
 NC='\e[0m' # No Color
 
-echo -e "${green}Uploading to Github...${NC}\n"
+echo -e "\n${green}********************************\n* Uploading new code to Github *\n********************************${NC}\n"
 git add --all
 git commit
 git push
 echo -e "\n${green}*************************************\n* Pi downloading and compiling code *\n*************************************${NC}\n"
-ssh pi@192.168.0.51 '~/pullchanges.sh; ~/compile.sh'
+ssh pi@192.168.0.51 '~/pullchanges.sh; make clean; make'
