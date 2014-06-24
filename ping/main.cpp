@@ -6,7 +6,7 @@
 
 using namespace std;
 
-Ping sensor(25, 25);
+Ping sensor(24, 25);
 
 void setup() {
 	sensor.init();
