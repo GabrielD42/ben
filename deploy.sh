@@ -8,7 +8,5 @@ echo -e "${green}Uploading to Github...${NC}\n"
 git add --all
 git commit
 git push
-echo -e "\n${green}*************************************\n
-									 * Pi downloading and compiling code *\n
-									 *************************************${NC}\n"
+echo -e "\n${green}*************************************\n* Pi downloading and compiling code *\n*************************************${NC}\n"
 ssh pi@192.168.0.51 '~/pullchanges.sh; ~/compile.sh'
