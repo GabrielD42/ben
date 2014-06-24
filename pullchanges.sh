@@ -1,4 +1,4 @@
 #!/bin/bash
 cd ~/ben
 git pull
-cp -r * ~
+cp ping/* ~
