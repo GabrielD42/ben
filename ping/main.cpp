@@ -9,7 +9,7 @@ using namespace std;
 Ping sensor(25, 25);
 
 void setup() {
-	Ping.init();
+	sensor.init();
 	}
 
 void loop() {
