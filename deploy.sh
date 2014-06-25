@@ -6,13 +6,14 @@ NC='\e[0m' # No Color
 
 usage() {
 	echo -e "Error: Incorrect Arguments.\n./deploy.sh [OPTION] 'commit message'\nWhere [OPTION] is either:\n-g\tGabriel's Pi's IP Address\n-k\tKeane's Pi's IP Address"
+	exit 1
 	}
 
-$login = ""
+loginInfo=""
 while getopts ":gk" opt; do
 	case $opt in
 		g)
-			$login = "pi@192.168.0.51"
+			loginInfo="pi@192.168.0.51"
 			;;
 		k)
 			#insert ip address here
@@ -29,8 +30,8 @@ if [ $# == 2 ]; then
 	git commit -m $1
 	git push
 	echo -e "\n${green}*************************************\n* Pi downloading and compiling code *\n*************************************${NC}\n"
-	if [[ $login != "" ]]; then
-		ssh $login '~/pullchanges.sh; make clean; make'
+	if [[ $loginInfo != "" ]]; then
+		ssh $loginInfo '~/pullchanges.sh; make clean; make'
 	fi
 else
 	usage
