@@ -27,7 +27,10 @@ stores maps from each run for analyzing. each table is one map, with each field 
 
 ###current database
 stores information about the current run that needs to be dealt with in `cleanup()`.
-
+####ping readings
+time               | distance      | sensor number
+------------------ | ------------- | -------------
+time (primary key) | float (in cm) | int (0-7)
 
 ##threads
 in order of priority

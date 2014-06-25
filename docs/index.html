@@ -104,7 +104,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3>maps database</h3>
 <p>stores maps from each run for analyzing. each table is one map, with each field being the probability (a number from 0-1) of there being an object there.</p>
 <h3>current database</h3>
-<p>stores information about the current run that needs to be dealt with in <code><a class="el" href="base_8h.html#a4b66d5e31b5dc18b314c8a68163263bd">cleanup()</a></code>.</p>
+<p>stores information about the current run that needs to be dealt with in <code><a class="el" href="base_8h.html#a4b66d5e31b5dc18b314c8a68163263bd">cleanup()</a></code>. </p>
+<h4>ping readings</h4>
+<table class="doxtable">
+<tr>
+<th>time </th><th>distance </th><th>sensor number  </th></tr>
+<tr>
+<td>time (primary key) </td><td>float (in cm) </td><td>int (0-7) </td></tr>
+</table>
 <h2>threads</h2>
 <p>in order of priority</p>
 <ul>
@@ -122,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 25 2014 13:52:49 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 25 2014 14:01:22 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
