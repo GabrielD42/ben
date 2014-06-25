@@ -2,6 +2,7 @@
 
 #include "main.h"
 #include "ping.h"
+#include "square.h"
 #include "base.h"
 #include <iostream>
 #include <wiringPi.h>

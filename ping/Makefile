@@ -1,4 +1,4 @@
-objects = base.o main.o ping.o utils.o
+objects = base.o main.o ping.o utils.o square.o list.o node.h
 
 ping: $(objects)
 	g++ -o ping $(objects) -lwiringPi
@@ -14,6 +14,12 @@ ping.o: ping.cpp ping.h
 
 utils.o: utils.cpp utils.h
 	g++ -c -o utils.o utils.cpp -lwiringPi
+
+square.o: square.cpp square.h
+	g++ -c -o square.o square.cpp
+
+list.o: list.cpp list.h
+	g++ -c -o list.o list.cpp
 
 .PHONY: clean
 clean:
