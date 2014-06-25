@@ -86,9 +86,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>stores echo pin number</li>
 <li>gives distance</li>
 </ul>
-<h2>world</h2>
+<h2>grid</h2>
+<p>2d linked-list of squares</p>
 <ul>
-<li>2d linked-list of squares</li>
+<li>controls access (mutex)</li>
+<li>adds rows and columns</li>
 </ul>
 <h2>square</h2>
 <ul>
@@ -99,9 +101,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>y coordinate</li>
 </ul>
 <h2>mysql</h2>
-<ul>
-<li>stores maps from each run</li>
-</ul>
+<h3>maps database</h3>
+<p>stores maps from each run for analyzing. each table is one map, with each field being the probability (a number from 0-1) of there being an object there.</p>
+<h3>current database</h3>
+<p>stores information about the current run that needs to be dealt with in <code><a class="el" href="base_8h.html#a4b66d5e31b5dc18b314c8a68163263bd">cleanup()</a></code>.</p>
 <h2>threads</h2>
 <p>in order of priority</p>
 <ul>
@@ -119,7 +122,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 25 2014 11:09:07 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 25 2014 13:52:49 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

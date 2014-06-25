@@ -8,8 +8,11 @@ The code controlling the Raspberry Pi on my robot, BEN (Bright Enough to Navigat
 * stores echo pin number
 * gives distance
 
-##world
-* 2d linked-list of squares
+##grid
+2d linked-list of squares
+
+* controls access (mutex)
+* adds rows and columns
 
 ##square
 * number of times scanned
@@ -19,7 +22,12 @@ The code controlling the Raspberry Pi on my robot, BEN (Bright Enough to Navigat
 * y coordinate
 
 ##mysql
-* stores maps from each run
+###maps database
+stores maps from each run for analyzing. each table is one map, with each field being the probability (a number from 0-1) of there being an object there.
+
+###current database
+stores information about the current run that needs to be dealt with in `cleanup()`.
+
 
 ##threads
 in order of priority
