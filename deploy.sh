@@ -29,7 +29,7 @@ if [ $# == 2 ]; then
 	git commit -m $1
 	git push
 	echo -e "\n${green}*************************************\n* Pi downloading and compiling code *\n*************************************${NC}\n"
-	if [ $login -!= "" ]; then
+	if [ $login != "" ]; then
 		ssh $login '~/pullchanges.sh; make clean; make'
 	fi
 else
