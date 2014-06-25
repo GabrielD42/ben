@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $# == 1 ]; then
+if [ $# == 2 ]; then
 	# color variables for output (see https://gist.github.com/GabrielD42/9de9668486ef0b642b48)
 	green='\e[0;32m'
 	NC='\e[0m' # No Color
