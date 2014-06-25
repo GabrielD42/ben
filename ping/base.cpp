@@ -13,13 +13,13 @@ int main() {
 	if(wiringPiSetupGpio() != -1) {
 		// get set up to catch keyboard interrupts
 		struct sigaction sigIntHandler;
-  	sigIntHandler.sa_handler = safeQuit;
-  	sigemptyset(&sigIntHandler.sa_mask);
-  	sigIntHandler.sa_flags = 0;
-  	sigaction(SIGINT, &sigIntHandler, NULL);
+	  	sigIntHandler.sa_handler = safeQuit;
+	  	sigemptyset(&sigIntHandler.sa_mask);
+	  	sigIntHandler.sa_flags = 0;
+	  	sigaction(SIGINT, &sigIntHandler, NULL);
 
-  	// do arduino stuff
-  	setup();
+	  	// do arduino stuff
+	  	setup();
 		while(1) {
 			loop();
 			}
