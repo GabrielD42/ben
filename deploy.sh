@@ -29,7 +29,7 @@ while getopts ":gkn" opt; do
 done
 
 if [[ $# == 2 ]]; then
-	echo -e "\n${green}******************************************\n* Generating and uploading documentation *\n******************************************${NC}\n"
+	echo -e "\n${green}****************************\n* Generating documentation *\n****************************${NC}\n"
 	doxygen doxygenConfig
 	echo -e "\n${green}********************************\n* Uploading new code to Github *\n********************************${NC}\n"
 	git add --all
