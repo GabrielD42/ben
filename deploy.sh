@@ -8,26 +8,30 @@ usage() {
 	echo -e "Error: Incorrect Arguments.\n./deploy.sh [OPTION] 'commit message'\nWhere [OPTION] is either:\n-g\tGabriel's Pi's IP Address\n-k\tKeane's Pi's IP Address"
 	}
 
-if [ $# == 2 ]; then
+$login = ""
+while getopts ":gk" opt; do
+	case $opt in
+		g)
+			$login = "pi@192.168.0.51"
+			;;
+		k)
+			#insert ip address here
+			;;
+		\?)
+			usage
+			;;
+	esac
+done
 
+if [ $# == 2 ]; then
 	echo -e "\n${green}********************************\n* Uploading new code to Github *\n********************************${NC}\n"
 	git add --all
 	git commit -m $1
 	git push
 	echo -e "\n${green}*************************************\n* Pi downloading and compiling code *\n*************************************${NC}\n"
-	while getopts ":gk" opt; do
-		case $opt in
-			g)
-				ssh pi@192.168.0.51 '~/pullchanges.sh; make clean; make'
-				;;
-			k)
-				#insert ip address here
-				;;
-			\?)
-				usage
-				;;
-		esac
-	done
+	if [ $login -ne "" ]; then
+		ssh $login '~/pullchanges.sh; make clean; make'
+	fi
 else
 	usage
 fi
