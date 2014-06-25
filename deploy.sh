@@ -6,18 +6,21 @@ green='\e[0;32m'
 NC='\e[0m' # No Color
 
 usage() {
-	echo -e "${red}Error: Incorrect Arguments.${NC}\n./deploy.sh [OPTION] 'commit message'\nWhere [OPTION] is either:\n-g\tGabriel's Pi's IP Address\n-k\tKeane's Pi's IP Address"
+	echo -e "${red}Error: Incorrect Arguments.${NC}\n./deploy.sh [OPTION] 'commit message'\nWhere [OPTION] is either:\n-g\tGabriel's Pi's IP Address\n-k\tKeane's Pi's IP Address\n-n\tDon't deploy code on a Pi"
 	exit 1
 	}
 
 loginInfo=""
-while getopts ":gk" opt; do
+while getopts ":gkn" opt; do
 	case $opt in
 		g)
 			loginInfo="pi@192.168.0.51"
 			;;
 		k)
 			#insert ip address here
+			;;
+		n)
+			#already left blank above. nothing to do here
 			;;
 		\?)
 			usage
