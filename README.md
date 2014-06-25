@@ -23,10 +23,12 @@ The code controlling the Raspberry Pi on my robot, BEN (Bright Enough to Navigat
 
 ##threads
 in order of priority
+
 * 1 thread for bump sensors
 * 1 main thread
 * 1 thread for movement
-* 8 threads for ping sensors
+* 4 threads for ping sensors
+	* they will alternate between sensors
 * 1 thread for processing sensor data
 * 1 thread for finding best path
 * 1 thread for machine learning

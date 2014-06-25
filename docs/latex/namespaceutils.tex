@@ -1,0 +1,35 @@
+\hypertarget{namespaceutils}{\section{utils Namespace Reference}
+\label{namespaceutils}\index{utils@{utils}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{namespaceutils_a119f267acdf7deb4a7fd994c171929d9}{pulse\-In} (int pin, int level, int timeout)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utilities namespace contains useful functions that aren't really associated with anything else, such as Arduino-\/esque functions not included in Wiring\-Pi 
+
+\subsection{Function Documentation}
+\hypertarget{namespaceutils_a119f267acdf7deb4a7fd994c171929d9}{\index{utils@{utils}!pulse\-In@{pulse\-In}}
+\index{pulse\-In@{pulse\-In}!utils@{utils}}
+\subsubsection[{pulse\-In}]{\setlength{\rightskip}{0pt plus 5cm}long utils\-::pulse\-In (
+\begin{DoxyParamCaption}
+\item[{int}]{pin, }
+\item[{int}]{level, }
+\item[{int}]{timeout}
+\end{DoxyParamCaption}
+)}}\label{namespaceutils_a119f267acdf7deb4a7fd994c171929d9}
+Calculates the length of a pulse on a pin 
+\begin{DoxyParams}{Parameters}
+{\em pin} & the G\-P\-I\-O pin number to watch \\
+\hline
+{\em level} & what level of pulse to look for. Either H\-I\-G\-H or L\-O\-W \\
+\hline
+{\em timeout} & the maximum length of a pulse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length of the pulse in microseconds 
+\end{DoxyReturn}

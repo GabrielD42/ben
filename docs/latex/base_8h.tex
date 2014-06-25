@@ -1,0 +1,46 @@
+\hypertarget{base_8h}{\section{base.\-h File Reference}
+\label{base_8h}\index{base.\-h@{base.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{base_8h_a4fc01d736fe50cf5b977f755b675f11d}{setup} ()
+\item 
+void \hyperlink{base_8h_afe461d27b9c48d5921c00d521181f12f}{loop} ()
+\item 
+void \hyperlink{base_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup} ()
+\item 
+int \hyperlink{base_8h_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{base_8h_a4b66d5e31b5dc18b314c8a68163263bd}{\index{base.\-h@{base.\-h}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!base.h@{base.\-h}}
+\subsubsection[{cleanup}]{\setlength{\rightskip}{0pt plus 5cm}void cleanup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{base_8h_a4b66d5e31b5dc18b314c8a68163263bd}
+called at program end (or interrupt) to clean up any classes that need cleaning up and save any data that need saving \hypertarget{base_8h_afe461d27b9c48d5921c00d521181f12f}{\index{base.\-h@{base.\-h}!loop@{loop}}
+\index{loop@{loop}!base.h@{base.\-h}}
+\subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}void loop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{base_8h_afe461d27b9c48d5921c00d521181f12f}
+called at program end (or interrupt) to clean up any classes that need cleaning up and save any data that need saving \hypertarget{base_8h_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{base.\-h@{base.\-h}!main@{main}}
+\index{main@{main}!base.h@{base.\-h}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{base_8h_ae66f6b31b5ad750f1fe042a706a4e3d4}
+main function, should not be touched. Instead define \hyperlink{base_8h_a4fc01d736fe50cf5b977f755b675f11d}{setup()}, \hyperlink{base_8h_afe461d27b9c48d5921c00d521181f12f}{loop()} and \hyperlink{base_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup()}. provides safe exiting and G\-P\-I\-O access \hypertarget{base_8h_a4fc01d736fe50cf5b977f755b675f11d}{\index{base.\-h@{base.\-h}!setup@{setup}}
+\index{setup@{setup}!base.h@{base.\-h}}
+\subsubsection[{setup}]{\setlength{\rightskip}{0pt plus 5cm}void setup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{base_8h_a4fc01d736fe50cf5b977f755b675f11d}
+called at beginning of execution to initilize everything properly 

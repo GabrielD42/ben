@@ -1,0 +1,53 @@
+The code controlling the Raspberry Pi on my robot, B\-E\-N (Bright Enough to Navigate)
+
+\subsection*{ping sensor}
+
+
+\begin{DoxyItemize}
+\item stores trigger pin number
+\item stores echo pin number
+\item gives distance
+\end{DoxyItemize}
+
+\subsection*{world}
+
+
+\begin{DoxyItemize}
+\item 2d linked-\/list of squares
+\end{DoxyItemize}
+
+\subsection*{square}
+
+
+\begin{DoxyItemize}
+\item number of times scanned
+\item number of times object found here
+\item linked list of coordinates that this square has been scanned from
+\item x coordinate
+\item y coordinate
+\end{DoxyItemize}
+
+\subsection*{mysql}
+
+
+\begin{DoxyItemize}
+\item stores maps from each run
+\end{DoxyItemize}
+
+\subsection*{threads}
+
+in order of priority
+
+
+\begin{DoxyItemize}
+\item 1 thread for bump sensors
+\item 1 main thread
+\item 1 thread for movement
+\item 4 threads for ping sensors
+\begin{DoxyItemize}
+\item they will alternate between sensors
+\end{DoxyItemize}
+\item 1 thread for processing sensor data
+\item 1 thread for finding best path
+\item 1 thread for machine learning 
+\end{DoxyItemize}

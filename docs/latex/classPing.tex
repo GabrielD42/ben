@@ -1,0 +1,75 @@
+\hypertarget{classPing}{\section{Ping Class Reference}
+\label{classPing}\index{Ping@{Ping}}
+}
+
+
+{\ttfamily \#include $<$ping.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPing_ac8699f06de93bae019b5c10eb4d9f07e}{Ping} (int temp\-Trigger\-Pin, int temp\-Echo\-Pin)
+\item 
+void \hyperlink{classPing_a60a84a4161b40e9fb7f82cabf6a948fc}{init} ()
+\item 
+long \hyperlink{classPing_a683f58ccb6bd5ef4c8ee82f2cf0a1652}{get\-Inches} ()
+\item 
+long \hyperlink{classPing_aae84b003ab46fbbc9ac591df3ab61e89}{get\-Centimeters} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides an interface to use the ping sensor 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPing_ac8699f06de93bae019b5c10eb4d9f07e}{\index{Ping@{Ping}!Ping@{Ping}}
+\index{Ping@{Ping}!Ping@{Ping}}
+\subsubsection[{Ping}]{\setlength{\rightskip}{0pt plus 5cm}Ping\-::\-Ping (
+\begin{DoxyParamCaption}
+\item[{int}]{temp\-Trigger\-Pin, }
+\item[{int}]{temp\-Echo\-Pin}
+\end{DoxyParamCaption}
+)}}\label{classPing_ac8699f06de93bae019b5c10eb4d9f07e}
+Initializes pin numbers 
+\begin{DoxyParams}{Parameters}
+{\em temp\-Trigger\-Pin} & the pin number for the trigger pin \\
+\hline
+{\em temp\-Echo\-Pin} & the pin number for the echo pin \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPing_aae84b003ab46fbbc9ac591df3ab61e89}{\index{Ping@{Ping}!get\-Centimeters@{get\-Centimeters}}
+\index{get\-Centimeters@{get\-Centimeters}!Ping@{Ping}}
+\subsubsection[{get\-Centimeters}]{\setlength{\rightskip}{0pt plus 5cm}long Ping\-::get\-Centimeters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPing_aae84b003ab46fbbc9ac591df3ab61e89}
+Uses the ping sensor to takes a reading and returns the distance in centimeters \begin{DoxyReturn}{Returns}
+the distance in centimeters 
+\end{DoxyReturn}
+\hypertarget{classPing_a683f58ccb6bd5ef4c8ee82f2cf0a1652}{\index{Ping@{Ping}!get\-Inches@{get\-Inches}}
+\index{get\-Inches@{get\-Inches}!Ping@{Ping}}
+\subsubsection[{get\-Inches}]{\setlength{\rightskip}{0pt plus 5cm}long Ping\-::get\-Inches (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPing_a683f58ccb6bd5ef4c8ee82f2cf0a1652}
+Uses the ping sensor to takes a reading and returns the distance in inches \begin{DoxyReturn}{Returns}
+the distance in inches 
+\end{DoxyReturn}
+\hypertarget{classPing_a60a84a4161b40e9fb7f82cabf6a948fc}{\index{Ping@{Ping}!init@{init}}
+\index{init@{init}!Ping@{Ping}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Ping\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPing_a60a84a4161b40e9fb7f82cabf6a948fc}
+Initilizes the pins to be ready to be used. Must be called before any other function and in \hyperlink{base_8h_a4fc01d736fe50cf5b977f755b675f11d}{setup()}. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ping_8h}{ping.\-h}\item 
+ping.\-cpp\end{DoxyCompactItemize}
