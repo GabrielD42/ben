@@ -31,6 +31,10 @@ stores information about the current run that needs to be dealt with in `cleanup
 time               | distance      | sensor number
 ------------------ | ------------- | -------------
 time (primary key) | float (in cm) | int (0-7)
+####best route
+order             | x               | y
+------------------|-----------------|----------------
+int (primary key) | int (of center) | int (of center)
 
 ##threads
 in order of priority
