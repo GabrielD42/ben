@@ -6,7 +6,7 @@ green='\e[0;32m'
 NC='\e[0m' # No Color
 
 usage() {
-	echo -e "${red}Error: Incorrect Arguments.${NC}\n./deploy.sh [OPTION] 'commit message'\nWhere [OPTION] is either:\n-g\tGabriel's Pi's IP Address\n-k\tKeane's Pi's IP Address\n-n\tDon't deploy code on a Pi"
+	echo -e "\n${red}Error: Incorrect Arguments.${NC}\n./deploy.sh [OPTION] 'commit message'\nWhere [OPTION] one of these flags:\n-g\tGabriel's Pi's IP Address\n-k\tKeane's Pi's IP Address\n-n\tDon't deploy code on a Pi\n"
 	exit 1
 	}
 
