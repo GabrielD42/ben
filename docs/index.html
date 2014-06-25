@@ -81,6 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><p>The code controlling the Raspberry Pi on my robot, BEN (Bright Enough to Navigate)</p>
 <h2>ping sensor</h2>
+<p>scans continously as long as robot is not moving</p>
 <ul>
 <li>stores trigger pin number</li>
 <li>stores echo pin number</li>
@@ -92,6 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>controls access (mutex)</li>
 <li>adds rows and columns</li>
 </ul>
+<p>when written to by sensor processing thread, passes copy to a*/search thread</p>
 <h2>square</h2>
 <ul>
 <li>number of times scanned</li>
@@ -103,7 +105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h2>mysql</h2>
 <h3>maps database</h3>
 <p>stores maps from each run for analyzing. each table is one map, with each field being the probability (a number from 0-1) of there being an object there.</p>
-<h3>current database</h3>
+<h2>global variables</h2>
 <p>stores information about the current run that needs to be dealt with in <code><a class="el" href="base_8h.html#a4b66d5e31b5dc18b314c8a68163263bd">cleanup()</a></code>. </p>
 <h4>ping readings</h4>
 <table class="doxtable">
@@ -120,11 +122,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <td>time (primary key) </td><td>int (of center) </td><td>int (of center) </td></tr>
 </table>
 <h4>best route</h4>
+<p>breakpoint pointer </p>
 <table class="doxtable">
 <tr>
-<th>order </th><th>x </th><th>y  </th></tr>
+<th>order </th><th>x </th><th>y </th><th>executed  </th></tr>
 <tr>
-<td>int (primary key) </td><td>int (of center) </td><td>int (of center) </td></tr>
+<td>int (primary key) </td><td>int (of center) </td><td>int (of center) </td><td>boolean </td></tr>
 </table>
 <h2>threads</h2>
 <p>in order of priority</p>
@@ -132,18 +135,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>1 thread for bump sensors</li>
 <li>1 main thread</li>
 <li>1 thread for movement</li>
+<li>1 control thread sensors</li>
 <li>4 threads for ping sensors<ul>
 <li>they will alternate between sensors</li>
 </ul>
 </li>
 <li>1 thread for processing sensor data</li>
 <li>1 thread for finding best path</li>
-<li>1 thread for machine learning </li>
+<li>1 thread for machine learning</li>
 </ul>
+<h2>movement</h2>
+<p>8 directions pulls of next instruction from best route table and moves there. if empty, runs a turn-scan-turn-scan subroutine Sends signals to sensor threads when turning (control sensor threads) to pause</p>
+<h2>A*/search thread</h2>
+<p>a*/search bool a* function input: grid output: best route table sets breakpoint search use a* to go to closest unexplored space </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 25 2014 14:48:40 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 25 2014 16:50:41 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
