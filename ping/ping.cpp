@@ -20,7 +20,8 @@ long Ping::getCentimeters() {
 	return getReading() / 29 / 2;
 	}
 
-long Ping::getReading(  n  long duration, inches, cm;
+long Ping::getReading() {
+	long duration, inches, cm;
 
 	// The PING))) is triggered by a HIGH pulse of 2 or more microseconds.
 	// Give a short LOW pulse beforehand to ensure a clean HIGH pulse:
