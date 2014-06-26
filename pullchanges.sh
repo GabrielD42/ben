@@ -3,4 +3,5 @@ cd ~/ben
 git pull
 cp *.cpp ~
 cp *.h ~
-cd ~
+cp *.sh ~
+cp Makefile ~
