@@ -1,5 +1,6 @@
 #!/bin/bash
 cd ~/ben
 git pull
-cp -r * ~
+cp *.cpp ~
+cp *.h ~
 cd ~
