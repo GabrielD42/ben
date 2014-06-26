@@ -15,7 +15,7 @@ void List::add(Node* object) {
 		first = object;
 		}
 	else {
-		get(length() - 1)->setNext(object);
+		//get(length() - 1)->setNext(object);
 		}
 	size++;
 	}

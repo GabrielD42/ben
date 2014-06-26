@@ -9,7 +9,7 @@ Square::Square(int tempX, int tempY) : x(tempX), y(tempY), scannedFrom(scannedFr
 	}
 
 void Square::scanned(bool found, Square* position) {
-	//scannedFrom.add(position);
+	scannedFrom.add(position);
 	numTimesScanned++;
 	if(found) {
 		numTimesFound++;
