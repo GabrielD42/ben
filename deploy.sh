@@ -37,7 +37,7 @@ if [[ $# == 2 ]]; then
 	git push
 	if [[ $loginInfo != "" ]]; then
 		echo -e "\n${green}*************************************\n* Pi downloading and compiling code *\n*************************************${NC}\n"
-		ssh $loginInfo '~/pullchanges.sh; make clean; make'
+		ssh $loginInfo '~/ben/pullchanges.sh; make clean; make'
 	fi
 else
 	usage
