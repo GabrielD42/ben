@@ -29,7 +29,7 @@ void loop() {
 	if(reading == 5) {
 		found = true;
 		}
-	square.scanned(found, &from);
+	// square.scanned(found, &from);
 	cout << sensor.getInches() << "in" << endl;
 	delay(1000);
 	}
