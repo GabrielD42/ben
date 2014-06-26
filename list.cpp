@@ -15,7 +15,7 @@ void List::add(Node* object) {
 		first = object;
 		}
 	else {
-		get(length() - 1)->next = object;
+		get(length() - 1)->setNext(object);
 		}
 	size++;
 	}
@@ -24,7 +24,7 @@ Node* List::get(int position) {
 	if(position < length() && position >= 0) {
 		Node* returnValue = first;
 		for(int i = 0; i < position; i++) {
-			returnValue = returnValue->next;
+			returnValue = returnValue->getNext();
 			}
 		return returnValue;
 		}
