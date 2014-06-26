@@ -90,19 +90,104 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">List Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="list_8h_source.html">list.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a77cfde9ffb6f9805865a754ed44417e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77cfde9ffb6f9805865a754ed44417e4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (<a class="el" href="classNode.html">Node</a> *object)</td></tr>
+<tr class="memitem:a64d878a92d11f7c63c70cbe4e7dd4176"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a64d878a92d11f7c63c70cbe4e7dd4176">List</a> ()</td></tr>
+<tr class="separator:a64d878a92d11f7c63c70cbe4e7dd4176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77cfde9ffb6f9805865a754ed44417e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a77cfde9ffb6f9805865a754ed44417e4">add</a> (<a class="el" href="classNode.html">Node</a> *object)</td></tr>
 <tr class="separator:a77cfde9ffb6f9805865a754ed44417e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaddc6396197e48298699e90d86cbd25f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaddc6396197e48298699e90d86cbd25f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>length</b> ()</td></tr>
+<tr class="memitem:aaddc6396197e48298699e90d86cbd25f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#aaddc6396197e48298699e90d86cbd25f">length</a> ()</td></tr>
 <tr class="separator:aaddc6396197e48298699e90d86cbd25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5cd1ad51912ed2ab57830abd25ad9e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5cd1ad51912ed2ab57830abd25ad9e1"></a>
-<a class="el" href="classNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (int position)</td></tr>
+<tr class="memitem:af5cd1ad51912ed2ab57830abd25ad9e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#af5cd1ad51912ed2ab57830abd25ad9e1">get</a> (int position)</td></tr>
 <tr class="separator:af5cd1ad51912ed2ab57830abd25ad9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The list class is a generic, extremely lightweight linked list. it should be used by overriding the node class and adding child objects using the <a class="el" href="classList.html#a77cfde9ffb6f9805865a754ed44417e4">add()</a> method </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a64d878a92d11f7c63c70cbe4e7dd4176"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List::List </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Default constructer, simply initializes all variables </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a77cfde9ffb6f9805865a754ed44417e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void List::add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>adds the argument to the end of the list </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>the address of the object to be added to the list </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af5cd1ad51912ed2ab57830abd25ad9e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classNode.html">Node</a> * List::get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>accessor function to get the nth member of the list</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>the 0-indexed position of the wanted object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to object, or 0 if position to large or small </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaddc6396197e48298699e90d86cbd25f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int List::length </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>the current length of the list </p>
+<dl class="section return"><dt>Returns</dt><dd>the list length </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="list_8h_source.html">list.h</a></li>
 <li>list.cpp</li>
@@ -110,7 +195,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>length</b> ()</td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 25 2014 21:24:54 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 25 2014 22:08:56 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

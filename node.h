@@ -4,7 +4,6 @@
 
 /**
  * Node class for linked list. should not be implemented.
- *
  */
 class Node {
 	public:

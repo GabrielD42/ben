@@ -21,7 +21,7 @@ void List::add(Node* object) {
 	}
 
 Node* List::get(int position) {
-	if(position < length()) {
+	if(position < length() && position >= 0) {
 		Node* returnValue = first;
 		for(int i = 0; i < position; i++) {
 			returnValue = returnValue->next;

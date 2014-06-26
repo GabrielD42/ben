@@ -17,5 +17,5 @@ void Square::scanned(bool found, Square* position) {
 	}
 
 float Square::probability() {
-
+	return float(numTimesFound) / numTimesScanned;
 	}

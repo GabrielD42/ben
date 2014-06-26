@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loop',['loop',['../base_8h.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;main.cpp'],['../main_8cpp.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;main.cpp']]]
+  ['init',['init',['../classPing.html#a60a84a4161b40e9fb7f82cabf6a948fc',1,'Ping']]]
 ];

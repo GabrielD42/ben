@@ -105,14 +105,11 @@ Inheritance diagram for Square:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a89248f7d762e5944c56825c085c84f35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89248f7d762e5944c56825c085c84f35"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Square</b> (int tempX, int tempY)</td></tr>
+<tr class="memitem:a89248f7d762e5944c56825c085c84f35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSquare.html#a89248f7d762e5944c56825c085c84f35">Square</a> (int tempX, int tempY)</td></tr>
 <tr class="separator:a89248f7d762e5944c56825c085c84f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a323c35131be4633013775550a9b42231"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a323c35131be4633013775550a9b42231"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>scanned</b> (bool found, <a class="el" href="classSquare.html">Square</a> *position)</td></tr>
+<tr class="memitem:a323c35131be4633013775550a9b42231"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSquare.html#a323c35131be4633013775550a9b42231">scanned</a> (bool found, <a class="el" href="classSquare.html">Square</a> *position)</td></tr>
 <tr class="separator:a323c35131be4633013775550a9b42231"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa27fbf5a7d017da532443b6af2730b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa27fbf5a7d017da532443b6af2730b4"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>probability</b> ()</td></tr>
+<tr class="memitem:afa27fbf5a7d017da532443b6af2730b4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSquare.html#afa27fbf5a7d017da532443b6af2730b4">probability</a> ()</td></tr>
 <tr class="separator:afa27fbf5a7d017da532443b6af2730b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -129,15 +126,102 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
 <tr class="separator:a2559a716f69ccaa76d648d9f1b83065e inherit pub_attribs_classNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class to hold data about one square in grid </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>Class to hold data about one square in grid. Descended from <a class="el" href="classNode.html">Node</a> so that a <a class="el" href="classList.html">List</a> of <code><a class="el" href="classSquare.html">Square</a></code>'s can be made </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a89248f7d762e5944c56825c085c84f35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Square::Square </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tempX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tempY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>initializes the new square object with itx coordinates</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tempX</td><td>this square's x coordinate </td></tr>
+    <tr><td class="paramname">tempY</td><td>this square's y coordinate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="afa27fbf5a7d017da532443b6af2730b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Square::probability </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>returns the probability of there being an object here </p>
+<dl class="section return"><dt>Returns</dt><dd>the probability as a decimal from 0 to 1 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a323c35131be4633013775550a9b42231"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Square::scanned </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>found</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSquare.html">Square</a> *&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function should be called after this square has been scanned by a ping sensor to store the relevent information</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">found</td><td>was an object found here? </td></tr>
+    <tr><td class="paramname">position</td><td>the <a class="el" href="classSquare.html">Square</a> that the ping sensor was at when it scanned this <a class="el" href="classSquare.html">Square</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="square_8h_source.html">square.h</a></li>
 <li>square.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 25 2014 21:24:54 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 25 2014 22:08:56 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,3 +1,5 @@
+/** @file */
+
 #include "base.h"
 #include <wiringPi.h> // for wiringPiSetupGpio
 #include <iostream> // for cout
@@ -32,7 +34,11 @@ int main() {
 		}
 	}
 
-// catch keyboard interrupt (ctrl-c)
+/**
+ * this function is called when main() catches a keyboard interrupt (such as ctrl-c). it calls cleanup() so that all data can be safely saved and memory reclaimed before the program ends.
+ *
+ * @param signal the interrupt signal
+ */
 void safeQuit(int signal){
 	cout << "\nCaught signal " << signal << "\nSafely exiting..." << endl;
 	cleanup();

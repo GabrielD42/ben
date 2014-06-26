@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cleanup',['cleanup',['../base_8h.html#a4b66d5e31b5dc18b314c8a68163263bd',1,'cleanup():&#160;main.cpp'],['../main_8cpp.html#a4b66d5e31b5dc18b314c8a68163263bd',1,'cleanup():&#160;main.cpp']]]
+  ['add',['add',['../classList.html#a77cfde9ffb6f9805865a754ed44417e4',1,'List']]]
 ];

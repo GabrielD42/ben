@@ -85,32 +85,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ping.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="ping_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef PING_H</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PING_H</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classPing.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPing.html">Ping</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="classPing.html#ac8699f06de93bae019b5c10eb4d9f07e">Ping</a>(<span class="keywordtype">int</span> tempTriggerPin, <span class="keywordtype">int</span> tempEchoPin);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPing.html#a60a84a4161b40e9fb7f82cabf6a948fc">init</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">long</span> <a class="code" href="classPing.html#a683f58ccb6bd5ef4c8ee82f2cf0a1652">getInches</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">long</span> <a class="code" href="classPing.html#aae84b003ab46fbbc9ac591df3ab61e89">getCentimeters</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">long</span> getReading();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">int</span> triggerPin;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">int</span> echoPin;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    };</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PING_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PING_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classPing.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPing.html">Ping</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="classPing.html#ac8699f06de93bae019b5c10eb4d9f07e">Ping</a>(<span class="keywordtype">int</span> tempTriggerPin, <span class="keywordtype">int</span> tempEchoPin);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPing.html#a60a84a4161b40e9fb7f82cabf6a948fc">init</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">long</span> <a class="code" href="classPing.html#a683f58ccb6bd5ef4c8ee82f2cf0a1652">getInches</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">long</span> <a class="code" href="classPing.html#aae84b003ab46fbbc9ac591df3ab61e89">getCentimeters</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">long</span> getReading();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">int</span> triggerPin;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">int</span> echoPin;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    };</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classPing_html_aae84b003ab46fbbc9ac591df3ab61e89"><div class="ttname"><a href="classPing.html#aae84b003ab46fbbc9ac591df3ab61e89">Ping::getCentimeters</a></div><div class="ttdeci">long getCentimeters()</div><div class="ttdef"><b>Definition:</b> ping.cpp:19</div></div>
 <div class="ttc" id="classPing_html_a683f58ccb6bd5ef4c8ee82f2cf0a1652"><div class="ttname"><a href="classPing.html#a683f58ccb6bd5ef4c8ee82f2cf0a1652">Ping::getInches</a></div><div class="ttdeci">long getInches()</div><div class="ttdef"><b>Definition:</b> ping.cpp:15</div></div>
-<div class="ttc" id="classPing_html"><div class="ttname"><a href="classPing.html">Ping</a></div><div class="ttdef"><b>Definition:</b> ping.h:9</div></div>
+<div class="ttc" id="classPing_html"><div class="ttname"><a href="classPing.html">Ping</a></div><div class="ttdef"><b>Definition:</b> ping.h:7</div></div>
 <div class="ttc" id="classPing_html_ac8699f06de93bae019b5c10eb4d9f07e"><div class="ttname"><a href="classPing.html#ac8699f06de93bae019b5c10eb4d9f07e">Ping::Ping</a></div><div class="ttdeci">Ping(int tempTriggerPin, int tempEchoPin)</div><div class="ttdef"><b>Definition:</b> ping.cpp:5</div></div>
 <div class="ttc" id="classPing_html_a60a84a4161b40e9fb7f82cabf6a948fc"><div class="ttname"><a href="classPing.html#a60a84a4161b40e9fb7f82cabf6a948fc">Ping::init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition:</b> ping.cpp:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 25 2014 21:24:54 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 25 2014 22:08:56 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
