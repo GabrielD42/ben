@@ -2,6 +2,7 @@ objects = base.o main.o ping.o utils.o square.o list.o node.h
 
 ping: $(objects)
 	g++ -o ping $(objects) -lwiringPi
+	rm $objects
 
 base.o: base.cpp base.h
 	g++ -c -o base.o base.cpp -lwiringPi
@@ -20,7 +21,3 @@ square.o: square.cpp square.h
 
 list.o: list.cpp list.h
 	g++ -c -o list.o list.cpp
-
-.PHONY: clean
-clean:
-	rm ping $(objects)

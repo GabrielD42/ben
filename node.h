@@ -1,8 +1,14 @@
 #ifndef NODE_H
 #define NODE_H
 
-struct Node {
-	Node* next;
+
+/**
+ * Node class for linked list. should not be implemented.
+ *
+ */
+class Node {
+	public:
+		Node* next;
 	};
 
 #endif
