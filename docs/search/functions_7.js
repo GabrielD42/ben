@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['safequit',['safeQuit',['../base_8cpp.html#afdde65e52a3cb6e0eb35fdb95b6a4cc7',1,'base.cpp']]],
-  ['scanned',['scanned',['../classSquare.html#a323c35131be4633013775550a9b42231',1,'Square']]],
-  ['setup',['setup',['../base_8h.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;main.cpp'],['../main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;main.cpp']]],
-  ['square',['Square',['../classSquare.html#a89248f7d762e5944c56825c085c84f35',1,'Square']]]
+  ['ping',['Ping',['../classPing.html#ac8699f06de93bae019b5c10eb4d9f07e',1,'Ping']]],
+  ['probability',['probability',['../classSquare.html#afa27fbf5a7d017da532443b6af2730b4',1,'Square']]],
+  ['pulsein',['pulseIn',['../namespaceutils.html#a119f267acdf7deb4a7fd994c171929d9',1,'utils']]]
 ];

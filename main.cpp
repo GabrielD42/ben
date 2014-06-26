@@ -24,9 +24,9 @@ void setup() {
  * called at program end (or interrupt) to clean up any classes that need cleaning up and save any data that need saving
  */
 void loop() {
-	long reading = sensor.getInches();
+	int reading = sensor.getInches();
 	bool found = false;
-	if(reading >= 4.5 && reading <= 5.5) {
+	if(reading == 5) {
 		found = true;
 		}
 	square.scanned(found, &from);

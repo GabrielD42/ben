@@ -84,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classNode-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Node Class Reference</div>  </div>
@@ -102,21 +102,84 @@ Inheritance diagram for Node:</div>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a2559a716f69ccaa76d648d9f1b83065e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2559a716f69ccaa76d648d9f1b83065e"></a>
-<a class="el" href="classNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>next</b></td></tr>
-<tr class="separator:a2559a716f69ccaa76d648d9f1b83065e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ad7a34779cad45d997bfd6d3d8043c75f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ad7a34779cad45d997bfd6d3d8043c75f">Node</a> ()</td></tr>
+<tr class="separator:ad7a34779cad45d997bfd6d3d8043c75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dbb7b47028112e27ae8cca9e7fbf297"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a1dbb7b47028112e27ae8cca9e7fbf297">setNext</a> (<a class="el" href="classNode.html">Node</a> *object)</td></tr>
+<tr class="separator:a1dbb7b47028112e27ae8cca9e7fbf297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae36639ff267d63e058ce309fde5a9913"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ae36639ff267d63e058ce309fde5a9913">getNext</a> ()</td></tr>
+<tr class="separator:ae36639ff267d63e058ce309fde5a9913"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classNode.html">Node</a> class for linked list. should not be implemented. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ad7a34779cad45d997bfd6d3d8043c75f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Node::Node </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>initializes the variables </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae36639ff267d63e058ce309fde5a9913"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classNode.html">Node</a> * Node::getNext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>get the address of the next node </p>
+<dl class="section return"><dt>Returns</dt><dd>the address of the next node </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1dbb7b47028112e27ae8cca9e7fbf297"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Node::setNext </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set what the node after this one is. the operation will fail if object isn't a valid pointer or if <code>next</code> is already set</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>the node after this one </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>wether or not this was sucessful </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="node_8h_source.html">node.h</a></li>
+<li>node.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 26 2014 10:53:09 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 26 2014 11:08:18 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
