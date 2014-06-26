@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['cleanup',['cleanup',['../base_8h.html#a4b66d5e31b5dc18b314c8a68163263bd',1,'cleanup():&#160;main.cpp'],['../main_8cpp.html#a4b66d5e31b5dc18b314c8a68163263bd',1,'cleanup():&#160;main.cpp']]]
+  ['getcentimeters',['getCentimeters',['../classPing.html#aae84b003ab46fbbc9ac591df3ab61e89',1,'Ping']]],
+  ['getinches',['getInches',['../classPing.html#a683f58ccb6bd5ef4c8ee82f2cf0a1652',1,'Ping']]]
 ];
