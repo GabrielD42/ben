@@ -29,11 +29,11 @@ bool Square::operator!=(const Square& other) {
 	}
 
 bool Square::operator>(const Square& other) {
-	return((x > other.x) ? true : ((y > other.y) ? true : false));
+	return((x > other.x) || (x == other.x && y > other.y));
 	}
 
 bool Square::operator<(const Square& other) {
-	return((x < other.x) ? true : ((y < other.y) ? true : false));
+	return((x < other.x) || (x == other.x && y < other.y));
 	}
 
 bool Square::operator>=(const Square& other) {
