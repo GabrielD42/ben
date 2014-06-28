@@ -31,12 +31,47 @@ class Square: public Node {
 		 */
 		float probability();
 		const int x, y;
-
+		/**
+		 * checks to see if two Squares are equal by comparing their x and y coordinates. a shallow comparison should be good enough since there should only ever be one of every Square, and that in the Grid. everything else should be pointers
+		 *
+		 * @param other the Square to compare to this one
+		 * @return true if they are equal, false otherwise
+		 */
 		bool operator==(const Square& other);
+		/**
+		 * checks to see if two Squares are unequal by taking the opposite of operator==. a shallow comparison should be good enough since there should only ever be one of every Square, and that in the Grid. everything else should be pointers
+		 *
+		 * @param other the Square to compare to this one
+		 * @return true if they aren't equal, false otherwise
+		 */
 		bool operator!=(const Square& other);
+		/**
+		 * compares two Square's to determine which is larger. Rather arbitrary, since there is no "true" way to measure this. this implementation sorts by x value, and determines ties with y value
+		 *
+		 * @param other the Square to compare to this one
+		 * @return true if Square invoked upon is smaller than `other`, false otherwise
+		 */
 		bool operator>(const Square& other);
+		/**
+		 * compares two Square's to determine which is larger. Rather arbitrary, since there is no "true" way to measure this. this implementation sorts by x value, and determines ties with y value
+		 *
+		 * @param other the Square to compare to this one
+		 * @return true if Square invoked upon is larger than `other`, false otherwise
+		 */
 		bool operator<(const Square& other);
+		/**
+		 * compares two Square's to determine which is larger. Rather arbitrary, since there is no "true" way to measure this. this implementation sorts by x value, and determines ties with y value
+		 *
+		 * @param other the Square to compare to this one
+		 * @return true if Square invoked upon is larger than or equal to `other`, false otherwise
+		 */
 		bool operator>=(const Square& other);
+		/**
+		 * compares two Square's to determine which is larger. Rather arbitrary, since there is no "true" way to measure this. this implementation sorts by x value, and determines ties with y value
+		 *
+		 * @param other the Square to compare to this one
+		 * @return true if Square invoked upon is smaller than or equal to `other`, false otherwise
+		 */
 		bool operator<=(const Square& other);
 	private:
 		int numTimesScanned, numTimesFound;
