@@ -15,12 +15,12 @@ Ping sensor(24, 25);
 
 void test(Square& other) {
 	cout << "Comparing (" << square.x << ", " << square.y << ") to (" << other.x << ", " << other.y << ")" << endl;
-	cout << "== "<< square == other << endl;
-	cout << "!= "<< square != other << endl;
-	cout << "< "<< square < other << endl;
-	cout << "> "<< square > other << endl;
-	cout << "<= "<< square <= other << endl;
-	cout << ">= "<< square >= other << endl;
+	cout << "== "<< (square == other) << endl;
+	cout << "!= "<< (square != other) << endl;
+	cout << "< "<< (square < other) << endl;
+	cout << "> "<< (square > other) << endl;
+	cout << "<= "<< (square <= other) << endl;
+	cout << ">= "<< (square >= other) << endl;
 	}
 
 /**
