@@ -21,7 +21,7 @@ float Square::probability() {
 	}
 
 bool Square::operator==(const Square& other) {
-	return(this.x == other.x && this.y == other.y);
+	return(x == other.x && y == other.y);
 	}
 
 bool Square::operator!=(const Square& other) {
@@ -29,11 +29,11 @@ bool Square::operator!=(const Square& other) {
 	}
 
 bool Square::operator>(const Square& other) {
-	return((this.x > other.x) ? true : ((this.y > other.y) ? true : false));
+	return((x > other.x) ? true : ((y > other.y) ? true : false));
 	}
 
 bool Square::operator<(const Square& other) {
-	return((this.x < other.x) ? true : ((this.y < other.y) ? true : false));
+	return((x < other.x) ? true : ((y < other.y) ? true : false));
 	}
 
 bool Square::operator>=(const Square& other) {
