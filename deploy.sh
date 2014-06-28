@@ -34,7 +34,7 @@ if [[ $# == 2 ]]; then
 	doxygen doxygenConfig
 	echo -e "\n${green}********************************\n* Uploading new code to Github *\n********************************${NC}\n"
 	git add --all
-	git commit -m $1
+	git commit -m "$2"
 	git push
 	if [[ $loginInfo != "" ]]; then
 		echo -e "\n${green}*************************************\n* Pi downloading and compiling code *\n*************************************${NC}\n"
