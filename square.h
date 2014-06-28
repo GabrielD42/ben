@@ -1,9 +1,9 @@
 #ifndef SQUARE_H
 #define SQUARE_H
 
-class List;
+#include "list.h"
+#include "node.h"
 class Grid;
-class Node;
 
 /**
  * Class to hold data about one square in grid. Descended from Node so that a List of `Square`'s can be made
