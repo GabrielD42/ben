@@ -1,7 +1,7 @@
 #ifndef LIST_H
 #define LIST_H
 
-#include "node.h"
+class Node;
 
 /**
  * The list class is a generic, extremely lightweight linked list. it should be used by overriding the node class and adding child objects using the add() method
