@@ -31,6 +31,13 @@ class Square: public Node {
 		 */
 		float probability();
 		const int x, y;
+
+		bool operator==(const Square& other);
+		bool operator!=(const Square& other);
+		bool operator>(const Square& other);
+		bool operator<(const Square& other);
+		bool operator>=(const Square& other);
+		bool operator<=(const Square& other);
 	private:
 		int numTimesScanned, numTimesFound;
 		List scannedFrom;

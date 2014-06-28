@@ -19,3 +19,27 @@ void Square::scanned(bool found, Square* position) {
 float Square::probability() {
 	return float(numTimesFound) / numTimesScanned;
 	}
+
+bool Square::operator==(const Square& other) {
+	return(this.x == other.x && this.y == other.y);
+	}
+
+bool Square::operator!=(const Square& other) {
+	return(!(operator==(other)));
+	}
+
+bool Square::operator>(const Square& other) {
+	return((this.x > other.x) ? true : ((this.y > other.y) ? true : false));
+	}
+
+bool Square::operator<(const Square& other) {
+	return((this.x < other.x) ? true : ((this.y < other.y) ? true : false));
+	}
+
+bool Square::operator>=(const Square& other) {
+	return(!(operator<(other)));
+	}
+
+bool Square::operator<=(const Square& other) {
+	return(!(operator>(other)));
+	}
