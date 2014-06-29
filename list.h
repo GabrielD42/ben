@@ -17,7 +17,7 @@ class List {
 			first = 0;
 			}
 		/**
-		 * adds the argument to the end of the list
+		 * adds the argument to the end of the list. object must be allocated on heap. takes over control of object, ie DO NOT DELETE OBJECT
 		 * @param object the address of the object to be added to the list
 		 */
 		void add(Node<T>* object) {
@@ -51,6 +51,17 @@ class List {
 				return returnValue;
 				}
 			return 0;
+			}
+		/**
+		 * delete all elements in list
+		 */
+		~List() {
+			Node<T>* nextValue = first;
+			while(nextValue) {
+				Node<T>* deleteThis = nextValue;
+				nextValue = deleteThis->getNext();
+				delete deleteThis;
+				}
 			}
 	private:
 		int size;

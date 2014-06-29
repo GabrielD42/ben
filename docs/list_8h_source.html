@@ -119,13 +119,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                }</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">int</span> size;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* first;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classList.html#a2b58189090f6e5ce52939c9195e59e85">   58</a></span>&#160;        <a class="code" href="classList.html#a2b58189090f6e5ce52939c9195e59e85">~List</a>() {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="classNode.html">Node&lt;T&gt;</a>* nextValue = first;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">while</span>(nextValue) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <a class="code" href="classNode.html">Node&lt;T&gt;</a>* deleteThis = nextValue;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                nextValue = deleteThis-&gt;<a class="code" href="classNode.html#afd985b504e37f4f8d7342f58e6035238">getNext</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keyword">delete</span> deleteThis;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">int</span> size;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* first;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    };</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classList_html_a9890243fd2d78175e4600a5364f8185f"><div class="ttname"><a href="classList.html#a9890243fd2d78175e4600a5364f8185f">List::length</a></div><div class="ttdeci">int length()</div><div class="ttdef"><b>Definition:</b> list.h:36</div></div>
+<div class="ttc" id="classList_html_a2b58189090f6e5ce52939c9195e59e85"><div class="ttname"><a href="classList.html#a2b58189090f6e5ce52939c9195e59e85">List::~List</a></div><div class="ttdeci">~List()</div><div class="ttdef"><b>Definition:</b> list.h:58</div></div>
 <div class="ttc" id="classNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdef"><b>Definition:</b> node.h:9</div></div>
 <div class="ttc" id="classList_html_a684f0232be56de4be749fd01b264721d"><div class="ttname"><a href="classList.html#a684f0232be56de4be749fd01b264721d">List::add</a></div><div class="ttdeci">void add(Node&lt; T &gt; *object)</div><div class="ttdef"><b>Definition:</b> list.h:23</div></div>
 <div class="ttc" id="classList_html"><div class="ttname"><a href="classList.html">List</a></div><div class="ttdef"><b>Definition:</b> list.h:10</div></div>
@@ -134,7 +143,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 29 2014 09:47:55 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 29 2014 10:45:10 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

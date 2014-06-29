@@ -102,6 +102,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9890243fd2d78175e4600a5364f8185f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1224cbefb9144fcf34822e37a33cc5cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNode.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a1224cbefb9144fcf34822e37a33cc5cd">get</a> (int position)</td></tr>
 <tr class="separator:a1224cbefb9144fcf34822e37a33cc5cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b58189090f6e5ce52939c9195e59e85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a2b58189090f6e5ce52939c9195e59e85">~List</a> ()</td></tr>
+<tr class="separator:a2b58189090f6e5ce52939c9195e59e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>
@@ -135,6 +137,32 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a2b58189090f6e5ce52939c9195e59e85"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classList.html">List</a>&lt; T &gt;::~<a class="el" href="classList.html">List</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>delete all elements in list </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a684f0232be56de4be749fd01b264721d"></a>
 <div class="memitem">
@@ -159,7 +187,7 @@ template&lt;class T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>adds the argument to the end of the list </p>
+<p>adds the argument to the end of the list. object must be allocated on heap. takes over control of object, ie DO NOT DELETE OBJECT </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">object</td><td>the address of the object to be added to the list </td></tr>
@@ -236,7 +264,7 @@ template&lt;class T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 29 2014 09:47:55 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 29 2014 10:45:10 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
