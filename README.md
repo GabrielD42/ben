@@ -43,7 +43,7 @@ time (primary key) | int (of center) | int (of center)
 breakpoint pointer
 order              |  x                |  y               | executed
 ------------------ | ----------------- | ---------------- | --------
-int (primary key)  |  int (of center)  |  int (of center) | boolean
+int (primary key)  | int (of center)   | int (of center)  | boolean
 
 ##threads
 in order of priority

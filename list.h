@@ -50,8 +50,7 @@ void List<T>::add(Node<T>* object) {
 		first = object;
 		}
 	else {
-		//get(length() - 1)->setNext(object);
-		delete object;
+		get(length() - 1)->setNext(object);
 		}
 	size++;
 	}
@@ -59,6 +58,7 @@ template <class T>
 int List<T>::length() {
 	return size;
 	}
+// bug here
 template <class T>
 Node<T>* List<T>::get(int position) {
 	if(position < length() && position >= 0) {
