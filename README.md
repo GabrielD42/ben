@@ -41,6 +41,7 @@ time               | x               | y
 time (primary key) | int (of center) | int (of center)
 ####best route
 breakpoint pointer
+
 order              |  x                |  y               | executed
 ------------------ | ----------------- | ---------------- | --------
 int (primary key)  | int (of center)   | int (of center)  | boolean
