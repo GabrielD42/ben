@@ -50,7 +50,8 @@ void List<T>::add(Node<T>* object) {
 		first = object;
 		}
 	else {
-		get(length() - 1)->setNext(object);
+		//get(length() - 1)->setNext(object);
+		delete object;
 		}
 	size++;
 	}
