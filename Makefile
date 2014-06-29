@@ -1,4 +1,4 @@
-objects = base.o main.o ping.o utils.o square.o node.o
+objects = base.o main.o ping.o utils.o square.o
 templates = node.h list.h
 
 ping: $(objects) $(templates)
