@@ -10,7 +10,7 @@ Square::Square(int tempX, int tempY) : x(tempX), y(tempY), scannedFrom(scannedFr
 
 void Square::scanned(bool found, Square* position) {
 	Node<Square>* newNode = new Node<Square>(position); // allocated on heap
-	scannedFrom.add(newNode); // list takes over control of newNode
+	//scannedFrom.add(newNode); // list takes over control of newNode
 	numTimesScanned++;
 	if(found) {
 		numTimesFound++;

@@ -19,9 +19,3 @@ utils.o: utils.cpp utils.h
 
 square.o: square.cpp square.h
 	g++ -c -o square.o square.cpp
-
-#node.o: node.cpp node.h
-#	g++ -c -o node.o node.cpp
-
-#list.o: list.cpp list.h
-#	g++ -c -o list.o list.cpp
