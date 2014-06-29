@@ -1,7 +1,8 @@
 objects = base.o main.o ping.o utils.o square.o node.o
+templates = node.h list.h
 
-ping: $(objects) list.h
-	g++ -o ping $(objects) list.h -lwiringPi
+ping: $(objects) $(templates)
+	g++ -o ping $(objects) $(templates) -lwiringPi
 	rm $(objects)
 
 base.o: base.cpp base.h
@@ -19,8 +20,8 @@ utils.o: utils.cpp utils.h
 square.o: square.cpp square.h
 	g++ -c -o square.o square.cpp
 
-node.o: node.cpp node.h
-	g++ -c -o node.o node.cpp
+#node.o: node.cpp node.h
+#	g++ -c -o node.o node.cpp
 
 #list.o: list.cpp list.h
 #	g++ -c -o list.o list.cpp
