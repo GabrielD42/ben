@@ -12,7 +12,7 @@ class List {
 		/**
 		 * Default constructer, simply initializes all variables
 		 */
-		List() {
+		List<T>() {
 			size = 0;
 			first = 0;
 			}
@@ -55,7 +55,7 @@ class List {
 		/**
 		 * delete all elements in list
 		 */
-		~List() {
+		~List<T>() {
 			Node<T>* nextValue = first;
 			while(nextValue) {
 				Node<T>* deleteThis = nextValue;
