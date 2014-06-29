@@ -6,9 +6,9 @@
 class Grid;
 
 /**
- * Class to hold data about one square in grid. Descended from Node so that a List of `Square`'s can be made
+ * Class to hold data about one square in grid. Friends with Grid so that Grid can manage Square's pointers but no other code can
  */
-class Square: public Node {
+class Square {
 	friend class Grid;
 	public:
 		/**
@@ -75,7 +75,7 @@ class Square: public Node {
 		bool operator<=(const Square& other);
 	private:
 		int numTimesScanned, numTimesFound;
-		List scannedFrom;
+		List<Square> scannedFrom;
 		Square* adjacent[4];
 	};
 

@@ -31,6 +31,7 @@ void loop() {
 		}
 	square.scanned(found, &from);
 	cout << sensor.getInches() << "in" << endl;
+	cout << "New probability: " << square.probability() << endl;
 	delay(1000);
 	}
 

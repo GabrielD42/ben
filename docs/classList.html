@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>BEN the Robot: List Class Reference</title>
+<title>BEN the Robot: List&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -87,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classList-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">List Class Reference</div>  </div>
+<div class="title">List&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -95,47 +94,70 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a64d878a92d11f7c63c70cbe4e7dd4176"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a64d878a92d11f7c63c70cbe4e7dd4176">List</a> ()</td></tr>
-<tr class="separator:a64d878a92d11f7c63c70cbe4e7dd4176"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77cfde9ffb6f9805865a754ed44417e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a77cfde9ffb6f9805865a754ed44417e4">add</a> (<a class="el" href="classNode.html">Node</a> *object)</td></tr>
-<tr class="separator:a77cfde9ffb6f9805865a754ed44417e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaddc6396197e48298699e90d86cbd25f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#aaddc6396197e48298699e90d86cbd25f">length</a> ()</td></tr>
-<tr class="separator:aaddc6396197e48298699e90d86cbd25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5cd1ad51912ed2ab57830abd25ad9e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#af5cd1ad51912ed2ab57830abd25ad9e1">get</a> (int position)</td></tr>
-<tr class="separator:af5cd1ad51912ed2ab57830abd25ad9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c5e27671b21b3815d4e25b953c69454"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a5c5e27671b21b3815d4e25b953c69454">List</a> ()</td></tr>
+<tr class="separator:a5c5e27671b21b3815d4e25b953c69454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a684f0232be56de4be749fd01b264721d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a684f0232be56de4be749fd01b264721d">add</a> (<a class="el" href="classNode.html">Node</a>&lt; T &gt; *object)</td></tr>
+<tr class="separator:a684f0232be56de4be749fd01b264721d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9890243fd2d78175e4600a5364f8185f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a9890243fd2d78175e4600a5364f8185f">length</a> ()</td></tr>
+<tr class="separator:a9890243fd2d78175e4600a5364f8185f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1224cbefb9144fcf34822e37a33cc5cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNode.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a1224cbefb9144fcf34822e37a33cc5cd">get</a> (int position)</td></tr>
+<tr class="separator:a1224cbefb9144fcf34822e37a33cc5cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The list class is a generic, extremely lightweight linked list. it should be used by overriding the node class and adding child objects using the <a class="el" href="classList.html#a77cfde9ffb6f9805865a754ed44417e4">add()</a> method </p>
+<div class="textblock"><h3>template&lt;class T&gt;<br/>
+class List&lt; T &gt;</h3>
+
+<p>The list class is a generic, extremely lightweight linked list. it should be used by overriding the node class and adding child objects using the <a class="el" href="classList.html#a684f0232be56de4be749fd01b264721d">add()</a> method </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a64d878a92d11f7c63c70cbe4e7dd4176"></a>
+<a class="anchor" id="a5c5e27671b21b3815d4e25b953c69454"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List::List </td>
+          <td class="memname"><a class="el" href="classList.html">List</a>&lt; T &gt;::<a class="el" href="classList.html">List</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Default constructer, simply initializes all variables </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a77cfde9ffb6f9805865a754ed44417e4"></a>
+<a class="anchor" id="a684f0232be56de4be749fd01b264721d"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void List::add </td>
+          <td class="memname">void <a class="el" href="classList.html">List</a>&lt; T &gt;::add </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classNode.html">Node</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classNode.html">Node</a>&lt; T &gt; *&#160;</td>
           <td class="paramname"><em>object</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>adds the argument to the end of the list </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -147,18 +169,28 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af5cd1ad51912ed2ab57830abd25ad9e1"></a>
+<a class="anchor" id="a1224cbefb9144fcf34822e37a33cc5cd"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classNode.html">Node</a> * List::get </td>
+          <td class="memname"><a class="el" href="classNode.html">Node</a>&lt;T&gt;* <a class="el" href="classList.html">List</a>&lt; T &gt;::get </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>position</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>accessor function to get the nth member of the list</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -171,31 +203,40 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aaddc6396197e48298699e90d86cbd25f"></a>
+<a class="anchor" id="a9890243fd2d78175e4600a5364f8185f"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int List::length </td>
+          <td class="memname">int <a class="el" href="classList.html">List</a>&lt; T &gt;::length </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>the current length of the list </p>
 <dl class="section return"><dt>Returns</dt><dd>the list length </dd></dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="list_8h_source.html">list.h</a></li>
-<li>list.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 28 2014 13:51:39 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 29 2014 09:47:55 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
