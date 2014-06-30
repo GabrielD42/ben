@@ -26,6 +26,7 @@ class Node {
 		 */
 		bool setNext(Node<T>* object) {
 			cout << "in Node<T>*::setNext()" << endl;
+			cout << "setting next to " << object << endl;
 			if(next != 0 && object != 0) {
 				next = object;
 				return true;
@@ -38,6 +39,7 @@ class Node {
 		 */
 		Node<T>* getNext() {
 			cout << "in Node<T>*::getNext()" << endl;
+			cout << "returning " << next << endl;
 			return next;
 			}
 		/**

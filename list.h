@@ -50,6 +50,7 @@ List<T>::List() {
 template <class T>
 void List<T>::add(Node<T>* object) {
 	cout << "in List<T>::add()" << endl;
+	cout << "adding " << object << endl;
 	if(length() == 0) {
 		cout << "length() == 0" << endl;
 		first = object;
@@ -73,6 +74,7 @@ Node<T>* List<T>::get(int position) {
 		for(int i = 0; i < position; i++) {
 			returnValue = returnValue->getNext();
 			}
+		cout << "returning " << returnValue << endl;
 		return returnValue;
 		}
 	return 0;
