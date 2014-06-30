@@ -70,6 +70,7 @@ the first is a flag, indicating which Raspberry Pi the script should attempt to 
 * `-g` for Gabriel's pi
 * `-k` for Keane's
 * `-n` for no Pi
+
 The second option is the commit message for git. It should be enclosed in quotes.
 
 The script does the following (in order)
@@ -136,4 +137,6 @@ a Raspberry Pi is needed to test code, because that's the only place where the C
 * make (`sudo apt-get install make`)
 * g++ (`sudo apt-get install g++`)
 * [wiringPi](http://wiringpi.com/)
-for convenience, give it a static IP address then add a flag to the deployment script. Good luck!
+for convenience, give it a static IP address then add a flag to the deployment script.
+
+Good luck!
