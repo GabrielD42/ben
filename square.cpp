@@ -2,6 +2,8 @@
 #include "list.h"
 #include <iostream>
 
+using namespace std;
+
 Square::Square(int tempX, int tempY) : x(tempX), y(tempY), scannedFrom(scannedFrom) {
 	for(int i = 0; i < 4; i++) {
 		adjacent[i] = 0;

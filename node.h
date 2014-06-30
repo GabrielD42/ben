@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+using namespace std;
+
 /**
  * Node class for linked list. should not be implemented.
  */

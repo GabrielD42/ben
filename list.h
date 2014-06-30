@@ -4,6 +4,8 @@
 #include "node.h"
 #include <iostream>
 
+using namespace std;
+
 /**
  * The list class is a generic, extremely lightweight linked list. it should be used by overriding the node class and adding child objects using the add() method
  */
