@@ -27,7 +27,7 @@ class Node {
 		bool setNext(Node<T>* object) {
 			cout << "in Node<T>*::setNext()" << endl;
 			cout << "\tsetting next pointer to " << object << endl;
-			if(next != 0 && object != 0) {
+			if(next == 0 && object != 0) {
 				next = object;
 				cout << "\tsuccess" << endl;
 				return true;
