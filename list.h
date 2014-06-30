@@ -2,6 +2,7 @@
 #define LIST_H
 
 #include "node.h"
+#include <iostream>
 
 /**
  * The list class is a generic, extremely lightweight linked list. it should be used by overriding the node class and adding child objects using the add() method
@@ -46,10 +47,13 @@ List<T>::List() {
 	}
 template <class T>
 void List<T>::add(Node<T>* object) {
+	cout << "in List<T>::add()" << endl;
 	if(length() == 0) {
+		cout << "length() == 0" << endl;
 		first = object;
 		}
 	else {
+		cout << "length() != 0" << endl;
 		get(length() - 1)->setNext(object);
 		}
 	size++;
@@ -61,6 +65,7 @@ int List<T>::length() {
 // bug here
 template <class T>
 Node<T>* List<T>::get(int position) {
+	cout << "in List<T>::get()" << endl;
 	if(position < length() && position >= 0) {
 		Node<T>* returnValue = first;
 		for(int i = 0; i < position; i++) {

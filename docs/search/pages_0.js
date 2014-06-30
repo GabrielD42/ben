@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['styleguide',['styleGuide',['../md_styleGuide.html',1,'']]]
+  ['contributing',['contributing',['../md_contributing.html',1,'']]]
 ];

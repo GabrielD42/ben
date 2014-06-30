@@ -1,10 +1,15 @@
 BEN
 ===
 
-The code controlling the Raspberry Pi on my robot, BEN (Bright Enough to Navigate)
+This repository contains code that will (hopefully) one day become a robot. BEN stands for **B**right **E**nough to **N**avigate. BEN has a multi-step goal:
+
+1. Navigate to a sector in his world. At this point he does not know where any obstacles are
+2. Search the sector for a small object, identified by comparing it to pictures it has taken
+3. Pick up the object and return to his starting position on the shortest path
+
 
 ##ping sensor
-scans continously as long as robot is not moving
+scans continuously as long as robot is not moving
 * stores trigger pin number
 * stores echo pin number
 * gives distance

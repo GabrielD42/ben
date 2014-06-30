@@ -1,11 +1,11 @@
 Note: this file uses Github Flavored Markdown, so please view on Github.
 
-#Style Guide and Other Relevant Information
-With more than one person working on this now and stuff, I figured I should establish a coding standard. Feel free to make suggestions.
-
+#What You Need to Know About this Project
 Note: this file (and all documentation, including the comments, are written using [Markdown](https://help.github.com/articles/markdown-basics))
 
 ##Formating
+With more than one person working on this now and stuff, I figured I should establish a coding standard. Feel free to make suggestions.
+
 ```C++
 if(!(3 == 5)) {
 	int theAnswer = 42; // the answer to life, the universe and everything
@@ -24,6 +24,13 @@ This sample code demonstrates most of the guidelines:
 * Macros (`#define`) and constants (`const`) are declared in all caps.
 * comments come 1 space after the relevant line
 * Use the tab character, not spaces
+
+##Naming Conventions
+For the most part, simply name stuff what makes the most sense. A few restrictions:
+* include guards must be named in all caps `FILE_NAME_H`, with underscores to seperate words
+* arguments being passed to methods simply to be used to set a corisponding variable in the class should be named `tempVariableName`, where `variableName` is the name of the variable in the class that will be set.
+* functions used to change data in a class should be called `setSomething`, where `Something` describes what is to be set
+* functions used to access data in a class should be called `getSomething`, where `Something` describes what is to be returned
 
 ##Comments
 The majority of comments should be of the `//` variety, as specified in the formatting section. place them after any confusing line, or to clarify an unclear name.
@@ -54,15 +61,8 @@ Do not make unnecessary classes, but if it is likely that a more generalized ver
 In most cases, memory is more expensive then time, so it is encouraged to recalculate some numbers in order to save space.
 
 ##Git and Github
-We are using Git and Github to manage this project. Git is a command line versioning tool to keep track of changes, and Github is a hosted server to store these files on. For the most part, the deploy script should take care of the messy details, but here are a few basic concepts and commands.
-
-The actual version of the code is stored on the server. To begin, type `git clone https://github.com/GabrielD42/ben.git` to copy the code from the server onto the machine. When you want to start working, you run `git pull` to pull down all changes anyone else has made. Once you have made some changes if you run `git status` you can see what you have changed. Moving code back up to the server is a multi-step process. The first part is to add files to a staging area. The staging area is the place to put files that you want to upload. This is a useful feature in larger projects but redundant in our case. To do that, run `git add fileName`, or better yet, `git add --all`. The next step is to "commit" the changes. This marks a change on your local machine, but not on the remote server. To do this type `git commit", and a text editor will pop up to allow you to enter a commit message, which describes what you have changed since the last commit. The last step is to push the changes to the server by typing `git push`.
-
-At some point during this process you may try to make changes only to find that someone else has changed the exact same part of the same file. In that case, git will give you a list of files where there are conflicts. You can view that list again by typing `git status`. Open those files and look for weird looking symbols such as "<<<<<<< HEAD (code) ======= (conflicting code) >>>>>>> something". In this case you must choose which is better, (code) or (conflicting code), delete everything else then run those command again.
-
-To learn more about git read [this](http://git-scm.com/book).
-
-Luckily for you, the deployment script does all this and more...
+We are using Git and Github to manage this project. Git is a command line versioning tool to keep track of changes, and Github is a hosted server to store these files on. For the most part, the deploy script should take care of the messy details, but I suggest going through [this](https://try.github.io/levels/1/challenges/1) introduction to git.
+To learn more about git read [this](http://git-scm.com/book). The only thing it is mandatory to to know to use this project is how to resolve conflicts. So after going through the basic [tutorial](https://try.github.io/levels/1/challenges/1), read at least [this](http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging) page.
 
 ##Deploying
 The deployment script (deploy.sh) takes two options:
@@ -79,42 +79,7 @@ The script does the following (in order)
 * if specified, ssh's into a Raspberry Pi, and commands it to pull down new changes from Github using the pullChanges.sh script, then compiles the new code using the Makefile (see the next section for more on that)
 
 ##Linking and Compiling Code
-I have chosen to use Makefiles to compile code. A Makefile describes how an executable depends on different files, and how each of those files in turn how made. One executable file is made from a number of object files being combined. Each object file in turn is made of one .cpp file and any other files it includes (the accompanying .h file at a minimum).
-
-Here is the current Makefile, with comments. As long as you understand enough to make changes when adding or removing files, its fine. `#` start comments
-```
-#declaring variables here. notice lists are space separated
-#objects stores a list of all compiled files (all the .cpp's should be here with a .o extension)
-objects = base.o main.o ping.o utils.o square.o
-#templates stores a list of all header files containing template classes (they can't be compiled)
-templates = node.h list.h
-
-#this line says that the executable file "ping" depends on all the files listed in the objects and templates variables
-ping: $(objects) $(templates)
-	#this line states that to create the "ping" executable, you must run this command (these lines must be indented)
-	g++ -o ping $(objects) $(templates) -lwiringPi
-	rm $(objects)
-
-#if it is noticed that ping has changed, the make command will then try to recompile all dependencies
-base.o: base.cpp base.h
-	g++ -c -o base.o base.cpp -lwiringPi
-
-main.o: main.cpp main.h
-	g++ -c -o main.o main.cpp -lwiringPi
-
-ping.o: ping.cpp ping.h
-	g++ -c -o ping.o ping.cpp -lwiringPi
-
-utils.o: utils.cpp utils.h
-	g++ -c -o utils.o utils.cpp -lwiringPi
-
-square.o: square.cpp square.h
-	g++ -c -o square.o square.cpp
-```
-
-the g++ command is the c++ compiler on linux. the `-c` option means only compile, don't link. The `-o` file says: output to the filename after this option. all files listed after that are used to compile. the `-lwiringPi` tells the compiler to use the special hardware library for the raspberry pi.
-
-To use a Makefile simply type `make`.
+I have chosen to use Makefiles to compile code. A Makefile describes how an executable depends on different files, and how each of those files in turn how made. One executable file is made from a number of object files being combined. Each object file in turn is made of one .cpp file and any other files it includes (the accompanying .h file at a minimum). You will need to modify the Makefile whenever you add or remove files. You should be able to do that simply by copying and pasting what is already there. To learn more about how they work read through the [manual](https://www.gnu.org/software/make/manual/html_node/index.html).
 
 ##What You Need to Contribute to this Project
 Besides the obvious (computer, intelligence), you need:
