@@ -25,14 +25,10 @@ class Node {
 		 * @return wether or not this was sucessful
 		 */
 		bool setNext(Node<T>* object) {
-			cout << "in Node<T>*::setNext()" << endl;
-			cout << "\tsetting next pointer to " << object << endl;
 			if(next == 0 && object != 0) {
 				next = object;
-				cout << "\tsuccess" << endl;
 				return true;
 				}
-			cout << "\tfailure" << endl;
 			return false;
 			}
 		/**
@@ -40,8 +36,6 @@ class Node {
 		 * @return the address of the next node
 		 */
 		Node<T>* getNext() {
-			cout << "in Node<T>*::getNext()" << endl;
-			cout << "\treturning the next pointer, which is " << next << endl;
 			return next;
 			}
 		/**
