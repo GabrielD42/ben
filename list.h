@@ -50,13 +50,13 @@ List<T>::List() {
 template <class T>
 void List<T>::add(Node<T>* object) {
 	cout << "in List<T>::add()" << endl;
-	cout << "adding " << object << endl;
+	cout << "\tgoing to add " << object << " to list" << endl;
 	if(length() == 0) {
-		cout << "length() == 0" << endl;
+		cout << "\tthis will be the first element" << endl;
 		first = object;
 		}
 	else {
-		cout << "length() != 0" << endl;
+		cout << "\tthere is already at least one node in the list. going to get the last node and setnext on it to " << object << endl;
 		get(length() - 1)->setNext(object);
 		}
 	size++;
@@ -70,11 +70,14 @@ template <class T>
 Node<T>* List<T>::get(int position) {
 	cout << "in List<T>::get()" << endl;
 	if(position < length() && position >= 0) {
+		cout << "\tvalid node wanted" << endl;
 		Node<T>* returnValue = first;
+		cout << "\tstarting at " << returnValue << endl;
 		for(int i = 0; i < position; i++) {
 			returnValue = returnValue->getNext();
+			cout << "\tadvancing to " << returnValue << endl;
 			}
-		cout << "returning " << returnValue << endl;
+		cout << "\treturning " << returnValue << endl;
 		return returnValue;
 		}
 	return 0;

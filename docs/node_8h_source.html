@@ -102,36 +102,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            }</div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">   27</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">setNext</a>(<a class="code" href="classNode.html">Node&lt;T&gt;</a>* <span class="keywordtype">object</span>) {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;in Node&lt;T&gt;*::setNext()&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;setting next to &quot;</span> &lt;&lt; <span class="keywordtype">object</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;\tsetting next pointer to &quot;</span> &lt;&lt; <span class="keywordtype">object</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span>(next != 0 &amp;&amp; <span class="keywordtype">object</span> != 0) {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                next = object;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classNode.html#afd985b504e37f4f8d7342f58e6035238">   40</a></span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* <a class="code" href="classNode.html#afd985b504e37f4f8d7342f58e6035238">getNext</a>() {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;in Node&lt;T&gt;*::getNext()&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;returning &quot;</span> &lt;&lt; next &lt;&lt; endl;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">return</span> next;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            }</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classNode.html#a37b3e2a48bce02418894a4e6e3ae2862">   49</a></span>&#160;        T* <a class="code" href="classNode.html#a37b3e2a48bce02418894a4e6e3ae2862">getData</a>() {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">return</span> data;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* next;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        T* data;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    };</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;\tsuccess&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;\tfailure&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            }</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classNode.html#afd985b504e37f4f8d7342f58e6035238">   42</a></span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* <a class="code" href="classNode.html#afd985b504e37f4f8d7342f58e6035238">getNext</a>() {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;in Node&lt;T&gt;*::getNext()&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;\treturning the next pointer, which is &quot;</span> &lt;&lt; next &lt;&lt; endl;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">return</span> next;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classNode.html#a37b3e2a48bce02418894a4e6e3ae2862">   51</a></span>&#160;        T* <a class="code" href="classNode.html#a37b3e2a48bce02418894a4e6e3ae2862">getData</a>() {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* next;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        T* data;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    };</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classNode_html_a49ef267753265f8ce3e08a0591e7ebf4"><div class="ttname"><a href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">Node::setNext</a></div><div class="ttdeci">bool setNext(Node&lt; T &gt; *object)</div><div class="ttdef"><b>Definition:</b> node.h:27</div></div>
 <div class="ttc" id="classNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdef"><b>Definition:</b> node.h:12</div></div>
-<div class="ttc" id="classNode_html_a37b3e2a48bce02418894a4e6e3ae2862"><div class="ttname"><a href="classNode.html#a37b3e2a48bce02418894a4e6e3ae2862">Node::getData</a></div><div class="ttdeci">T * getData()</div><div class="ttdef"><b>Definition:</b> node.h:49</div></div>
-<div class="ttc" id="classNode_html_afd985b504e37f4f8d7342f58e6035238"><div class="ttname"><a href="classNode.html#afd985b504e37f4f8d7342f58e6035238">Node::getNext</a></div><div class="ttdeci">Node&lt; T &gt; * getNext()</div><div class="ttdef"><b>Definition:</b> node.h:40</div></div>
+<div class="ttc" id="classNode_html_a37b3e2a48bce02418894a4e6e3ae2862"><div class="ttname"><a href="classNode.html#a37b3e2a48bce02418894a4e6e3ae2862">Node::getData</a></div><div class="ttdeci">T * getData()</div><div class="ttdef"><b>Definition:</b> node.h:51</div></div>
+<div class="ttc" id="classNode_html_afd985b504e37f4f8d7342f58e6035238"><div class="ttname"><a href="classNode.html#afd985b504e37f4f8d7342f58e6035238">Node::getNext</a></div><div class="ttdeci">Node&lt; T &gt; * getNext()</div><div class="ttdef"><b>Definition:</b> node.h:42</div></div>
 <div class="ttc" id="classNode_html_a355fd2fee454c54c84d7a1e99d072ba0"><div class="ttname"><a href="classNode.html#a355fd2fee454c54c84d7a1e99d072ba0">Node::Node</a></div><div class="ttdeci">Node(T *tempData)</div><div class="ttdef"><b>Definition:</b> node.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 30 2014 14:21:00 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 30 2014 14:36:21 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -17,7 +17,6 @@ Ping sensor(24, 25);
  * called at beginning of execution to initilize everything properly
  */
 void setup() {
-	cout << "in setup()" << endl;
 	sensor.init();
 	}
 
@@ -25,11 +24,9 @@ void setup() {
  * called at program end (or interrupt) to clean up any classes that need cleaning up and save any data that need saving
  */
 void loop() {
-	cout << "in loop()" << endl;
 	int reading = sensor.getInches();
 	bool found = false;
 	if(reading == 5) {
-		cout << "reading == 5" << endl;
 		found = true;
 		}
 	square.scanned(found, &from);
