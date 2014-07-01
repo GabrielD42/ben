@@ -1,5 +1,5 @@
 objects = base.o main.o ping.o utils.o square.o
-templates = node.h list.h
+templates = node.h list.h orderedList.h uniqueList.h
 
 ping: $(objects) $(templates)
 	g++ -o ping $(objects) $(templates) -lwiringPi

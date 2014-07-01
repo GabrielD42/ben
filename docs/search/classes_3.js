@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['square',['Square',['../classSquare.html',1,'']]]
+  ['ping',['Ping',['../classPing.html',1,'']]]
 ];

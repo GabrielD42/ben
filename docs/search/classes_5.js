@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['square',['Square',['../classSquare.html',1,'']]]
+  ['uniquelist',['UniqueList',['../classUniqueList.html',1,'']]]
 ];

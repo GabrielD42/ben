@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>BEN the Robot: Main Page</title>
+<title>BEN the Robot: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,10 +37,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -60,7 +60,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -75,86 +82,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">BEN the Robot Documentation</div>  </div>
+<div class="title">OrderedList&lt; T &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This repository contains code that will (hopefully) one day become a robot. BEN stands for **B**right **E**nough to **N**avigate. BEN has a multi-step goal:</p>
-<ol type="1">
-<li>Navigate to a sector in his world. At this point he does not know where any obstacles are</li>
-<li>Search the sector for a small object, identified by comparing it to pictures it has taken</li>
-<li>Pick up the object and return to his starting position on the shortest path</li>
-</ol>
-<h2>ping sensor</h2>
-<p>scans continuously as long as robot is not moving</p>
-<ul>
-<li>stores trigger pin number</li>
-<li>stores echo pin number</li>
-<li>gives distance</li>
-</ul>
-<h2>grid</h2>
-<p>2d linked-list of squares</p>
-<ul>
-<li>controls access (mutex)</li>
-<li>adds rows and columns</li>
-</ul>
-<p>when written to by sensor processing thread, passes copy to a*/search thread</p>
-<h2>square</h2>
-<ul>
-<li>number of times scanned</li>
-<li>number of times object found here</li>
-<li>linked list of coordinates that this square has been scanned from</li>
-<li>x coordinate</li>
-<li>y coordinate</li>
-</ul>
-<h2>mysql</h2>
-<h3>maps database</h3>
-<p>stores maps from each run for analyzing. each table is one map, with each field being the probability (a number from 0-1) of there being an object there.</p>
-<h2>global variables</h2>
-<p>stores information about the current run that needs to be dealt with in <code><a class="el" href="base_8h.html#a4b66d5e31b5dc18b314c8a68163263bd">cleanup()</a></code>. </p>
-<h4>ping readings</h4>
-<table class="doxtable">
-<tr>
-<th>time </th><th>distance </th><th>sensor number  </th></tr>
-<tr>
-<td>time (primary key) </td><td>float (in cm) </td><td>int (0-7) </td></tr>
-</table>
-<h4>robot locations</h4>
-<table class="doxtable">
-<tr>
-<th>time </th><th>x </th><th>y  </th></tr>
-<tr>
-<td>time (primary key) </td><td>int (of center) </td><td>int (of center) </td></tr>
-</table>
-<h4>best route</h4>
-<p>breakpoint pointer</p>
-<table class="doxtable">
-<tr>
-<th>order </th><th>x </th><th>y </th><th>executed  </th></tr>
-<tr>
-<td>int (primary key) </td><td>int (of center) </td><td>int (of center) </td><td>boolean </td></tr>
-</table>
-<h2>threads</h2>
-<p>in order of priority</p>
-<ul>
-<li>1 thread for bump sensors</li>
-<li>1 main thread</li>
-<li>1 thread for movement</li>
-<li>1 control thread sensors</li>
-<li>4 threads for ping sensors<ul>
-<li>they will alternate between sensors</li>
-</ul>
-</li>
-<li>1 thread for processing sensor data</li>
-<li>1 thread for finding best path</li>
-<li>1 thread for machine learning</li>
-</ul>
-<h2>movement</h2>
-<p>8 directions pulls of next instruction from best route table and moves there. if empty, runs a turn-scan-turn-scan subroutine Sends signals to sensor threads when turning (control sensor threads) to pause</p>
-<h2>A*/search thread</h2>
-<p>a*/search bool a* function input: grid output: best route table sets breakpoint search use a* to go to closest unexplored space </p>
-</div></div><!-- contents -->
+
+<p>This is the complete list of members for <a class="el" href="classOrderedList.html">OrderedList&lt; T &gt;</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="classOrderedList.html#ab42cfae84f817724c68b9fa9f65b0995">add</a>(Node&lt; T &gt; *object)</td><td class="entry"><a class="el" href="classOrderedList.html">OrderedList&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classList.html#aba29cc654260eef85da56faaf8100815">get</a>(int position)</td><td class="entry"><a class="el" href="classList.html">List&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classOrderedList.html#a28e8f4909ff79882677b41e1c1782f43">insert</a>(int position, Node&lt; T &gt; *object)</td><td class="entry"><a class="el" href="classOrderedList.html">OrderedList&lt; T &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classList.html#a9890243fd2d78175e4600a5364f8185f">length</a>()</td><td class="entry"><a class="el" href="classList.html">List&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classList.html#a5c5e27671b21b3815d4e25b953c69454">List</a>()</td><td class="entry"><a class="el" href="classList.html">List&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classList.html#a2b58189090f6e5ce52939c9195e59e85">~List</a>()</td><td class="entry"><a class="el" href="classList.html">List&lt; T &gt;</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Mon Jun 30 2014 21:49:56 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
