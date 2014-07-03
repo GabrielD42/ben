@@ -96,11 +96,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classUniqueList.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classUniqueList.html">UniqueList</a> : <span class="keyword">public</span> <a class="code" href="classOrderedList.html">OrderedList</a> {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classUniqueList.html#a2d54a8610ec359b7dd0510d044f27a2e">add</a>(<a class="code" href="classNode.html">Node&lt;T&gt;</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classUniqueList.html#a2d54a8610ec359b7dd0510d044f27a2e">add</a>(Node&lt;T&gt;* <span class="keywordtype">object</span>);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    };</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classOrderedList.html#ab42cfae84f817724c68b9fa9f65b0995">OrderedList&lt;T&gt;::add</a>(<a class="code" href="classNode.html">Node&lt;T&gt;</a>* <span class="keywordtype">object</span>) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classOrderedList.html#ab42cfae84f817724c68b9fa9f65b0995">OrderedList&lt;T&gt;::add</a>(Node&lt;T&gt;* <span class="keywordtype">object</span>) {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; length(); i++) {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span>(&amp;<span class="keywordtype">object</span>.data == &amp;<span class="keyword">get</span>(i).data) {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -110,7 +110,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdef"><b>Definition:</b> node.h:8</div></div>
 <div class="ttc" id="classOrderedList_html"><div class="ttname"><a href="classOrderedList.html">OrderedList</a></div><div class="ttdef"><b>Definition:</b> orderedList.h:13</div></div>
 <div class="ttc" id="classOrderedList_html_ab42cfae84f817724c68b9fa9f65b0995"><div class="ttname"><a href="classOrderedList.html#ab42cfae84f817724c68b9fa9f65b0995">OrderedList::add</a></div><div class="ttdeci">void add(Node&lt; T &gt; *object)</div><div class="ttdef"><b>Definition:</b> orderedList.h:34</div></div>
 <div class="ttc" id="classUniqueList_html_a2d54a8610ec359b7dd0510d044f27a2e"><div class="ttname"><a href="classUniqueList.html#a2d54a8610ec359b7dd0510d044f27a2e">UniqueList::add</a></div><div class="ttdeci">bool add(Node&lt; T &gt; *object)</div></div>
@@ -118,7 +117,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 30 2014 21:49:56 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 3 2014 12:19:29 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

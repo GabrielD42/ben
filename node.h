@@ -5,7 +5,7 @@
  * Node class for linked list. should not be implemented.
  */
 template <class T>
-class Node {
+class No+de {
 	public:
 		/**
 		 * initializes the variables

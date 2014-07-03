@@ -1,7 +1,7 @@
 #ifndef SQUARE_H
 #define SQUARE_H
 
-#include "list.h"
+#include "uniqueList.h"
 #include "node.h"
 class Grid;
 
@@ -29,7 +29,7 @@ class Square {
 		 * returns the probability of there being an object here
 		 * @return the probability as a decimal from 0 to 1
 		 */
-		float probability();
+		double probability();
 		const int x, y;
 		/**
 		 * checks to see if two Squares are equal by comparing their x and y coordinates. a shallow comparison should be good enough since there should only ever be one of every Square, and that in the Grid. everything else should be pointers
@@ -75,7 +75,7 @@ class Square {
 		bool operator<=(const Square& other);
 	private:
 		int numTimesScanned, numTimesFound;
-		List<Square> scannedFrom;
+		UniqueList<Square> scannedFrom;
 		Square* adjacent[4];
 	};
 

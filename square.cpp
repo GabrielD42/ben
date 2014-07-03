@@ -1,5 +1,6 @@
 #include "square.h"
-#include "list.h"
+#include "uniqueList.h"
+#include <math.h>
 
 Square::Square(int tempX, int tempY) : x(tempX), y(tempY), scannedFrom(scannedFrom) {
 	for(int i = 0; i < 4; i++) {
@@ -17,8 +18,12 @@ void Square::scanned(bool found, Square* position) {
 		}
 	}
 
-float Square::probability() {
-	return float(numTimesFound) / numTimesScanned;
+double Square::probability() {
+	double totalSquaresScanned = 0; // the total number of squares scanned from each time this square was scanned
+	for(int i = 0; i < scannedFrom.length(); i++) {
+		totalSquaresScanned += sqrt((x - scannedFrom.get(i).data->x)^2 + (y - scannedFrom.get(i).data->y)^2)/3; // the distance formula over 3
+		}
+	return double(numTimesFound) / totalSquaresScanned;
 	}
 
 bool Square::operator==(const Square& other) {
