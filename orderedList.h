@@ -38,7 +38,7 @@ void OrderedList<T>::add(Node<T>* object) {
 			return;
 			}
 		}
-	this.insert(length(), object);
+	this.insert(List<T>::length(), object);
 	}
 template <class T>
 bool OrderedList<T>::insert(int position, Node<T>* object) {

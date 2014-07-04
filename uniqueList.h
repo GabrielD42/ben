@@ -22,7 +22,7 @@ class UniqueList : public OrderedList<T> {
 	};
 
 template <class T>
-void OrderedList<T>::add(Node<T>* object) {
+void UniqueList<T>::add(Node<T>* object) {
 	for(int i = 0; i < length(); i++) {
 		if(&object.data == &get(i).data) {
 			return;
