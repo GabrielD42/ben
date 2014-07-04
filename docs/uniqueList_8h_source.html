@@ -101,24 +101,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classUniqueList.html#a20eba433942268ba3f0bea9791a29342">   25</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classUniqueList.html#a20eba433942268ba3f0bea9791a29342">UniqueList&lt;T&gt;::add</a>(<a class="code" href="classNode.html">Node&lt;T&gt;</a>* <span class="keywordtype">object</span>) {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; length(); i++) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span>(&amp;<span class="keywordtype">object</span>.data == &amp;<span class="keyword">get</span>(i).data) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; List&lt;T&gt;::length(); i++) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span>(object-&gt;<a class="code" href="classNode.html#a130e6bec4c78a3885b7da48e16ec2764">getData</a>() == <a class="code" href="classList.html#aba29cc654260eef85da56faaf8100815">List&lt;T&gt;::get</a>(i)-&gt;getData()) {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            }</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classOrderedList.html#a699ff9a824255acca58828551a9d40dd">OrderedList::add</a>(<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classOrderedList.html#a699ff9a824255acca58828551a9d40dd">OrderedList&lt;T&gt;::add</a>(<span class="keywordtype">object</span>);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classList_html_aba29cc654260eef85da56faaf8100815"><div class="ttname"><a href="classList.html#aba29cc654260eef85da56faaf8100815">List::get</a></div><div class="ttdeci">Node&lt; T &gt; * get(int position)</div><div class="ttdef"><b>Definition:</b> list.h:67</div></div>
 <div class="ttc" id="classNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdef"><b>Definition:</b> node.h:8</div></div>
 <div class="ttc" id="classOrderedList_html"><div class="ttname"><a href="classOrderedList.html">OrderedList</a></div><div class="ttdef"><b>Definition:</b> orderedList.h:13</div></div>
 <div class="ttc" id="classUniqueList_html_a20eba433942268ba3f0bea9791a29342"><div class="ttname"><a href="classUniqueList.html#a20eba433942268ba3f0bea9791a29342">UniqueList::add</a></div><div class="ttdeci">void add(Node&lt; T &gt; *object)</div><div class="ttdef"><b>Definition:</b> uniqueList.h:25</div></div>
 <div class="ttc" id="classOrderedList_html_a699ff9a824255acca58828551a9d40dd"><div class="ttname"><a href="classOrderedList.html#a699ff9a824255acca58828551a9d40dd">OrderedList::add</a></div><div class="ttdeci">void add(Node&lt; T &gt; *object)</div><div class="ttdef"><b>Definition:</b> orderedList.h:34</div></div>
+<div class="ttc" id="classNode_html_a130e6bec4c78a3885b7da48e16ec2764"><div class="ttname"><a href="classNode.html#a130e6bec4c78a3885b7da48e16ec2764">Node::getData</a></div><div class="ttdeci">T * getData()</div><div class="ttdef"><b>Definition:</b> node.h:54</div></div>
 <div class="ttc" id="classUniqueList_html"><div class="ttname"><a href="classUniqueList.html">UniqueList</a></div><div class="ttdef"><b>Definition:</b> uniqueList.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 3 2014 18:48:11 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 3 2014 18:49:12 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
