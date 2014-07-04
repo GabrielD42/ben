@@ -38,21 +38,21 @@ void OrderedList<T>::add(Node<T>* object) {
 			return;
 			}
 		}
-	this.insert(List<T>::length(), object);
+	insert(List<T>::length(), object);
 	}
 template <class T>
 bool OrderedList<T>::insert(int position, Node<T>* object) {
 	if(List<T>::length() != 0 && position < List<T>::length() && position >= 0) {
 		Node<T>* previous = List<T>::get(position);
 		Node<T>* next = List<T>::get(position + 1);
-		previous.setNext(object);
+		previous->setNext(object);
 		if(next) {
-			object.setNext(next);
+			object->setNext(next);
 			}
 		return true;
 		}
 	else {
-		return add(object);
+		return List<T>::add(object);
 		}
 	}
 
