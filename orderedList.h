@@ -32,19 +32,19 @@ class OrderedList : public List<T> {
 
 template <class T>
 void OrderedList<T>::add(Node<T>* object) {
-	for(int i = 0; i < length(); i++) {
-		if(&object.data <= &get(i).data) {
+	for(int i = 0; i < List<T>::length(); i++) {
+		if(object->getData() <= List<T>::get(i)->getData) {
 			insert(i, object);
 			return;
 			}
 		}
-	insert(length(), object);
+	this.insert(length(), object);
 	}
 template <class T>
 bool OrderedList<T>::insert(int position, Node<T>* object) {
-	if(length() != 0 && position < length && position >= 0) {
-		Node<T>* previous = get(position);
-		Node<T>* next = get(position + 1);
+	if(List<T>::length() != 0 && position < List<T>::length() && position >= 0) {
+		Node<T>* previous = List<T>::get(position);
+		Node<T>* next = List<T>::get(position + 1);
 		previous.setNext(object);
 		if(next) {
 			object.setNext(next);
