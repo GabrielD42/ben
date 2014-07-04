@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['uniquelist',['UniqueList',['../classUniqueList.html',1,'']]],
-  ['uniquelist_3c_20square_20_3e',['UniqueList&lt; Square &gt;',['../classUniqueList.html',1,'']]],
-  ['utils',['utils',['../namespaceutils.html',1,'']]]
+  ['_7elist',['~List',['../classList.html#a2b58189090f6e5ce52939c9195e59e85',1,'List']]]
 ];
