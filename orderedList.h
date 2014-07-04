@@ -24,10 +24,8 @@ class OrderedList : public List<T> {
 		 *
 		 * @param position where to insert the new Node
 		 * @param object the address of the object to be added to the list
-		 *
-		 * @return true if successful, false otherwise
 		 */
-		bool insert(int position, Node<T>* object);
+		void insert(int position, Node<T>* object);
 	};
 
 template <class T>
@@ -41,7 +39,7 @@ void OrderedList<T>::add(Node<T>* object) {
 	insert(List<T>::length(), object);
 	}
 template <class T>
-bool OrderedList<T>::insert(int position, Node<T>* object) {
+void OrderedList<T>::insert(int position, Node<T>* object) {
 	if(List<T>::length() != 0 && position < List<T>::length() && position >= 0) {
 		Node<T>* previous = List<T>::get(position);
 		Node<T>* next = List<T>::get(position + 1);
@@ -49,10 +47,9 @@ bool OrderedList<T>::insert(int position, Node<T>* object) {
 		if(next) {
 			object->setNext(next);
 			}
-		return true;
 		}
 	else {
-		return List<T>::add(object);
+		List<T>::add(object);
 		}
 	}
 
