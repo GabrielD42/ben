@@ -33,10 +33,12 @@ class Node {
 		T* data;
 	};
 
+template <class T>
 Node<T>::Node(T* tempData) {
 	next = 0;
 	data = tempData;
 	}
+template <class T>
 bool Node<T>::setNext(Node<T>* object) {
 	if(next == 0 && object != 0) {
 		next = object;
@@ -44,9 +46,11 @@ bool Node<T>::setNext(Node<T>* object) {
 		}
 	return false;
 	}
+template <class T>
 Node<T>* Node<T>::getNext() {
 	return next;
 	}
+template <class T>
 T* Node<T>::getData() {
 	return data;
 	}

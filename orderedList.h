@@ -10,7 +10,7 @@
  * @tparam T the type of data to be stored in the list
  */
 template <class T>
-class OrderedList : public List {
+class OrderedList : public List<T> {
 	public:
 		/**
 		 * adds the argument to the appropriate position in the list based on its comparison operators. object must be allocated on heap. takes over control of object, ie DO NOT DELETE OBJECT
