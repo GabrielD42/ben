@@ -12,7 +12,7 @@ var indexSectionsWithContent =
   2: "u",
   3: "bm",
   4: "acgilmnops~",
-  5: "cp"
+  5: "c"
 };
 
 var indexSectionNames =

@@ -108,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">   42</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">Node&lt;T&gt;::setNext</a>(<a class="code" href="classNode.html">Node&lt;T&gt;</a>* <span class="keywordtype">object</span>) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span>(next == 0 &amp;&amp; <span class="keywordtype">object</span> != 0) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span>(<span class="keywordtype">object</span> != 0) {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        next = object;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
@@ -132,7 +132,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 3 2014 21:46:32 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 5 2014 11:40:11 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

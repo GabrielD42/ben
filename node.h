@@ -12,7 +12,7 @@ class Node {
 		 */
 		Node(T* tempData);
 		/**
-		 * set what the node after this one is. the operation will fail if object isn't a valid pointer or if `next` is already set
+		 * set what the node after this one is. the operation will fail if object isn't a valid pointer
 		 *
 		 * @param object the node after this one
 		 * @return wether or not this was sucessful
@@ -40,7 +40,7 @@ Node<T>::Node(T* tempData) {
 	}
 template <class T>
 bool Node<T>::setNext(Node<T>* object) {
-	if(next == 0 && object != 0) {
+	if(object != 0) {
 		next = object;
 		return true;
 		}

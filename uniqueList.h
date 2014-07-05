@@ -24,7 +24,7 @@ class UniqueList : public OrderedList<T> {
 template <class T>
 void UniqueList<T>::add(Node<T>* object) {
 	for(int i = 0; i < List<T>::length(); i++) {
-		if(object->getData() == List<T>::get(i)->getData()) {
+		if(*(object->getData()) == *(List<T>::get(i)->getData())) {
 			return;
 			}
 		}

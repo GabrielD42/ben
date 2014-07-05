@@ -39,7 +39,7 @@ class List {
 		 * delete all elements in list
 		 */
 		~List();
-	private:
+	protected:
 		Node<T>* first;
 		int size;
 	};
