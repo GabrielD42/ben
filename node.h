@@ -8,7 +8,7 @@ template <class T>
 class Node {
 	public:
 		/**
-		 * initializes the variables
+		 * initializes the variables. will take over control of tempData, so it must be allocated dynamically
 		 */
 		Node(T* tempData);
 		/**
@@ -28,6 +28,7 @@ class Node {
 		 * @return address of data
 		 */
 		T* getData();
+		~Node();
 	private:
 		Node<T>* next;
 		T* data;
@@ -53,6 +54,10 @@ Node<T>* Node<T>::getNext() {
 template <class T>
 T* Node<T>::getData() {
 	return data;
+	}
+template <class T>
+Node<T>::~Node() {
+	delete data;
 	}
 
 #endif

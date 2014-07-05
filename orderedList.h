@@ -13,11 +13,11 @@ template <class T>
 class OrderedList : public List<T> {
 	public:
 		/**
-		 * adds the argument to the appropriate position in the list based on its comparison operators. object must be allocated on heap. takes over control of object, ie DO NOT DELETE OBJECT
+		 * adds the argument to the appropriate position in the list based on its comparison operators
 		 *
-		 * @param object the address of the object to be added to the list
+		 * @param the piece of data to be added to the list
 		 */
-		void add(Node<T>* object);
+		void add(T data);
 	protected:
 		/**
 		 * inserts the argument into list at position specified
@@ -29,10 +29,12 @@ class OrderedList : public List<T> {
 	};
 
 template <class T>
-void OrderedList<T>::add(Node<T>* object) {
+void OrderedList<T>::add(T data) {
+	T newData = new T(data);
+	Node newNode = new Node(&newData);
 	for(int i = 0; i < List<T>::length(); i++) {
-		if(*(object->getData()) <= *(List<T>::get(i)->getData())) {
-			insert(i, object);
+		if(*(newNode->getData()) <= *(List<T>::get(i)->getData())) {
+			insert(i, newNode);
 			return;
 			}
 		}

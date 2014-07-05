@@ -14,21 +14,23 @@ template <class T>
 class UniqueList : public OrderedList<T> {
 	public:
 		/**
-		 * adds the argument to the appropriate position in the list based on its comparison operators, as long as it is not already in the list. object must be allocated on heap. takes over control of object, ie DO NOT DELETE OBJECT
+		 * adds the argument to the appropriate position in the list based on its comparison operators, as long as it is not already in the list
 		 *
-		 * @param object the address of the object to be added to the list
+		 * @param the piece of data to be added to the list
 		 */
-		void add(Node<T>* object);
+		void add(T data);
 	};
 
 template <class T>
-void UniqueList<T>::add(Node<T>* object) {
+void UniqueList<T>::add(T data) {
 	for(int i = 0; i < List<T>::length(); i++) {
-		if(*(object->getData()) == *(List<T>::get(i)->getData())) {
+		if(data == *(List<T>::get(i)->getData())) {
 			return;
 			}
 		}
-	OrderedList<T>::add(object);
+	T newData = new T(data);
+	Node newNode = new Node(&newData);
+	OrderedList<T>::add(&newNode);
 	}
 
 #endif

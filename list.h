@@ -16,11 +16,11 @@ class List {
 		 */
 		List();
 		/**
-		 * adds the argument to the end of the list. object must be allocated on heap. takes over control of object, ie DO NOT DELETE OBJECT
+		 * adds the argument to the end of the list
 		 *
-		 * @param object the address of the object to be added to the list
+		 * @param the piece of data to be added to the list
 		 */
-		void add(Node<T>* object);
+		void add(T data);
 		/**
 		 * the current length of the list
 		 *
@@ -28,18 +28,26 @@ class List {
 		 */
 		int length();
 		/**
-		 * accessor function to get the nth member of the list
+		 * accessor function to get the nth piece of data in the list
 		 *
 		 * @param position the 0-indexed position of the wanted object
 		 *
-		 * @return pointer to object, or 0 if position to large or small
+		 * @return pointer to the data at position specified, or 0 if position to large or small
 		 */
-		Node<T>* get(int position);
+		T* get(int position);
 		/**
 		 * delete all elements in list
 		 */
 		~List();
 	protected:
+		/**
+		 * accessor function to get the nth node of the list
+		 *
+		 * @param position the 0-indexed position of the wanted object
+		 *
+		 * @return pointer to the node at position specified, or 0 if position to large or small
+		 */
+		Node<T>* getNode(int position);
 		Node<T>* first;
 		int size;
 	};
@@ -50,12 +58,14 @@ List<T>::List() {
 	first = 0;
 	}
 template <class T>
-void List<T>::add(Node<T>* object) {
+void List<T>::add(T data) {
+	T newData = new T(data);
+	Node newNode = new Node(&newData);
 	if(length() == 0) {
-		first = object;
+		first = newNode;
 		}
 	else {
-		get(length() - 1)->setNext(object);
+		get(length() - 1)->setNext(newNode);
 		}
 	size++;
 	}
@@ -64,7 +74,11 @@ int List<T>::length() {
 	return size;
 	}
 template <class T>
-Node<T>* List<T>::get(int position) {
+T* get(int position) {
+	return getNode(position)->getData();
+	}
+template <class T>
+Node<T>* List<T>::getNode(int position) {
 	if(position < length() && position >= 0) {
 		Node<T>* returnValue = first;
 		for(int i = 0; i < position; i++) {

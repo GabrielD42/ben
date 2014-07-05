@@ -86,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classList-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -109,14 +110,19 @@ Inheritance diagram for List&lt; T &gt;:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5c5e27671b21b3815d4e25b953c69454"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a5c5e27671b21b3815d4e25b953c69454">List</a> ()</td></tr>
 <tr class="separator:a5c5e27671b21b3815d4e25b953c69454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a684f0232be56de4be749fd01b264721d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a684f0232be56de4be749fd01b264721d">add</a> (<a class="el" href="classNode.html">Node</a>&lt; T &gt; *object)</td></tr>
-<tr class="separator:a684f0232be56de4be749fd01b264721d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31df33a73f2aac1139719c530e677035"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a31df33a73f2aac1139719c530e677035">add</a> (T data)</td></tr>
+<tr class="separator:a31df33a73f2aac1139719c530e677035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9890243fd2d78175e4600a5364f8185f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a9890243fd2d78175e4600a5364f8185f">length</a> ()</td></tr>
 <tr class="separator:a9890243fd2d78175e4600a5364f8185f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba29cc654260eef85da56faaf8100815"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNode.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#aba29cc654260eef85da56faaf8100815">get</a> (int position)</td></tr>
-<tr class="separator:aba29cc654260eef85da56faaf8100815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d87ea01dde67a668788f7a1d22dc4e"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a15d87ea01dde67a668788f7a1d22dc4e">get</a> (int position)</td></tr>
+<tr class="separator:a15d87ea01dde67a668788f7a1d22dc4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b58189090f6e5ce52939c9195e59e85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a2b58189090f6e5ce52939c9195e59e85">~List</a> ()</td></tr>
 <tr class="separator:a2b58189090f6e5ce52939c9195e59e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a9ec867e0a0799da7b55b0047e52b2bd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNode.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a9ec867e0a0799da7b55b0047e52b2bd9">getNode</a> (int position)</td></tr>
+<tr class="separator:a9ec867e0a0799da7b55b0047e52b2bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -131,7 +137,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>
 class List&lt; T &gt;</h3>
 
-<p>The list class is a generic, extremely lightweight linked list. it should be used by overriding the node class and adding child objects using the <a class="el" href="classList.html#a684f0232be56de4be749fd01b264721d">add()</a> method</p>
+<p>The list class is a generic, extremely lightweight linked list. it should be used by overriding the node class and adding child objects using the <a class="el" href="classList.html#a31df33a73f2aac1139719c530e677035">add()</a> method</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>the type of data to be stored in the list </td></tr>
@@ -176,7 +182,7 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a684f0232be56de4be749fd01b264721d"></a>
+<a class="anchor" id="a31df33a73f2aac1139719c530e677035"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -185,30 +191,30 @@ template&lt;class T&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classList.html">List</a>&lt; T &gt;::add </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classNode.html">Node</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>adds the argument to the end of the list. object must be allocated on heap. takes over control of object, ie DO NOT DELETE OBJECT</p>
+<p>adds the argument to the end of the list</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">object</td><td>the address of the object to be added to the list </td></tr>
+    <tr><td class="paramname">the</td><td>piece of data to be added to the list </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="aba29cc654260eef85da56faaf8100815"></a>
+<a class="anchor" id="a15d87ea01dde67a668788f7a1d22dc4e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classNode.html">Node</a>&lt; T &gt; * <a class="el" href="classList.html">List</a>&lt; T &gt;::get </td>
+          <td class="memname">T* <a class="el" href="classList.html">List</a>&lt; T &gt;::get </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>position</em></td><td>)</td>
@@ -216,14 +222,48 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>accessor function to get the nth member of the list</p>
+<p>accessor function to get the nth piece of data in the list</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">position</td><td>the 0-indexed position of the wanted object</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>pointer to object, or 0 if position to large or small </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to the data at position specified, or 0 if position to large or small </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9ec867e0a0799da7b55b0047e52b2bd9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classNode.html">Node</a>&lt; T &gt; * <a class="el" href="classList.html">List</a>&lt; T &gt;::getNode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>accessor function to get the nth node of the list</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>the 0-indexed position of the wanted object</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to the node at position specified, or 0 if position to large or small </dd></dl>
 
 </div>
 </div>
@@ -252,7 +292,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jul 5 2014 11:40:11 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 5 2014 13:40:11 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
