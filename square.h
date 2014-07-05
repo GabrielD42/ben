@@ -75,7 +75,7 @@ class Square {
 		bool operator<=(const Square& other);
 	private:
 		int numTimesScanned, numTimesFound;
-		UniqueList<Square> scannedFrom;
+		UniqueList<Square*> scannedFrom;
 		Square* adjacent[4];
 	};
 

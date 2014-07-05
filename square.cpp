@@ -10,8 +10,7 @@ Square::Square(int tempX, int tempY) : x(tempX), y(tempY), scannedFrom(scannedFr
 	}
 
 void Square::scanned(bool found, Square* position) {
-	Node<Square>* newNode = new Node<Square>(position); // allocated on heap
-	scannedFrom.add(newNode); // list takes over control of newNode
+	scannedFrom.add(position);
 	numTimesScanned++;
 	if(found) {
 		numTimesFound++;
@@ -21,7 +20,7 @@ void Square::scanned(bool found, Square* position) {
 double Square::probability() {
 	double totalSquaresScanned = 0; // the total number of squares scanned from each time this square was scanned
 	for(int i = 0; i < scannedFrom.length(); i++) {
-		totalSquaresScanned += sqrt((x - scannedFrom.get(i)->getData()->x)^2 + (y - scannedFrom.get(i)->getData()->y)^2)/3; // the distance formula over 3
+		totalSquaresScanned += sqrt((x - scannedFrom.get(i)->x)^2 + (y - scannedFrom.get(i)->y)^2)/3; // the distance formula over 3
 		}
 	return double(numTimesFound) / totalSquaresScanned;
 	}
