@@ -113,7 +113,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classList.html#a31df33a73f2aac1139719c530e677035">   61</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classList.html#a31df33a73f2aac1139719c530e677035">List&lt;T&gt;::add</a>(T data) {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    T newData = <span class="keyword">new</span> T(data);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classNode.html">Node</a> newNode = <span class="keyword">new</span> <a class="code" href="classNode.html">Node</a>(&amp;newData);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classNode.html">Node&lt;T&gt;</a> newNode = <span class="keyword">new</span> <a class="code" href="classNode.html">Node&lt;T&gt;</a>(&amp;newData);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span>(length() == 0) {</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        first = newNode;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
@@ -128,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;T* <span class="keyword">get</span>(<span class="keywordtype">int</span> position) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> getNode(position)-&gt;getData();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> this-&gt;getNode(position)-&gt;getData();</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classList.html#a9ec867e0a0799da7b55b0047e52b2bd9">   81</a></span>&#160;<a class="code" href="classNode.html">Node&lt;T&gt;</a>* <a class="code" href="classList.html#a9ec867e0a0799da7b55b0047e52b2bd9">List&lt;T&gt;::getNode</a>(<span class="keywordtype">int</span> position) {</div>
@@ -163,7 +163,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jul 5 2014 13:49:27 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 5 2014 13:58:20 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

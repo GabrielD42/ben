@@ -60,7 +60,7 @@ List<T>::List() {
 template <class T>
 void List<T>::add(T data) {
 	T newData = new T(data);
-	Node newNode = new Node(&newData);
+	Node<T> newNode = new Node<T>(&newData);
 	if(length() == 0) {
 		first = newNode;
 		}
@@ -75,7 +75,7 @@ int List<T>::length() {
 	}
 template <class T>
 T* get(int position) {
-	return getNode(position)->getData();
+	return this->getNode(position)->getData();
 	}
 template <class T>
 Node<T>* List<T>::getNode(int position) {

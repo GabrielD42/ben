@@ -29,7 +29,7 @@ void UniqueList<T>::add(T data) {
 			}
 		}
 	T newData = new T(data);
-	Node newNode = new Node(&newData);
+	Node<T> newNode = new Node<T>(&newData);
 	OrderedList<T>::add(&newNode);
 	}
 

@@ -31,7 +31,7 @@ class OrderedList : public List<T> {
 template <class T>
 void OrderedList<T>::add(T data) {
 	T newData = new T(data);
-	Node newNode = new Node(&newData);
+	Node<T> newNode = new Node<T>(&newData);
 	for(int i = 0; i < List<T>::length(); i++) {
 		if(*(newNode->getData()) <= *(List<T>::get(i)->getData())) {
 			insert(i, newNode);
