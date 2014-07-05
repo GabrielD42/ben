@@ -110,13 +110,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    insert(<a class="code" href="classList.html">List&lt;T&gt;::length</a>(), <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    insert(<a class="code" href="classList.html">List&lt;T&gt;::length</a>(), newNode);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classOrderedList.html#a1fb124167a2578765beba74b748a8460">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classOrderedList.html#a1fb124167a2578765beba74b748a8460">OrderedList&lt;T&gt;::insert</a>(<span class="keywordtype">int</span> position, <a class="code" href="classNode.html">Node&lt;T&gt;</a>* <span class="keywordtype">object</span>) {</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classList.html">List&lt;T&gt;::length</a>() != 0 &amp;&amp; position &lt; <a class="code" href="classList.html">List&lt;T&gt;::length</a>() &amp;&amp; position &gt;= 0) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* previous = <a class="code" href="classList.html#a15d87ea01dde67a668788f7a1d22dc4e">List&lt;T&gt;::get</a>(position - 1);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* next = <a class="code" href="classList.html#a15d87ea01dde67a668788f7a1d22dc4e">List&lt;T&gt;::get</a>(position);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* previous = <a class="code" href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List&lt;T&gt;::get</a>(position - 1);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* next = <a class="code" href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List&lt;T&gt;::get</a>(position);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span>(previous) {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            previous-&gt;<a class="code" href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">setNext</a>(<span class="keywordtype">object</span>);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdef"><b>Definition:</b> node.h:8</div></div>
 <div class="ttc" id="classOrderedList_html"><div class="ttname"><a href="classOrderedList.html">OrderedList</a></div><div class="ttdef"><b>Definition:</b> orderedList.h:13</div></div>
 <div class="ttc" id="classList_html_a31df33a73f2aac1139719c530e677035"><div class="ttname"><a href="classList.html#a31df33a73f2aac1139719c530e677035">List::add</a></div><div class="ttdeci">void add(T data)</div><div class="ttdef"><b>Definition:</b> list.h:61</div></div>
-<div class="ttc" id="classList_html_a15d87ea01dde67a668788f7a1d22dc4e"><div class="ttname"><a href="classList.html#a15d87ea01dde67a668788f7a1d22dc4e">List::get</a></div><div class="ttdeci">T * get(int position)</div></div>
+<div class="ttc" id="classList_html_ad0d2fcbb314209fc00e91558ac09693c"><div class="ttname"><a href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List::get</a></div><div class="ttdeci">T * get(int position)</div><div class="ttdef"><b>Definition:</b> list.h:77</div></div>
 <div class="ttc" id="classOrderedList_html_a1fb124167a2578765beba74b748a8460"><div class="ttname"><a href="classOrderedList.html#a1fb124167a2578765beba74b748a8460">OrderedList::insert</a></div><div class="ttdeci">void insert(int position, Node&lt; T &gt; *object)</div><div class="ttdef"><b>Definition:</b> orderedList.h:44</div></div>
 <div class="ttc" id="classNode_html_a130e6bec4c78a3885b7da48e16ec2764"><div class="ttname"><a href="classNode.html#a130e6bec4c78a3885b7da48e16ec2764">Node::getData</a></div><div class="ttdeci">T * getData()</div><div class="ttdef"><b>Definition:</b> node.h:55</div></div>
 <div class="ttc" id="classList_html"><div class="ttname"><a href="classList.html">List</a></div><div class="ttdef"><b>Definition:</b> list.h:12</div></div>
@@ -147,7 +147,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jul 5 2014 13:58:20 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 5 2014 14:00:26 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

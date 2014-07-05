@@ -74,8 +74,8 @@ int List<T>::length() {
 	return size;
 	}
 template <class T>
-T* get(int position) {
-	return this->getNode(position)->getData();
+T* List<T>::get(int position) {
+	return getNode(position)->getData();
 	}
 template <class T>
 Node<T>* List<T>::getNode(int position) {
