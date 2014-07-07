@@ -18,11 +18,7 @@ void Square::scanned(bool found, Square* position) {
 	}
 
 double Square::probability() {
-	double totalSquaresScanned = 0; // the total number of squares scanned from each time this square was scanned
-	for(int i = 0; i < scannedFrom.length(); i++) {
-		totalSquaresScanned += sqrt((x - scannedFrom.get(i)->x)^2 + (y - scannedFrom.get(i)->y)^2)/3; // the distance formula over 3
-		}
-	return double(numTimesFound) / totalSquaresScanned;
+	return 0.0;
 	}
 
 bool Square::operator==(const Square& other) {
