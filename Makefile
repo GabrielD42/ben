@@ -1,8 +1,8 @@
 objects = base.o main.o ping.o utils.o square.o
 templates = node.h list.h orderedList.h uniqueList.h
 
-ping: $(objects) $(templates)
-	g++ -o ping $(objects) $(templates) -lwiringPi
+ben: $(objects) $(templates)
+	g++ -o ben $(objects) $(templates) -lwiringPi
 	rm $(objects)
 
 base.o: base.cpp base.h
