@@ -31,8 +31,8 @@ class OrderedList : public List<T> {
 template <class T>
 void OrderedList<T>::add(T* data) {
 	for(int i = 0; i < List<T>::length(); i++) {
-		if((*T) <= (*(List<T>::get(i)->getData())) {
-			insert(i, fsys);
+		if((*T) <= (*(List<T>::get(i))) {
+			insert(i, data);
 			return;
 			}
 		}

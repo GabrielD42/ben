@@ -103,8 +103,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classOrderedList.html#af88377ec90b27767163d94b1a734e9ca">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classOrderedList.html#af88377ec90b27767163d94b1a734e9ca">OrderedList&lt;T&gt;::add</a>(T* data) {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; List&lt;T&gt;::length(); i++) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span>((*T) &lt;= (*(<a class="code" href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List&lt;T&gt;::get</a>(i)-&gt;getData())) {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            insert(i, fsys);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span>((*T) &lt;= (*(<a class="code" href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List&lt;T&gt;::get</a>(i))) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            insert(i, data);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
@@ -145,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 9 2014 15:04:28 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 9 2014 15:05:35 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
