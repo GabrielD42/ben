@@ -67,7 +67,7 @@ void List<T>::add(T* data) {
 		first = newNode;
 		}
 	else {
-		get(length() - 1)->setNext(newNode);
+		getNode(length() - 1)->setNext(newNode);
 		}
 	size++;
 	}
