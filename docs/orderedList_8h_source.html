@@ -118,10 +118,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classOrderedList.html#a6d9154bfacfb6dd486d966701ae2e1a4">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classOrderedList.html#a6d9154bfacfb6dd486d966701ae2e1a4">OrderedList&lt;T&gt;::insert</a>(<span class="keywordtype">int</span> position, T* data) {</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classList.html">List&lt;T&gt;::length</a>() != 0 &amp;&amp; position &lt; <a class="code" href="classList.html">List&lt;T&gt;::length</a>() &amp;&amp; position &gt;= 0) {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* newNode = <span class="keyword">new</span> <a class="code" href="classNode.html">Node&lt;T&gt;</a>(data, <a class="code" href="classList.html">List&lt;T&gt;::controlData</a>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* previous-&gt;<a class="code" href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">setNext</a>(<a class="code" href="classList.html">List&lt;T&gt;::getNode</a>(position - 1));</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* previous = <a class="code" href="classList.html#a9ec867e0a0799da7b55b0047e52b2bd9">List&lt;T&gt;::getNode</a>(position - 1);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* next = <a class="code" href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List&lt;T&gt;::get</a>(position);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span>(previous) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            previous-&gt;setNext(newNode);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            previous-&gt;<a class="code" href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">setNext</a>(newNode);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="comment">// we must be adding to the beginning of the list, so we need to reassign first</span></div>
@@ -147,10 +147,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classList_html"><div class="ttname"><a href="classList.html">List</a></div><div class="ttdef"><b>Definition:</b> list.h:12</div></div>
 <div class="ttc" id="classList_html_af21667f3dbff1d99e96194f74579813c"><div class="ttname"><a href="classList.html#af21667f3dbff1d99e96194f74579813c">List::add</a></div><div class="ttdeci">void add(T *data)</div><div class="ttdef"><b>Definition:</b> list.h:64</div></div>
 <div class="ttc" id="classOrderedList_html_abb3c93a1f74438acb372c4cf75b29bd8"><div class="ttname"><a href="classOrderedList.html#abb3c93a1f74438acb372c4cf75b29bd8">OrderedList::OrderedList</a></div><div class="ttdeci">OrderedList(bool tempControlData)</div><div class="ttdef"><b>Definition:</b> orderedList.h:38</div></div>
+<div class="ttc" id="classList_html_a9ec867e0a0799da7b55b0047e52b2bd9"><div class="ttname"><a href="classList.html#a9ec867e0a0799da7b55b0047e52b2bd9">List::getNode</a></div><div class="ttdeci">Node&lt; T &gt; * getNode(int position)</div><div class="ttdef"><b>Definition:</b> list.h:83</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 9 2014 15:22:54 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 9 2014 15:23:51 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
