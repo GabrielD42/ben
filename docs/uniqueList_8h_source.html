@@ -106,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classUniqueList.html#abd6ff5eb603b6b0a99c3ef1ab9ff9416">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classUniqueList.html#abd6ff5eb603b6b0a99c3ef1ab9ff9416">UniqueList&lt;T&gt;::add</a>(T* data) {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; List&lt;T&gt;::length(); i++) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span>(data == *(<a class="code" href="classList.html">List&lt;T&gt;::get</a>(i)-&gt;getData())) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span>((*data) == (*(<a class="code" href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List&lt;T&gt;::get</a>(i)))) {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
@@ -116,14 +116,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classOrderedList_html"><div class="ttname"><a href="classOrderedList.html">OrderedList</a></div><div class="ttdef"><b>Definition:</b> orderedList.h:13</div></div>
 <div class="ttc" id="classOrderedList_html_af88377ec90b27767163d94b1a734e9ca"><div class="ttname"><a href="classOrderedList.html#af88377ec90b27767163d94b1a734e9ca">OrderedList::add</a></div><div class="ttdeci">void add(T *data)</div><div class="ttdef"><b>Definition:</b> orderedList.h:41</div></div>
-<div class="ttc" id="classList_html"><div class="ttname"><a href="classList.html">List</a></div><div class="ttdef"><b>Definition:</b> list.h:12</div></div>
+<div class="ttc" id="classList_html_ad0d2fcbb314209fc00e91558ac09693c"><div class="ttname"><a href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List::get</a></div><div class="ttdeci">T * get(int position)</div><div class="ttdef"><b>Definition:</b> list.h:79</div></div>
 <div class="ttc" id="classUniqueList_html_a252198e4f1152df45721e4980af4fbc7"><div class="ttname"><a href="classUniqueList.html#a252198e4f1152df45721e4980af4fbc7">UniqueList::UniqueList</a></div><div class="ttdeci">UniqueList(bool tempControlData)</div><div class="ttdef"><b>Definition:</b> uniqueList.h:31</div></div>
 <div class="ttc" id="classUniqueList_html_abd6ff5eb603b6b0a99c3ef1ab9ff9416"><div class="ttname"><a href="classUniqueList.html#abd6ff5eb603b6b0a99c3ef1ab9ff9416">UniqueList::add</a></div><div class="ttdeci">void add(T *data)</div><div class="ttdef"><b>Definition:</b> uniqueList.h:34</div></div>
 <div class="ttc" id="classUniqueList_html"><div class="ttname"><a href="classUniqueList.html">UniqueList</a></div><div class="ttdef"><b>Definition:</b> uniqueList.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 9 2014 15:17:25 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 9 2014 15:18:29 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

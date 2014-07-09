@@ -33,7 +33,7 @@ UniqueList<T>::UniqueList(bool tempControlData) : OrderedList<T>(tempControlData
 template <class T>
 void UniqueList<T>::add(T* data) {
 	for(int i = 0; i < List<T>::length(); i++) {
-		if(data == *(List<T>::get(i)->getData())) {
+		if((*data) == (*(List<T>::get(i)))) {
 			return;
 			}
 		}
