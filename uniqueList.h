@@ -28,7 +28,7 @@ class UniqueList : public OrderedList<T> {
 	};
 
 template <class T>
-UniqueList<T>::UniqueList(bool tempControlData) : List<T>(tempControlData) {
+UniqueList<T>::UniqueList(bool tempControlData) : OrderedList<T>(tempControlData) {
 	}
 template <class T>
 void UniqueList<T>::add(T* data) {
