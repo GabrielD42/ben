@@ -35,7 +35,7 @@ class OrderedList : public List<T> {
 	};
 
 template <class T>
-OrderedList<T>::OrderedList(bool tempControlData) : List(tempControlData) {
+OrderedList<T>::OrderedList(bool tempControlData) : List<T>(tempControlData) {
 	}
 template <class T>
 void OrderedList<T>::add(T* data) {
