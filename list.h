@@ -62,7 +62,7 @@ List<T>::List(bool tempControlData) : controlData(tempControlData) {
 	}
 template <class T>
 void List<T>::add(T* data) {
-	Node<T> newNode = new Node<T>(data, controlData);
+	Node<T>* newNode = new Node<T>(data, controlData);
 	if(length() == 0) {
 		first = newNode;
 		}
