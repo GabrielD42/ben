@@ -31,7 +31,7 @@ class OrderedList : public List<T> {
 template <class T>
 void OrderedList<T>::add(T* data) {
 	for(int i = 0; i < List<T>::length(); i++) {
-		if((*T) <= (*(List<T>::get(i))) {
+		if((*T) <= (*(List<T>::get(i)))) {
 			insert(i, data);
 			return;
 			}
@@ -57,7 +57,7 @@ void OrderedList<T>::insert(int position, T* data) {
 		(this->size)++;
 		}
 	else {
-		List<T>::add(object); // will increment size
+		List<T>::add(data); // will increment size
 		}
 	}
 
