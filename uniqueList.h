@@ -16,21 +16,19 @@ class UniqueList : public OrderedList<T> {
 		/**
 		 * adds the argument to the appropriate position in the list based on its comparison operators, as long as it is not already in the list
 		 *
-		 * @param the piece of data to be added to the list
+		 * @param a pointer to the piece of data to be added to the list
 		 */
-		void add(T data);
+		void add(T* data);
 	};
 
 template <class T>
-void UniqueList<T>::add(T data) {
+void UniqueList<T>::add(T* data) {
 	for(int i = 0; i < List<T>::length(); i++) {
 		if(data == *(List<T>::get(i)->getData())) {
 			return;
 			}
 		}
-	T newData = new T(data);
-	Node<T> newNode = new Node<T>(&newData);
-	OrderedList<T>::add(newNode);
+	OrderedList<T>::add(data);
 	}
 
 #endif
