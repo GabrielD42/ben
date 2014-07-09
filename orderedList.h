@@ -51,7 +51,7 @@ template <class T>
 void OrderedList<T>::insert(int position, T* data) {
 	if(List<T>::length() != 0 && position < List<T>::length() && position >= 0) {
 		Node<T> newNode = new Node<T>(data, List<T>::controlData);
-		Node<T>* previous.setNext(List<T>::getNode(position - 1));
+		Node<T>* previous->setNext(List<T>::getNode(position - 1));
 		Node<T>* next = List<T>::get(position);
 		if(previous) {
 			previous->setNext(newNode);
