@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classOrderedList.html#af88377ec90b27767163d94b1a734e9ca">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classOrderedList.html#af88377ec90b27767163d94b1a734e9ca">OrderedList&lt;T&gt;::add</a>(T* data) {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; List&lt;T&gt;::length(); i++) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span>(*T &lt;= *(<a class="code" href="classList.html">List&lt;T&gt;::get</a>(i)-&gt;getData())) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span>((*T) &lt;= (*(<a class="code" href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List&lt;T&gt;::get</a>(i)-&gt;getData())) {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            insert(i, fsys);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            }</div>
@@ -113,7 +113,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classOrderedList.html#a6d9154bfacfb6dd486d966701ae2e1a4">   42</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classOrderedList.html#a6d9154bfacfb6dd486d966701ae2e1a4">OrderedList&lt;T&gt;::insert</a>(<span class="keywordtype">int</span> position, T* data) {</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classList.html">List&lt;T&gt;::length</a>() != 0 &amp;&amp; position &lt; <a class="code" href="classList.html">List&lt;T&gt;::length</a>() &amp;&amp; position &gt;= 0) {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a> newNode = <span class="keyword">new</span> <a class="code" href="classNode.html">Node&lt;T&gt;</a>(data, controlData);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a> newNode = <span class="keyword">new</span> <a class="code" href="classNode.html">Node&lt;T&gt;</a>(data, this.controlData);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* previous = <a class="code" href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List&lt;T&gt;::get</a>(position - 1);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* next = <a class="code" href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List&lt;T&gt;::get</a>(position);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span>(previous) {</div>
@@ -145,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 9 2014 15:03:06 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 9 2014 15:04:28 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
