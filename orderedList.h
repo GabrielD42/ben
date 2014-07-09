@@ -17,7 +17,7 @@ class OrderedList : public List<T> {
 		 *
 		 * @param tempControlData wether or not this class should control the data stored in it
 		 */
-		List(bool tempControlData);
+		OrderedList(bool tempControlData);
 		/**
 		 * adds the argument to the appropriate position in the list based on its comparison operators
 		 *
