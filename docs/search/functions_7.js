@@ -6,5 +6,5 @@ var searchData=
   ['operator_3d_3d',['operator==',['../classSquare.html#a19abb835f53ac83b458931b8367d342d',1,'Square']]],
   ['operator_3e',['operator&gt;',['../classSquare.html#aee0bdf6e98ad9d9080e8f956cdaf4d42',1,'Square']]],
   ['operator_3e_3d',['operator&gt;=',['../classSquare.html#adc2cb0ebb1d31d406d9e9d9b0b0cfe4c',1,'Square']]],
-  ['orderedlist',['OrderedList',['../classOrderedList.html#abb3c93a1f74438acb372c4cf75b29bd8',1,'OrderedList::OrderedList()'],['../classUniqueList.html#aaede847e23a1ca8b081f64e37185e290',1,'UniqueList::OrderedList()']]]
+  ['orderedlist',['OrderedList',['../classOrderedList.html#abb3c93a1f74438acb372c4cf75b29bd8',1,'OrderedList']]]
 ];

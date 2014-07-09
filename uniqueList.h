@@ -18,7 +18,7 @@ class UniqueList : public OrderedList<T> {
 		 *
 		 * @param tempControlData wether or not this class should control the data stored in it
 		 */
-		OrderedList(bool tempControlData);
+		UniqueList(bool tempControlData);
 		/**
 		 * adds the argument to the appropriate position in the list based on its comparison operators, as long as it is not already in the list
 		 *

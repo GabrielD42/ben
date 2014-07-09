@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7elist',['~List',['../classList.html#a2b58189090f6e5ce52939c9195e59e85',1,'List']]]
+  ['uniquelist',['UniqueList',['../classUniqueList.html#a252198e4f1152df45721e4980af4fbc7',1,'UniqueList']]]
 ];

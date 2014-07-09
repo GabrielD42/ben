@@ -11,7 +11,7 @@ var indexSectionsWithContent =
   1: "lnopsu",
   2: "u",
   3: "bm",
-  4: "acgilmnops~",
+  4: "acgilmnopsu~",
   5: "c"
 };
 
