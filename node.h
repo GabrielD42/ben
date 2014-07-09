@@ -10,7 +10,7 @@ class Node {
 		/**
 		 * initializes the variables. will take over control of tempData, so it must be allocated dynamically
 		 */
-		Node(T* tempData);
+		Node(T* tempData, bool tempControlData);
 		/**
 		 * set what the node after this one is. the operation will fail if object isn't a valid pointer
 		 *
@@ -32,10 +32,11 @@ class Node {
 	private:
 		Node<T>* next;
 		T* data;
+		const bool controlData;
 	};
 
 template <class T>
-Node<T>::Node(T* tempData) {
+Node<T>::Node(T* tempData, bool tempControlData) : controlData(tempControlData) {
 	next = 0;
 	data = tempData;
 	}
@@ -57,7 +58,9 @@ T* Node<T>::getData() {
 	}
 template <class T>
 Node<T>::~Node() {
-	delete data;
+	if(controlData) {
+		delete data;
+		}
 	}
 
 #endif

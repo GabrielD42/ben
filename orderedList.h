@@ -13,6 +13,12 @@ template <class T>
 class OrderedList : public List<T> {
 	public:
 		/**
+		 * Constructer initializes all variables. if tempControlData is true, then OrderedList will delete all data upon destruction
+		 *
+		 * @param tempControlData wether or not this class should control the data stored in it
+		 */
+		List(bool tempControlData);
+		/**
 		 * adds the argument to the appropriate position in the list based on its comparison operators
 		 *
 		 * @param a pointer to the piece of data to be added to the list
@@ -28,6 +34,9 @@ class OrderedList : public List<T> {
 		void insert(int position, T* data);
 	};
 
+template <class T>
+OrderedList<T>::OrderedList(bool tempControlData) : List(tempControlData) {
+	}
 template <class T>
 void OrderedList<T>::add(T* data) {
 	for(int i = 0; i < List<T>::length(); i++) {

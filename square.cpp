@@ -2,7 +2,7 @@
 #include "uniqueList.h"
 #include <math.h>
 
-Square::Square(int tempX, int tempY) : x(tempX), y(tempY), scannedFrom(scannedFrom), scannedFrom(false) {
+Square::Square(int tempX, int tempY) : x(tempX), y(tempY), scannedFrom(false) {
 	for(int i = 0; i < 4; i++) {
 		adjacent[i] = 0;
 		}
