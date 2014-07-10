@@ -19,7 +19,7 @@ int Square::getY() {
 	}
 
 Location* Square::getLocation() {
-	return *Coordinates;
+	return &Coordinates;
 	}
 
 void Square::scanned(bool found, Square* position) {
