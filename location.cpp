@@ -11,3 +11,27 @@ int Location::getX() {
 int Location::getY() {
 	return y;
 	}
+
+bool Location::operator==(const Location& other) {
+	return(x == other.x && y == other.y);
+	}
+
+bool Location::operator!=(const Location& other) {
+	return(!(operator==(other)));
+	}
+
+bool Location::operator>(const Location& other) {
+	return((x > other.x) || (x == other.x && y > other.y));
+	}
+
+bool Location::operator<(const Location& other) {
+	return((x < other.x) || (x == other.x && y < other.y));
+	}
+
+bool Location::operator>=(const Location& other) {
+	return(!(operator<(other)));
+	}
+
+bool Location::operator<=(const Location& other) {
+	return(!(operator>(other)));
+	}

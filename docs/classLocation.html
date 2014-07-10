@@ -102,6 +102,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8f961b51c88ec2d1700fc47575ab906a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a482c525d85e348026a1830e555b97924"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocation.html#a482c525d85e348026a1830e555b97924">getY</a> ()</td></tr>
 <tr class="separator:a482c525d85e348026a1830e555b97924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10106002740e5593004e5ced66c98e43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocation.html#a10106002740e5593004e5ced66c98e43">operator==</a> (const <a class="el" href="classLocation.html">Location</a> &amp;other)</td></tr>
+<tr class="separator:a10106002740e5593004e5ced66c98e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e258243c183e6a2ce6b38f868407245"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocation.html#a5e258243c183e6a2ce6b38f868407245">operator!=</a> (const <a class="el" href="classLocation.html">Location</a> &amp;other)</td></tr>
+<tr class="separator:a5e258243c183e6a2ce6b38f868407245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fc7541d648db5f277abb10e1244cf47"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocation.html#a1fc7541d648db5f277abb10e1244cf47">operator&gt;</a> (const <a class="el" href="classLocation.html">Location</a> &amp;other)</td></tr>
+<tr class="separator:a1fc7541d648db5f277abb10e1244cf47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c2c0661071ea012ef5075dac2a0a719"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocation.html#a8c2c0661071ea012ef5075dac2a0a719">operator&lt;</a> (const <a class="el" href="classLocation.html">Location</a> &amp;other)</td></tr>
+<tr class="separator:a8c2c0661071ea012ef5075dac2a0a719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ec4dd48c241a93578918494ab3545fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocation.html#a7ec4dd48c241a93578918494ab3545fc">operator&gt;=</a> (const <a class="el" href="classLocation.html">Location</a> &amp;other)</td></tr>
+<tr class="separator:a7ec4dd48c241a93578918494ab3545fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca06288396711af36d91723224c48130"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocation.html#aca06288396711af36d91723224c48130">operator&lt;=</a> (const <a class="el" href="classLocation.html">Location</a> &amp;other)</td></tr>
+<tr class="separator:aca06288396711af36d91723224c48130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Describes a location or coordinate on a plane. Values are fixed. </p>
@@ -175,6 +187,150 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5e258243c183e6a2ce6b38f868407245"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Location::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>checks to see if two Locations are unequal by taking the opposite of operator==</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>the <a class="el" href="classLocation.html">Location</a> to compare to this one </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if they aren't equal, false otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8c2c0661071ea012ef5075dac2a0a719"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Location::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>compares two Locations to determine which is larger. Rather arbitrary, since there is no "true" way to measure this. this implementation sorts by x value, and determines ties with y value</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>the <a class="el" href="classLocation.html">Location</a> to compare to this one </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if <a class="el" href="classLocation.html">Location</a> invoked upon is larger than <code>other</code>, false otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aca06288396711af36d91723224c48130"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Location::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>compares two Locations to determine which is larger. Rather arbitrary, since there is no "true" way to measure this. this implementation sorts by x value, and determines ties with y value</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>the <a class="el" href="classLocation.html">Location</a> to compare to this one </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if <a class="el" href="classLocation.html">Location</a> invoked upon is smaller than or equal to <code>other</code>, false otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a10106002740e5593004e5ced66c98e43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Location::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>checks to see if two Locations are equal by comparing their x and y coordinates</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>the <a class="el" href="classLocation.html">Location</a> to compare to this one </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if they are equal, false otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1fc7541d648db5f277abb10e1244cf47"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Location::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>compares two Locations to determine which is larger. Rather arbitrary, since there is no "true" way to measure this. this implementation sorts by x value, and determines ties with y value</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>the <a class="el" href="classLocation.html">Location</a> to compare to this one </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if <a class="el" href="classLocation.html">Location</a> invoked upon is smaller than <code>other</code>, false otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7ec4dd48c241a93578918494ab3545fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Location::operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>compares two Locations to determine which is larger. Rather arbitrary, since there is no "true" way to measure this. this implementation sorts by x value, and determines ties with y value</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>the <a class="el" href="classSquare.html">Square</a> to compare to this one </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if <a class="el" href="classSquare.html">Square</a> invoked upon is larger than or equal to <code>other</code>, false otherwise </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="location_8h_source.html">location.h</a></li>
 <li>location.cpp</li>
@@ -182,7 +338,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 9 2014 18:38:41 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 9 2014 18:45:03 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

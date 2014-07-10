@@ -30,25 +30,24 @@ double Square::probability() {
 	}
 
 bool Square::operator==(const Square& other) {
-	return(x == other.x && y == other.y);
+	return(Coordinates == other.Coordinates);
 	}
 
 bool Square::operator!=(const Square& other) {
-	return(!(operator==(other)));
+	return(Coordinates != other.Coordinates);
 	}
 
 bool Square::operator>(const Square& other) {
-	return((x > other.x) || (x == other.x && y > other.y));
+	return(Coordinates > other.Coordinates);
 	}
 
 bool Square::operator<(const Square& other) {
-	return((x < other.x) || (x == other.x && y < other.y));
+	return(Coordinates < other.Coordinates);
 	}
 
 bool Square::operator>=(const Square& other) {
-	return(!(operator<(other)));
-	}
+	return(Coordinates >= other.Coordinates);
 
 bool Square::operator<=(const Square& other) {
-	return(!(operator>(other)));
+	return(Coordinates <= other.Coordinates);
 	}
