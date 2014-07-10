@@ -11,11 +11,13 @@ Square::Square(int tempX, int tempY) : scannedFrom(false), Coordinates(tempX, te
 	}
 
 int Square::getX() {
-	return Coordinates.getX();
+	//return Coordinates.getX();
+	return 42;
 	}
 
 int Square::getY() {
-	return Coordinates.getY();
+	//return Coordinates.getY();
+	return 42;
 	}
 
 void Square::scanned(bool found, Square* position) {
