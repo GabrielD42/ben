@@ -19,7 +19,7 @@ int Square::getY() {
 	}
 
 void Square::scanned(bool found, Square* position) {
-	scannedFrom.add(position);
+	scannedFrom.add(position->getLocation());
 	numTimesScanned++;
 	if(found) {
 		numTimesFound++;

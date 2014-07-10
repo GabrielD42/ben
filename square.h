@@ -30,6 +30,11 @@ class Square {
 		 */
 		int getY();
 		/**
+		 * accessor method for the coordinates of the square
+		 * @return a pointer to the Location object
+		 */
+		Location* getLocation();
+		/**
 		 * this function should be called after this square has been scanned by a ping sensor to store the relevent information
 		 *
 		 * @param found was an object found here?
@@ -86,7 +91,7 @@ class Square {
 	private:
 		Location Coordinates;
 		int numTimesScanned, numTimesFound;
-		UniqueList<Square> scannedFrom;
+		UniqueList<Location> scannedFrom;
 		Square* adjacent[4];
 	};
 
