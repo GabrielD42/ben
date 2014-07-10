@@ -1,5 +1,6 @@
 #include "square.h"
 #include "uniqueList.h"
+#include "location.h"
 #include <math.h>
 
 Square::Square(int tempX, int tempY) : scannedFrom(false), Coordinates(tempX, tempY) {
