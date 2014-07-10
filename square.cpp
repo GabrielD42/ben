@@ -47,6 +47,7 @@ bool Square::operator<(const Square& other) {
 
 bool Square::operator>=(const Square& other) {
 	return(Coordinates >= other.Coordinates);
+	}
 
 bool Square::operator<=(const Square& other) {
 	return(Coordinates <= other.Coordinates);
