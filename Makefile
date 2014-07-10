@@ -1,5 +1,5 @@
-objects = base.o main.o ping.o utils.o square.o
-templates = node.h list.h orderedList.h uniqueList.h
+objects = base.o main.o ping.o utils.o square.o location.o
+templates = node.h list.h orderedList.h uniqueList.h location.h
 
 benExecutable: $(objects) $(templates)
 	g++ -o benExecutable $(objects) $(templates) -lwiringPi
@@ -19,3 +19,6 @@ utils.o: utils.cpp utils.h
 
 square.o: square.cpp square.h
 	g++ -c -o square.o square.cpp
+
+location.o: location.cpp location.h
+	g++ -c -o location.o location.cpp
