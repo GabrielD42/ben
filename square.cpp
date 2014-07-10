@@ -3,7 +3,7 @@
 #include "location.h"
 #include <math.h>
 
-Square::Square(int tempX, int tempY) : scannedFrom(false), Coordinates(tempX, tempY) {
+Square::Square(int tempX, int tempY) : scannedFrom(false) {
 	for(int i = 0; i < 4; i++) {
 		adjacent[i] = 0;
 		}
