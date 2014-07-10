@@ -4,7 +4,7 @@ var searchData=
   ['getcentimeters',['getCentimeters',['../classPing.html#aae84b003ab46fbbc9ac591df3ab61e89',1,'Ping']]],
   ['getdata',['getData',['../classNode.html#a130e6bec4c78a3885b7da48e16ec2764',1,'Node']]],
   ['getinches',['getInches',['../classPing.html#a683f58ccb6bd5ef4c8ee82f2cf0a1652',1,'Ping']]],
-  ['getlocation',['getLocation',['../classSquare.html#a73abf65e6e5b2b9e511fab0f0e3ba9f0',1,'Square']]],
+  ['getlocation',['getLocation',['../classSquare.html#afa596228023ae7e901f8fff79d2033ec',1,'Square']]],
   ['getnext',['getNext',['../classNode.html#a688501032615bbd05c9f42ef89d63db5',1,'Node']]],
   ['getnode',['getNode',['../classList.html#a9ec867e0a0799da7b55b0047e52b2bd9',1,'List']]],
   ['getx',['getX',['../classLocation.html#a8f961b51c88ec2d1700fc47575ab906a',1,'Location::getX()'],['../classSquare.html#a16d53c26c499c731898826701c1bee3f',1,'Square::getX()']]],

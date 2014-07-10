@@ -18,6 +18,10 @@ int Square::getY() {
 	return Coordinates.getY();
 	}
 
+Location* Square::getLocation() {
+	return *Coordinates;
+	}
+
 void Square::scanned(bool found, Square* position) {
 	scannedFrom.add(position->getLocation());
 	numTimesScanned++;
