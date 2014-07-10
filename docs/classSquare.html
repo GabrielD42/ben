@@ -86,7 +86,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classSquare-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -100,6 +99,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a89248f7d762e5944c56825c085c84f35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSquare.html#a89248f7d762e5944c56825c085c84f35">Square</a> (int tempX, int tempY)</td></tr>
 <tr class="separator:a89248f7d762e5944c56825c085c84f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d53c26c499c731898826701c1bee3f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSquare.html#a16d53c26c499c731898826701c1bee3f">getX</a> ()</td></tr>
+<tr class="separator:a16d53c26c499c731898826701c1bee3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c566a530c16ace9afb5861bf67739aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSquare.html#a9c566a530c16ace9afb5861bf67739aa">getY</a> ()</td></tr>
+<tr class="separator:a9c566a530c16ace9afb5861bf67739aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a323c35131be4633013775550a9b42231"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSquare.html#a323c35131be4633013775550a9b42231">scanned</a> (bool found, <a class="el" href="classSquare.html">Square</a> *position)</td></tr>
 <tr class="separator:a323c35131be4633013775550a9b42231"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae03934b50801a8bad0ef7518a4627dc7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSquare.html#ae03934b50801a8bad0ef7518a4627dc7">probability</a> ()</td></tr>
@@ -116,15 +119,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adc2cb0ebb1d31d406d9e9d9b0b0cfe4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03f12765668bdea6296a979b7cdbdf5b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSquare.html#a03f12765668bdea6296a979b7cdbdf5b">operator&lt;=</a> (const <a class="el" href="classSquare.html">Square</a> &amp;other)</td></tr>
 <tr class="separator:a03f12765668bdea6296a979b7cdbdf5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aa4e649cac24eed0fcdd989d265765a5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4e649cac24eed0fcdd989d265765a5d"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
-<tr class="separator:aa4e649cac24eed0fcdd989d265765a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af535402a252db32f59d2faf591e3a28e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af535402a252db32f59d2faf591e3a28e"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
-<tr class="separator:af535402a252db32f59d2faf591e3a28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -170,6 +164,40 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Grid</b></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a16d53c26c499c731898826701c1bee3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Square::getX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>accessor method for the x coordinate </p>
+<dl class="section return"><dt>Returns</dt><dd>the x coordinate </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9c566a530c16ace9afb5861bf67739aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Square::getY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>accessor method for the y coordinate </p>
+<dl class="section return"><dt>Returns</dt><dd>the y coordinate </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a37dfea7e00cfcbbdeac5f64d92c8028f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -372,7 +400,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Grid</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 9 2014 15:30:59 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 9 2014 18:38:41 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

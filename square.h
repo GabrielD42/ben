@@ -3,6 +3,7 @@
 
 #include "uniqueList.h"
 #include "node.h"
+#include "location.h"
 class Grid;
 
 /**
@@ -19,6 +20,16 @@ class Square {
 		 */
 		Square(int tempX, int tempY);
 		/**
+		 * accessor method for the x coordinate
+		 * @return the x coordinate
+		 */
+		int getX();
+		/**
+		 * accessor method for the y coordinate
+		 * @return the y coordinate
+		 */
+		int getY();
+		/**
 		 * this function should be called after this square has been scanned by a ping sensor to store the relevent information
 		 *
 		 * @param found was an object found here?
@@ -30,7 +41,6 @@ class Square {
 		 * @return the probability as a decimal from 0 to 1
 		 */
 		double probability();
-		const int x, y;
 		/**
 		 * checks to see if two Squares are equal by comparing their x and y coordinates. a shallow comparison should be good enough since there should only ever be one of every Square, and that in the Grid. everything else should be pointers
 		 *
@@ -74,6 +84,7 @@ class Square {
 		 */
 		bool operator<=(const Square& other);
 	private:
+		Location Coordinates;
 		int numTimesScanned, numTimesFound;
 		UniqueList<Square> scannedFrom;
 		Square* adjacent[4];

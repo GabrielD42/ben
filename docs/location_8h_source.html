@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>BEN the Robot: Member List</title>
+<title>BEN the Robot: location.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,8 +40,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -62,12 +62,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
-      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -82,25 +81,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">List&lt; T &gt; Member List</div>  </div>
+<div class="title">location.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="classList.html">List&lt; T &gt;</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classList.html#af21667f3dbff1d99e96194f74579813c">add</a>(T *data)</td><td class="entry"><a class="el" href="classList.html">List&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>controlData</b> (defined in <a class="el" href="classList.html">List&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="classList.html">List&lt; T &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>first</b> (defined in <a class="el" href="classList.html">List&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="classList.html">List&lt; T &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">get</a>(int position)</td><td class="entry"><a class="el" href="classList.html">List&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classList.html#a9ec867e0a0799da7b55b0047e52b2bd9">getNode</a>(int position)</td><td class="entry"><a class="el" href="classList.html">List&lt; T &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classList.html#a9890243fd2d78175e4600a5364f8185f">length</a>()</td><td class="entry"><a class="el" href="classList.html">List&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classList.html#a58c7751f783fd581fe83d40a9dc7224d">List</a>(bool tempControlData)</td><td class="entry"><a class="el" href="classList.html">List&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>size</b> (defined in <a class="el" href="classList.html">List&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="classList.html">List&lt; T &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classList.html#a2b58189090f6e5ce52939c9195e59e85">~List</a>()</td><td class="entry"><a class="el" href="classList.html">List&lt; T &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-</table></div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LOCATION_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define LOCATION_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classLocation.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLocation.html">Location</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="classLocation.html#a4d40301de84c1c9e6fde3074dbbc0960">Location</a>(<span class="keywordtype">int</span> tempX, <span class="keywordtype">int</span> tempY);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classLocation.html#a8f961b51c88ec2d1700fc47575ab906a">getX</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classLocation.html#a482c525d85e348026a1830e555b97924">getY</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> x;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> y;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classLocation_html_a4d40301de84c1c9e6fde3074dbbc0960"><div class="ttname"><a href="classLocation.html#a4d40301de84c1c9e6fde3074dbbc0960">Location::Location</a></div><div class="ttdeci">Location(int tempX, int tempY)</div><div class="ttdef"><b>Definition:</b> location.cpp:3</div></div>
+<div class="ttc" id="classLocation_html_a482c525d85e348026a1830e555b97924"><div class="ttname"><a href="classLocation.html#a482c525d85e348026a1830e555b97924">Location::getY</a></div><div class="ttdeci">int getY()</div><div class="ttdef"><b>Definition:</b> location.cpp:11</div></div>
+<div class="ttc" id="classLocation_html"><div class="ttname"><a href="classLocation.html">Location</a></div><div class="ttdef"><b>Definition:</b> location.h:7</div></div>
+<div class="ttc" id="classLocation_html_a8f961b51c88ec2d1700fc47575ab906a"><div class="ttname"><a href="classLocation.html#a8f961b51c88ec2d1700fc47575ab906a">Location::getX</a></div><div class="ttdeci">int getX()</div><div class="ttdef"><b>Definition:</b> location.cpp:7</div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Wed Jul 9 2014 18:38:41 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
