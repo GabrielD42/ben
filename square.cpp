@@ -31,7 +31,8 @@ void Square::scanned(bool found, Square* position) {
 	}
 
 double Square::probability() {
-	return 0.0;
+	int totalSquaresScanned = 1; // temperary, to avoid divide by 0 errors
+	return double(numTimesFound) / totalSquaresScanned;
 	}
 
 bool Square::operator==(const Square& other) {
