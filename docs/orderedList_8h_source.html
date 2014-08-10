@@ -8,6 +8,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -67,6 +74,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('orderedList_8h_source.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -94,66 +115,70 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classOrderedList.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classOrderedList.html">OrderedList</a> : <span class="keyword">public</span> <a class="code" href="classList.html">List</a>&lt;T&gt; {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="classOrderedList.html#abb3c93a1f74438acb372c4cf75b29bd8">OrderedList</a>(<span class="keywordtype">bool</span> tempControlData);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classOrderedList.html#af88377ec90b27767163d94b1a734e9ca">add</a>(T* data);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classOrderedList.html#a6d9154bfacfb6dd486d966701ae2e1a4">insert</a>(<span class="keywordtype">int</span> position, T* data);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classOrderedList.html#abb3c93a1f74438acb372c4cf75b29bd8">OrderedList</a>(<span class="keywordtype">bool</span> tempControlData);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classOrderedList.html#af88377ec90b27767163d94b1a734e9ca">add</a>(T* data);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classOrderedList.html#a6d9154bfacfb6dd486d966701ae2e1a4">insert</a>(<span class="keywordtype">int</span> position, T* data);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  };</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classOrderedList.html#abb3c93a1f74438acb372c4cf75b29bd8">   38</a></span>&#160;<a class="code" href="classOrderedList.html#abb3c93a1f74438acb372c4cf75b29bd8">OrderedList&lt;T&gt;::OrderedList</a>(<span class="keywordtype">bool</span> tempControlData) : <a class="code" href="classList.html">List</a>&lt;T&gt;(tempControlData) {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classOrderedList.html#af88377ec90b27767163d94b1a734e9ca">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classOrderedList.html#af88377ec90b27767163d94b1a734e9ca">OrderedList&lt;T&gt;::add</a>(T* data) {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; List&lt;T&gt;::length(); i++) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span>((*data) &lt;= (*(<a class="code" href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List&lt;T&gt;::get</a>(i)))) {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            insert(i, data);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    insert(<a class="code" href="classList.html">List&lt;T&gt;::length</a>(), data);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; List&lt;T&gt;::length(); i++) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span>((*data) &lt;= (*(<a class="code" href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List&lt;T&gt;::get</a>(i)))) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      insert(i, data);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  insert(<a class="code" href="classList.html">List&lt;T&gt;::length</a>(), data);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classOrderedList.html#a6d9154bfacfb6dd486d966701ae2e1a4">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classOrderedList.html#a6d9154bfacfb6dd486d966701ae2e1a4">OrderedList&lt;T&gt;::insert</a>(<span class="keywordtype">int</span> position, T* data) {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classList.html">List&lt;T&gt;::length</a>() != 0 &amp;&amp; position &lt; <a class="code" href="classList.html">List&lt;T&gt;::length</a>() &amp;&amp; position &gt;= 0) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* newNode = <span class="keyword">new</span> <a class="code" href="classNode.html">Node&lt;T&gt;</a>(data, <a class="code" href="classList.html">List&lt;T&gt;::controlData</a>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* previous = <a class="code" href="classList.html#a9ec867e0a0799da7b55b0047e52b2bd9">List&lt;T&gt;::getNode</a>(position - 1);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classNode.html">Node&lt;T&gt;</a>* next = <a class="code" href="classList.html#a9ec867e0a0799da7b55b0047e52b2bd9">List&lt;T&gt;::getNode</a>(position);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span>(previous) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            previous-&gt;<a class="code" href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">setNext</a>(newNode);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="comment">// we must be adding to the beginning of the list, so we need to reassign first</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            this-&gt;first = newNode;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span>(next) {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            newNode-&gt;<a class="code" href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">setNext</a>(next);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        (this-&gt;size)++;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="classList.html#af21667f3dbff1d99e96194f74579813c">List&lt;T&gt;::add</a>(data); <span class="comment">// will increment size</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="classList.html">List&lt;T&gt;::length</a>() != 0 &amp;&amp; position &lt; <a class="code" href="classList.html">List&lt;T&gt;::length</a>() &amp;&amp; position &gt;= 0) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classNode.html">Node&lt;T&gt;</a>* newNode = <span class="keyword">new</span> <a class="code" href="classNode.html">Node&lt;T&gt;</a>(data, <a class="code" href="classList.html">List&lt;T&gt;::controlData</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classNode.html">Node&lt;T&gt;</a>* previous = <a class="code" href="classList.html#a9ec867e0a0799da7b55b0047e52b2bd9">List&lt;T&gt;::getNode</a>(position - 1);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classNode.html">Node&lt;T&gt;</a>* next = <a class="code" href="classList.html#a9ec867e0a0799da7b55b0047e52b2bd9">List&lt;T&gt;::getNode</a>(position);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span>(previous) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      previous-&gt;<a class="code" href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">setNext</a>(newNode);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="comment">// we must be adding to the beginning of the list, so we need to reassign first</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      this-&gt;first = newNode;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span>(next) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      newNode-&gt;<a class="code" href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">setNext</a>(next);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    (this-&gt;size)++;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classList.html#af21667f3dbff1d99e96194f74579813c">List&lt;T&gt;::add</a>(data); <span class="comment">// will increment size</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classNode_html_a49ef267753265f8ce3e08a0591e7ebf4"><div class="ttname"><a href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">Node::setNext</a></div><div class="ttdeci">bool setNext(Node&lt; T &gt; *object)</div><div class="ttdef"><b>Definition:</b> node.h:44</div></div>
-<div class="ttc" id="classOrderedList_html_a6d9154bfacfb6dd486d966701ae2e1a4"><div class="ttname"><a href="classOrderedList.html#a6d9154bfacfb6dd486d966701ae2e1a4">OrderedList::insert</a></div><div class="ttdeci">void insert(int position, T *data)</div><div class="ttdef"><b>Definition:</b> orderedList.h:51</div></div>
-<div class="ttc" id="classNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdef"><b>Definition:</b> node.h:8</div></div>
-<div class="ttc" id="classOrderedList_html"><div class="ttname"><a href="classOrderedList.html">OrderedList</a></div><div class="ttdef"><b>Definition:</b> orderedList.h:13</div></div>
-<div class="ttc" id="classOrderedList_html_af88377ec90b27767163d94b1a734e9ca"><div class="ttname"><a href="classOrderedList.html#af88377ec90b27767163d94b1a734e9ca">OrderedList::add</a></div><div class="ttdeci">void add(T *data)</div><div class="ttdef"><b>Definition:</b> orderedList.h:41</div></div>
-<div class="ttc" id="classList_html_ad0d2fcbb314209fc00e91558ac09693c"><div class="ttname"><a href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List::get</a></div><div class="ttdeci">T * get(int position)</div><div class="ttdef"><b>Definition:</b> list.h:79</div></div>
-<div class="ttc" id="classList_html"><div class="ttname"><a href="classList.html">List</a></div><div class="ttdef"><b>Definition:</b> list.h:12</div></div>
-<div class="ttc" id="classList_html_af21667f3dbff1d99e96194f74579813c"><div class="ttname"><a href="classList.html#af21667f3dbff1d99e96194f74579813c">List::add</a></div><div class="ttdeci">void add(T *data)</div><div class="ttdef"><b>Definition:</b> list.h:64</div></div>
-<div class="ttc" id="classOrderedList_html_abb3c93a1f74438acb372c4cf75b29bd8"><div class="ttname"><a href="classOrderedList.html#abb3c93a1f74438acb372c4cf75b29bd8">OrderedList::OrderedList</a></div><div class="ttdeci">OrderedList(bool tempControlData)</div><div class="ttdef"><b>Definition:</b> orderedList.h:38</div></div>
-<div class="ttc" id="classList_html_a9ec867e0a0799da7b55b0047e52b2bd9"><div class="ttname"><a href="classList.html#a9ec867e0a0799da7b55b0047e52b2bd9">List::getNode</a></div><div class="ttdeci">Node&lt; T &gt; * getNode(int position)</div><div class="ttdef"><b>Definition:</b> list.h:83</div></div>
+<div class="ttc" id="classNode_html_a49ef267753265f8ce3e08a0591e7ebf4"><div class="ttname"><a href="classNode.html#a49ef267753265f8ce3e08a0591e7ebf4">Node::setNext</a></div><div class="ttdeci">bool setNext(Node&lt; T &gt; *object)</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00044">node.h:44</a></div></div>
+<div class="ttc" id="classOrderedList_html_a6d9154bfacfb6dd486d966701ae2e1a4"><div class="ttname"><a href="classOrderedList.html#a6d9154bfacfb6dd486d966701ae2e1a4">OrderedList::insert</a></div><div class="ttdeci">void insert(int position, T *data)</div><div class="ttdef"><b>Definition:</b> <a href="orderedList_8h_source.html#l00051">orderedList.h:51</a></div></div>
+<div class="ttc" id="classNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00008">node.h:8</a></div></div>
+<div class="ttc" id="classOrderedList_html"><div class="ttname"><a href="classOrderedList.html">OrderedList</a></div><div class="ttdef"><b>Definition:</b> <a href="orderedList_8h_source.html#l00013">orderedList.h:13</a></div></div>
+<div class="ttc" id="classOrderedList_html_af88377ec90b27767163d94b1a734e9ca"><div class="ttname"><a href="classOrderedList.html#af88377ec90b27767163d94b1a734e9ca">OrderedList::add</a></div><div class="ttdeci">void add(T *data)</div><div class="ttdef"><b>Definition:</b> <a href="orderedList_8h_source.html#l00041">orderedList.h:41</a></div></div>
+<div class="ttc" id="classList_html_ad0d2fcbb314209fc00e91558ac09693c"><div class="ttname"><a href="classList.html#ad0d2fcbb314209fc00e91558ac09693c">List::get</a></div><div class="ttdeci">T * get(int position)</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00079">list.h:79</a></div></div>
+<div class="ttc" id="classList_html"><div class="ttname"><a href="classList.html">List</a></div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00012">list.h:12</a></div></div>
+<div class="ttc" id="classList_html_af21667f3dbff1d99e96194f74579813c"><div class="ttname"><a href="classList.html#af21667f3dbff1d99e96194f74579813c">List::add</a></div><div class="ttdeci">void add(T *data)</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00064">list.h:64</a></div></div>
+<div class="ttc" id="classOrderedList_html_abb3c93a1f74438acb372c4cf75b29bd8"><div class="ttname"><a href="classOrderedList.html#abb3c93a1f74438acb372c4cf75b29bd8">OrderedList::OrderedList</a></div><div class="ttdeci">OrderedList(bool tempControlData)</div><div class="ttdef"><b>Definition:</b> <a href="orderedList_8h_source.html#l00038">orderedList.h:38</a></div></div>
+<div class="ttc" id="classList_html_a9ec867e0a0799da7b55b0047e52b2bd9"><div class="ttname"><a href="classList.html#a9ec867e0a0799da7b55b0047e52b2bd9">List::getNode</a></div><div class="ttdeci">Node&lt; T &gt; * getNode(int position)</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00083">list.h:83</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 10 2014 15:01:53 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>orderedList.h</b></li>
+    <li class="footer">Generated on Sun Aug 10 2014 15:31:44 for BEN the Robot by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -8,6 +8,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -67,6 +74,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('ping_8h_source.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -90,29 +111,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PING_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classPing.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPing.html">Ping</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="classPing.html#ac8699f06de93bae019b5c10eb4d9f07e">Ping</a>(<span class="keywordtype">int</span> tempTriggerPin, <span class="keywordtype">int</span> tempEchoPin);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPing.html#a60a84a4161b40e9fb7f82cabf6a948fc">init</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">long</span> <a class="code" href="classPing.html#a683f58ccb6bd5ef4c8ee82f2cf0a1652">getInches</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">long</span> <a class="code" href="classPing.html#aae84b003ab46fbbc9ac591df3ab61e89">getCentimeters</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">long</span> getReading();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">int</span> triggerPin;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">int</span> echoPin;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    };</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classPing.html#ac8699f06de93bae019b5c10eb4d9f07e">Ping</a>(<span class="keywordtype">int</span> tempTriggerPin, <span class="keywordtype">int</span> tempEchoPin);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPing.html#a60a84a4161b40e9fb7f82cabf6a948fc">init</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">long</span> <a class="code" href="classPing.html#a683f58ccb6bd5ef4c8ee82f2cf0a1652">getInches</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">long</span> <a class="code" href="classPing.html#aae84b003ab46fbbc9ac591df3ab61e89">getCentimeters</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">long</span> getReading();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> triggerPin;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> echoPin;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  };</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classPing_html_aae84b003ab46fbbc9ac591df3ab61e89"><div class="ttname"><a href="classPing.html#aae84b003ab46fbbc9ac591df3ab61e89">Ping::getCentimeters</a></div><div class="ttdeci">long getCentimeters()</div><div class="ttdef"><b>Definition:</b> ping.cpp:19</div></div>
-<div class="ttc" id="classPing_html_a683f58ccb6bd5ef4c8ee82f2cf0a1652"><div class="ttname"><a href="classPing.html#a683f58ccb6bd5ef4c8ee82f2cf0a1652">Ping::getInches</a></div><div class="ttdeci">long getInches()</div><div class="ttdef"><b>Definition:</b> ping.cpp:15</div></div>
-<div class="ttc" id="classPing_html"><div class="ttname"><a href="classPing.html">Ping</a></div><div class="ttdef"><b>Definition:</b> ping.h:7</div></div>
-<div class="ttc" id="classPing_html_ac8699f06de93bae019b5c10eb4d9f07e"><div class="ttname"><a href="classPing.html#ac8699f06de93bae019b5c10eb4d9f07e">Ping::Ping</a></div><div class="ttdeci">Ping(int tempTriggerPin, int tempEchoPin)</div><div class="ttdef"><b>Definition:</b> ping.cpp:5</div></div>
-<div class="ttc" id="classPing_html_a60a84a4161b40e9fb7f82cabf6a948fc"><div class="ttname"><a href="classPing.html#a60a84a4161b40e9fb7f82cabf6a948fc">Ping::init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition:</b> ping.cpp:10</div></div>
+<div class="ttc" id="classPing_html_aae84b003ab46fbbc9ac591df3ab61e89"><div class="ttname"><a href="classPing.html#aae84b003ab46fbbc9ac591df3ab61e89">Ping::getCentimeters</a></div><div class="ttdeci">long getCentimeters()</div><div class="ttdef"><b>Definition:</b> <a href="ping_8cpp_source.html#l00019">ping.cpp:19</a></div></div>
+<div class="ttc" id="classPing_html_a683f58ccb6bd5ef4c8ee82f2cf0a1652"><div class="ttname"><a href="classPing.html#a683f58ccb6bd5ef4c8ee82f2cf0a1652">Ping::getInches</a></div><div class="ttdeci">long getInches()</div><div class="ttdef"><b>Definition:</b> <a href="ping_8cpp_source.html#l00015">ping.cpp:15</a></div></div>
+<div class="ttc" id="classPing_html"><div class="ttname"><a href="classPing.html">Ping</a></div><div class="ttdef"><b>Definition:</b> <a href="ping_8h_source.html#l00007">ping.h:7</a></div></div>
+<div class="ttc" id="classPing_html_ac8699f06de93bae019b5c10eb4d9f07e"><div class="ttname"><a href="classPing.html#ac8699f06de93bae019b5c10eb4d9f07e">Ping::Ping</a></div><div class="ttdeci">Ping(int tempTriggerPin, int tempEchoPin)</div><div class="ttdef"><b>Definition:</b> <a href="ping_8cpp_source.html#l00005">ping.cpp:5</a></div></div>
+<div class="ttc" id="classPing_html_a60a84a4161b40e9fb7f82cabf6a948fc"><div class="ttname"><a href="classPing.html#a60a84a4161b40e9fb7f82cabf6a948fc">Ping::init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition:</b> <a href="ping_8cpp_source.html#l00010">ping.cpp:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 10 2014 15:01:53 for BEN the Robot by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>ping.h</b></li>
+    <li class="footer">Generated on Sun Aug 10 2014 15:31:44 for BEN the Robot by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>
