@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>BEN the Robot: Member List</title>
+<title>BEN the Robot: color.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -47,8 +47,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -69,10 +69,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
-      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -87,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classLocation.html','');});
+$(document).ready(function(){initNavTree('color_8h_source.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -106,26 +104,35 @@ $(document).ready(function(){initNavTree('classLocation.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Location Member List</div>  </div>
+<div class="title">color.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="classLocation.html">Location</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classLocation.html#a8f961b51c88ec2d1700fc47575ab906a">getX</a>()</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classLocation.html#a482c525d85e348026a1830e555b97924">getY</a>()</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classLocation.html#a4d40301de84c1c9e6fde3074dbbc0960">Location</a>(int tempX, int tempY)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classLocation.html#a5e258243c183e6a2ce6b38f868407245">operator!=</a>(const Location &amp;other)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classLocation.html#a8c2c0661071ea012ef5075dac2a0a719">operator&lt;</a>(const Location &amp;other)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classLocation.html#aca06288396711af36d91723224c48130">operator&lt;=</a>(const Location &amp;other)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classLocation.html#a10106002740e5593004e5ced66c98e43">operator==</a>(const Location &amp;other)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classLocation.html#a1fc7541d648db5f277abb10e1244cf47">operator&gt;</a>(const Location &amp;other)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classLocation.html#a7ec4dd48c241a93578918494ab3545fc">operator&gt;=</a>(const Location &amp;other)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef COLOR_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define COLOR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespaceColor.html">   17</a></span>&#160;<span class="keyword">namespace </span>Color {</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622">   25</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622">Code</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        RED      = 31,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        YELLOW   = 33,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        GREEN    = 32,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        BLUE     = 34,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        PURPLE   = 35,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        DEFAULT  = 39</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::ostream&amp; <a class="code" href="namespaceColor.html#a0a74c83ead3176702da8b8249d9c8672">operator&lt;&lt;</a>(std::ostream&amp; os, <a class="code" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622">Code</a> code);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespaceColor_html_a0a74c83ead3176702da8b8249d9c8672"><div class="ttname"><a href="namespaceColor.html#a0a74c83ead3176702da8b8249d9c8672">Color::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, Code code)</div><div class="ttdoc">overloaded output operator </div><div class="ttdef"><b>Definition:</b> <a href="color_8cpp_source.html#l00003">color.cpp:3</a></div></div>
+<div class="ttc" id="namespaceColor_html_a20a7b04657c1d83fae5d54514d3f1622"><div class="ttname"><a href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622">Color::Code</a></div><div class="ttdeci">Code</div><div class="ttdoc">the available set of colors </div><div class="ttdef"><b>Definition:</b> <a href="color_8h_source.html#l00025">color.h:25</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_84d4ec99856759213102e4209c09c524.html">debug</a></li><li class="navelem"><b>color.h</b></li>
     <li class="footer">Generated on Sun Aug 10 2014 22:43:31 for BEN the Robot by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>

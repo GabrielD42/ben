@@ -4,5 +4,6 @@ var searchData=
   ['list',['List',['../classList.html',1,'List&lt; T &gt;'],['../classList.html#a58c7751f783fd581fe83d40a9dc7224d',1,'List::List()']]],
   ['list_3c_20location_20_3e',['List&lt; Location &gt;',['../classList.html',1,'']]],
   ['location',['Location',['../classLocation.html',1,'Location'],['../classLocation.html#a4d40301de84c1c9e6fde3074dbbc0960',1,'Location::Location()']]],
+  ['log',['Log',['../classLog.html',1,'Log'],['../classLog.html#aec667c6f842d0923c036e74a5c6d83d5',1,'Log::Log()']]],
   ['loop',['loop',['../base_8h.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;main.cpp'],['../main_8cpp.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;main.cpp']]]
 ];

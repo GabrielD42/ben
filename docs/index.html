@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('index.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,86 +101,31 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="title">BEN the Robot Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This repository contains code that will (hopefully) one day become a robot. BEN stands for **B**right **E**nough to **N**avigate. BEN has a multi-step goal:</p>
-<ol type="1">
-<li>Navigate to a sector in his world. At this point he does not know where any obstacles are</li>
-<li>Search the sector for a small object, identified by comparing it to pictures it has taken</li>
-<li>Pick up the object and return to his starting position on the shortest path</li>
-</ol>
-<h2>ping sensor</h2>
-<p>scans continuously as long as robot is not moving</p>
+<div class="textblock"><p>these are a few simple C++ classes that I find useful for squashing bugs.</p>
+<h2><a class="el" href="classLog.html" title="Allows programs to log relevant information. ">Log</a></h2>
+<p><code><a class="el" href="classLog.html" title="Allows programs to log relevant information. ">Log</a></code> is useful for outputting information to both a log file as well as to the terminal. It has a very simple interface, with only a constructor and an overloaded <code>operator()</code>. It is extremely configurable because it defines a handful of different message types, and allows where they output to be set individually.</p>
+<h3>Message Types</h3>
+<p>At the moment, there are 6 output types:</p>
 <ul>
-<li>stores trigger pin number</li>
-<li>stores echo pin number</li>
-<li>gives distance</li>
+<li><b>general</b>: general output format. when in doubt, use this type</li>
+<li><b>warning</b>: if something strange has happened that can be recovered from, such as receiving a null parameter, use this type to complain about it</li>
+<li><b>error</b>: use this if something has gone seriously wrong. should never be disabled. exceptions should complain by logging an error</li>
+<li><b>success</b>: if some test or check was passed, this would be the format to use</li>
+<li><b>state</b>: useful for outputting the value of variables for debugging purposes</li>
+<li><b>location</b>: useful for outputting the current location of program flow for debugging purposes</li>
 </ul>
-<h2>grid</h2>
-<p>2d linked-list of squares</p>
-<ul>
-<li>controls access (mutex)</li>
-<li>adds rows and columns</li>
-</ul>
-<p>when written to by sensor processing thread, passes copy to a*/search thread</p>
-<h2>square</h2>
-<ul>
-<li>number of times scanned</li>
-<li>number of times object found here</li>
-<li>linked list of coordinates that this square has been scanned from</li>
-<li>x coordinate</li>
-<li>y coordinate</li>
-</ul>
-<h2>mysql</h2>
-<h3>maps database</h3>
-<p>stores maps from each run for analyzing. each table is one map, with each field being the probability (a number from 0-1) of there being an object there.</p>
-<h2>global variables</h2>
-<p>stores information about the current run that needs to be dealt with in <code><a class="el" href="base_8h.html#a4b66d5e31b5dc18b314c8a68163263bd">cleanup()</a></code>. </p>
-<h4>ping readings</h4>
-<table class="doxtable">
-<tr>
-<th>time </th><th>distance </th><th>sensor number  </th></tr>
-<tr>
-<td>time (primary key) </td><td>float (in cm) </td><td>int (0-7) </td></tr>
-</table>
-<h4>robot locations</h4>
-<table class="doxtable">
-<tr>
-<th>time </th><th>x </th><th>y  </th></tr>
-<tr>
-<td>time (primary key) </td><td>int (of center) </td><td>int (of center) </td></tr>
-</table>
-<h4>best route</h4>
-<p>breakpoint pointer</p>
-<table class="doxtable">
-<tr>
-<th>order </th><th>x </th><th>y </th><th>executed  </th></tr>
-<tr>
-<td>int (primary key) </td><td>int (of center) </td><td>int (of center) </td><td>boolean </td></tr>
-</table>
-<h2>threads</h2>
-<p>in order of priority</p>
-<ul>
-<li>1 thread for bump sensors</li>
-<li>1 main thread</li>
-<li>1 thread for movement</li>
-<li>1 control thread sensors</li>
-<li>4 threads for ping sensors<ul>
-<li>they will alternate between sensors</li>
-</ul>
-</li>
-<li>1 thread for processing sensor data</li>
-<li>1 thread for finding best path</li>
-<li>1 thread for machine learning</li>
-</ul>
-<h2>movement</h2>
-<p>8 directions pulls of next instruction from best route table and moves there. if empty, runs a turn-scan-turn-scan subroutine Sends signals to sensor threads when turning (control sensor threads) to pause</p>
-<h2>A*/search thread</h2>
-<p>a*/search bool a* function input: grid output: best route table sets breakpoint search use a* to go to closest unexplored space </p>
+<h3>Usage</h3>
+<p>Here is a simple usage example:</p>
+<p>#include "log.h"</p>
+<p>using namespace std;</p>
+<p>int <a class="el" href="base_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a> { <a class="el" href="classLog.html" title="Allows programs to log relevant information. ">Log</a> log(Log::putGeneralToConsole, Log::putWarningToFile, Log::putErrorToConsoleAndFile, Log::putSuccessToConsole, Log::putStateToNone, Log::putLocationToNone); log("this is a general message"); log(Log::warning, "this is a warning message"); log(Log::error, "this is a error message"); log(Log::success, "this is a success message"); log(Log::state, "this is a state message"); log(Log::location, "this is a location message"); }</p>
+<p>Note that if the message type is omitted, it is assumed to be a general message. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Aug 10 2014 22:41:42 for BEN the Robot by
+    <li class="footer">Generated on Sun Aug 10 2014 22:43:31 for BEN the Robot by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

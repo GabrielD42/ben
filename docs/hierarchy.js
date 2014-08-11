@@ -11,6 +11,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "Location", "classLocation.html", null ],
+    [ "Log", "classLog.html", null ],
     [ "Node< T >", "classNode.html", null ],
     [ "Node< Location >", "classNode.html", null ],
     [ "Ping", "classPing.html", null ],

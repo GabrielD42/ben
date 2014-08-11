@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>BEN the Robot: Member List</title>
+<title>BEN the Robot: main.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -47,8 +47,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -69,10 +69,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
-      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -87,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classLocation.html','');});
+$(document).ready(function(){initNavTree('debug_2main_8cpp_source.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -106,26 +104,30 @@ $(document).ready(function(){initNavTree('classLocation.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Location Member List</div>  </div>
+<div class="title">debug/main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="classLocation.html">Location</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classLocation.html#a8f961b51c88ec2d1700fc47575ab906a">getX</a>()</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classLocation.html#a482c525d85e348026a1830e555b97924">getY</a>()</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classLocation.html#a4d40301de84c1c9e6fde3074dbbc0960">Location</a>(int tempX, int tempY)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classLocation.html#a5e258243c183e6a2ce6b38f868407245">operator!=</a>(const Location &amp;other)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classLocation.html#a8c2c0661071ea012ef5075dac2a0a719">operator&lt;</a>(const Location &amp;other)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classLocation.html#aca06288396711af36d91723224c48130">operator&lt;=</a>(const Location &amp;other)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classLocation.html#a10106002740e5593004e5ced66c98e43">operator==</a>(const Location &amp;other)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classLocation.html#a1fc7541d648db5f277abb10e1244cf47">operator&gt;</a>(const Location &amp;other)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classLocation.html#a7ec4dd48c241a93578918494ab3545fc">operator&gt;=</a>(const Location &amp;other)</td><td class="entry"><a class="el" href="classLocation.html">Location</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;log.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keywordtype">int</span> <a class="code" href="base_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <a class="code" href="classLog.html">Log</a> log(<span class="stringliteral">&quot;general_log&quot;</span>, Log::putGeneralToConsoleAndFile, Log::putWarningToConsoleAndFile, Log::putErrorToConsoleAndFile, Log::putSuccessToConsoleAndFile, Log::putStateToConsoleAndFile, Log::putLocationToConsoleAndFile);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  log(<span class="stringliteral">&quot;this is a general message&quot;</span>);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  log(Log::warning, <span class="stringliteral">&quot;this is a warning message&quot;</span>);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  log(Log::error, <span class="stringliteral">&quot;this is a error message&quot;</span>);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  log(Log::success, <span class="stringliteral">&quot;this is a success message&quot;</span>);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  log(Log::state, <span class="stringliteral">&quot;this is a state message&quot;</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  log(Log::location, <span class="stringliteral">&quot;this is a location message&quot;</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="ttc" id="base_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="base_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00014">base.cpp:14</a></div></div>
+<div class="ttc" id="classLog_html"><div class="ttname"><a href="classLog.html">Log</a></div><div class="ttdoc">Allows programs to log relevant information. </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00023">log.h:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_84d4ec99856759213102e4209c09c524.html">debug</a></li><li class="navelem"><b>main.cpp</b></li>
     <li class="footer">Generated on Sun Aug 10 2014 22:43:31 for BEN the Robot by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
