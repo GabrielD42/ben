@@ -14,7 +14,7 @@ if [[ $# == 1 ]]; then
 	echo -e "\n${green}****************************\n* Generating documentation *\n****************************${NC}\n"
 	doxygen doxygenConfig
 	echo -e "\n${green}********************************\n* Uploading new code to Github *\n********************************${NC}\n"
-	git add --all
+	git add --all .
 	git commit -m "$1"
 	git push
 else
