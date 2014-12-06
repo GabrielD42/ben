@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['uniquelist',['UniqueList',['../classUniqueList.html',1,'UniqueList&lt; T &gt;'],['../classUniqueList.html#a252198e4f1152df45721e4980af4fbc7',1,'UniqueList::UniqueList()']]],
-  ['uniquelist_3c_20location_20_3e',['UniqueList&lt; Location &gt;',['../classUniqueList.html',1,'']]],
-  ['utils',['utils',['../namespaceutils.html',1,'']]]
+  ['safequit',['safeQuit',['../base_8cpp.html#afdde65e52a3cb6e0eb35fdb95b6a4cc7',1,'base.cpp']]],
+  ['scanned',['scanned',['../classSquare.html#a323c35131be4633013775550a9b42231',1,'Square']]],
+  ['setoutputlocations',['setOutputLocations',['../classLog.html#a1bf221c08202bf481d2b79ab56de37b0',1,'Log::setOutputLocations()'],['../classLogType.html#a97b978ae192fb270907c8d3b29ea1017',1,'LogType::setOutputLocations()']]],
+  ['setup',['setup',['../base_8h.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;main.cpp'],['../main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;main.cpp']]],
+  ['square',['Square',['../classSquare.html',1,'Square'],['../classSquare.html#a89248f7d762e5944c56825c085c84f35',1,'Square::Square()']]]
 ];
