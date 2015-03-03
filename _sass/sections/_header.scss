@@ -1,0 +1,17 @@
+.site-header {
+	background: $dark-grey;
+	width: 100%;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	.site-nav {
+		.title {
+			padding: 0;
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-right: 0;
+			font-size: 2.5rem;
+			line-height: 1.45;
+			text-shadow: 1px 1px 2px black;
+			border-left: $block-width solid nth($shades, 1);
+		}
+	}
+}

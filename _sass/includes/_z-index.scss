@@ -1,0 +1,17 @@
+@mixin height($height) {
+  @if $height == sky {
+    z-index: 2;
+  }
+  @else if $height == clouds {
+    z-index: 1;
+	}
+	@else if $height == ground {
+		z-index: 0;
+	}
+	@else if $height == rock {
+		z-index: -1;
+	}
+	@else if $height == magma {
+		z-index: -2;
+	}
+}

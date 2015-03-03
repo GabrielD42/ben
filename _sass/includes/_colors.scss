@@ -1,0 +1,29 @@
+$temp: $base-color;
+$shades: ();
+@for $i from 1 through 20 {
+  $shades: append($shades, $temp);
+	%color#{$i} {
+		color: $temp;
+	}
+	.color#{$i} {
+		@extend %color#{$i};
+	}
+	%background-color#{$i} {
+		background-color: $temp;
+	}
+	.background-color#{$i} {
+		@extend %background-color#{$i};
+	}
+	%border-color#{$i} {
+		border-color: $temp;
+	}
+	.border-color#{$i} {
+		@extend %border-color#{$i};
+	}
+  $temp: darken($temp, 5%);
+  }
+
+$dark-grey: #222;
+$grey: #444;
+$light-grey: #666;
+$off-white: #AAA;

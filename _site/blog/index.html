@@ -1,0 +1,121 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+<title>BEN the Robot</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab|Raleway' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="/js/script.js"></script>
+
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav">
+  <ul>
+    <li class="item"><h1 class="title"><span class="color3">B</span><span class="color5">E</span><span class="color7">N</span></h1></li>
+    <li class="item"><a href="/about">about</a></li>
+<li class="item"><a href="/blog">(b)log</a></li>
+<li class="item"><a href="https://github.com/GabrielD42/ben">github</a></li>
+
+  </ul>
+</nav>
+
+  </header>
+  <main>
+    <h1 class="page-title">Project (B)log</h1>
+    
+
+    <ul class="timeline">
+    
+      <li class="post">
+        <div class="post-header">
+          <h2 class="title">Learning from the past</h2>
+          <h3 class="date">February 28, 2015</h3>
+        </div>
+        <div class="content"><blockquote>
+  <p>Anyone who has never made a mistake has never tried anything new.</p>
+
+  <p>-Albert Einstein</p>
+</blockquote>
+
+<p>Although my first robot <strong>did</strong> work, perhaps the most important knowledge I gained was on how <strong>not</strong> to build a robot. With that in mind, here are some of my goals for my second robot.</p>
+
+<ol>
+  <li>It should be designed with ease of access to its guts in mind. Although this will lead to a less aesthetically pleasing creation, it will be worth it. Making panels easily removable and the inside spacious and neat will make opening it up a pleasure rather than a chore.</li>
+  <li>It should be minimally hardware dependent. I would like the option to switch out hardware, for when I inevitable discover I have made a mistake or for when I want to experiment with something new. This will allow me to use the body for all sorts of robots, rather than a robot that can only perform one task, like my previous one.</li>
+  <li>In order to achieve number 2, the code should be written with a separation of concerns. There should be base, low level code for commanding the robot that can be used by any program, and specific, high level behaviors built on top of that base.</li>
+  <li>Debugging and documentation must come first. With EDWARD, I suffered from a lack of both of those. Debug information should be baked into the low level code, and always available in a variety of manners. Documentation should describe the assumptions of the code, and what it requires.</li>
+</ol>
+</div>
+      </li>
+    
+      <li class="post">
+        <div class="post-header">
+          <h2 class="title">Is there something here?</h2>
+          <h3 class="date">July 7, 2014</h3>
+        </div>
+        <div class="content"><p>Ping sensors are inaccurate. I had great troubles with this in my last robot. Either he would see too many walls or none at all. There are a few reasons this happened, and I am going to try to fix them all in this new robot. One issue was that EDWARD divided his world into 12” x 12” squares. This meant that any reading would (often erroneously) create a wall at an unnatural 90 degree angle. In order to fix that I am going to use smaller (1cm) squares. However, this amplifies the second, and major, problem: Sound travels in a wave, but ping sensors simply give you the distance to the nearest object, which means that no measurement is certain.</p>
+
+<p>What to do? I decided that the best way to fix this problem is to make BEN based on probability. As my friend commented,</p>
+
+<blockquote>
+  <p>I wouldn’t want to be in a car driven by probability!</p>
+</blockquote>
+
+<p>Neither would I. So I will put some bump sensors around the outside of the robot as an emergency stop. But ideally my algorithms will be good enough (and fast enough) so that they won’t be necessary.</p>
+
+<h2 id="how-will-it-work">How will it work?</h2>
+
+<p>The basic idea is that every square, rather than storing whether or not there is an object in it, will store the probability that there is something there. Since the robot will be navigating using the A* Search Algorithm, I can use a factor of the probability as the cost per square, instead of a flat rate.</p>
+
+<p>However, design is only half the challenge. Now I needed to figure out a way to calculate this probability. After debating with my friend, we decided that the best way would be something like:</p>
+
+<script type="math/tex; mode=display"> \frac{numTimesObjectFound}{numTimesSquareScanned} * \frac{1}{errorRate} </script>
+
+<p>where the error rate is the average number of squares scanned at once at the same time this square has been scanned. That means that</p>
+
+<script type="math/tex; mode=display"> \frac{1}{errorRate} </script>
+
+<p>gives the probability that this square was the one with the object in it, whereas</p>
+
+<script type="math/tex; mode=display"> \frac{numTimesObjectFound}{numTimesSquareScanned} </script>
+
+<p>gives the probability that the readings were correct on seeing something in the general area.</p>
+
+<p>If we expand the error rate a little, we find that it is</p>
+
+<script type="math/tex; mode=display"> \frac{totalNumSquaresScanned}{numTimesSquareScanned} </script>
+
+<p>which means that we can simplify our equation to</p>
+
+<script type="math/tex; mode=display"> \frac{numTimesObjectFound}{totalNumSquaresScanned} </script>
+
+<p>since it is easy enough to keep track the number of times something has been found in a square, now all I had to do was find a way to calculate the total number of squares that were scanned at times when the current square was scanned as well.</p>
+
+<h2 id="theories-about-circles">Theories about circles</h2>
+
+<p>Since we needed the total number of squares scanned, I figured I would record each position a square has been scanned from, and use that to find how many other squares were hit by the sensor’s pulse at the same time. So I tried to look for patterns in circles: given a given radius, how many squares will the parameter cut through (since I know that the sensor’s pulse is 15 degrees wide, from there it would be simple division). I thought I had found it, but I formula broke down as soon as I tried fractional values.</p>
+
+<p>I came up with an algorithmic approach: find the very edges of the arc, two squares 15 degrees apart, at the appropriate radius. Then find their midpoint, and repeat the process recursively for each consecutive set of points until for every two points, both them and the one between them lie on the same square. That will ensure that we visit every square on the arc, giving us the number we need.</p>
+
+<p>That left only one final problem: how to find the square that the midpoint of an arc lies on? My friend and I spent a few hours on it, and came upon the answer using trigonometry.</p>
+
+<p><img src="/images/arc.png" alt="" /></p>
+
+<p>Since we know what the initial angle is, all we have to do is find the isosceles triangle whose top angle is half of the current arc. The triangle is isosceles because the top is in the center of the circle (an arc is part of a circle) and both endpoints are on the circle. By dividing an isosceles triangle into two, we find right triangles, allowing us to find the point with simple right triangle trig. We eventually found that, given the angle, <script type="math/tex">\Theta</script>, the side of the triangle, or radius, <script type="math/tex">r</script> and coordinates of one of the endpoints on the circle, <script type="math/tex">(x, y)</script>, the coordinates of the other side of the arc are</p>
+
+<script type="math/tex; mode=display"> (x + r * sin\frac{\Theta}{2}, y + r * cos\frac{\Theta}{2}) </script>
+
+<p>Now I have the easy (cough, cough), of translating that into a recursive mess.</p>
+</div>
+      </li>
+    
+    </ul>
+  </main>
+  
+</body>

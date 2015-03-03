@@ -1,0 +1,40 @@
+.site-header {
+	background: url("/images/site/ben.png") no-repeat right, radial-gradient($grey, $dark-grey);
+	@include breakpoint(mama-bear) {
+		background-size: 50%, 100% 100%;
+	}
+	@include breakpoint(baby-bear) {
+		background-size: 0, 100% 100%;
+	}
+	width: 100%;
+	height: 100%;
+	@include scut-vcenter-td(".header-group");
+	.site-nav {
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+	.header-group {
+		@include breakpoint(mama-bear) {
+			padding-top: 3rem;
+		}
+		.title {
+			margin-top: 0;
+			margin-bottom: 0;
+			padding: 0.5rem 0;
+			color: $light-grey;
+			text-shadow: 1px 1px 2px black;
+			font-size: 5rem;
+			border-left-width: $block-width;
+			border-left-style: solid;
+			@include breakpoint(mama-bear) {
+				font-size: 4rem;
+			}
+		}
+		.subtitle {
+			color: $light-grey;
+			text-shadow: 1px 1px 2px black;
+			padding-left: $block-width;
+		}
+	}
+}

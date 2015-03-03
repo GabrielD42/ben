@@ -1,0 +1,34 @@
+.site-nav {
+	width: 100%;
+	&:hover {
+		a {
+			color: $off-white;
+		}
+	}
+	ul {
+		display: flex;
+		width: 100%;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			flex-grow: 1;
+			width: 33%;
+			margin: 0;
+			padding: 0;
+			a {
+				display: block;
+				width: 100%;
+				padding: 1rem;
+				text-align: center;
+				text-decoration: none;
+				text-shadow: 1px 1px 2px black;
+				color: $light-grey;
+				transition: color 0.5s;
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+name: BEN
+baseurl: http://www.ben.gabriel-damon.com
+permalink: /:categories/:title/
+sass:
+  style: compressed
+highlighter: pygments
+markdown: kramdown
