@@ -34,6 +34,75 @@
     
       <li class="post">
         <div class="post-header">
+          <h2 class="title">Pseudocode</h2>
+          <h3 class="date">November 3, 2015</h3>
+        </div>
+        <div class="content"><p>Writing some Ruby to flesh out the DSL requirements.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Robot</span><span class="o">.</span><span class="n">describe</span> <span class="k">do</span>
+  <span class="n">has_a</span> <span class="ss">:left_motor</span> <span class="k">do</span>
+    <span class="n">on_pin</span> <span class="mi">16</span>
+  <span class="k">end</span>
+
+  <span class="n">has_a</span> <span class="ss">:right_motor</span> <span class="k">do</span>
+    <span class="n">on_pin</span> <span class="mi">17</span>
+  <span class="k">end</span>
+
+  <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="no">Math</span><span class="o">::</span><span class="no">PI</span><span class="p">))</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="no">Math</span><span class="o">::</span><span class="no">PI</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">with_index</span> <span class="k">do</span> <span class="o">|</span><span class="n">theta</span><span class="p">,</span> <span class="n">pin</span><span class="o">|</span>
+    <span class="n">has_a</span> <span class="ss">:distance_sensor</span> <span class="k">do</span>
+      <span class="n">on_pin</span> <span class="n">pin</span>
+      <span class="n">at_angle</span> <span class="n">theta</span>
+    <span class="k">end</span>
+    <span class="n">has_a</span> <span class="ss">:bump_sensor</span> <span class="k">do</span>
+      <span class="n">on_pin</span> <span class="n">pin</span> <span class="o">+</span> <span class="mi">8</span>
+      <span class="n">at_angle</span> <span class="n">theta</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">Robot</span><span class="o">.</span><span class="n">define</span> <span class="ss">:choose_route</span> <span class="k">do</span> <span class="o">|</span><span class="n">destination</span><span class="o">|</span>
+  <span class="c1"># A* search algorithm</span>
+  <span class="c1"># store commands in stack</span>
+  <span class="n">commands</span> <span class="o">&lt;&lt;</span> <span class="o">[</span><span class="ss">:turn_left</span><span class="p">,</span> <span class="no">Math</span><span class="o">::</span><span class="no">PI</span> <span class="o">/</span> <span class="mi">2</span><span class="o">]</span>
+  <span class="n">commands</span> <span class="o">&lt;&lt;</span> <span class="o">[</span><span class="ss">:go_forwards</span><span class="p">,</span> <span class="mi">10</span><span class="o">]</span>
+<span class="k">end</span>
+
+<span class="no">Robot</span><span class="o">.</span><span class="n">when</span> <span class="ss">:hit_wall</span> <span class="k">do</span> <span class="o">|</span><span class="n">sensor</span><span class="o">|</span>
+  <span class="mi">2</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span> <span class="n">turn_left</span><span class="p">(</span><span class="no">Math</span><span class="o">::</span><span class="no">PI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="p">}</span>
+  <span class="c1"># cm, m, motor steps?</span>
+  <span class="n">go_forwards</span> <span class="mi">10</span>
+  <span class="n">full_scan</span>
+  <span class="n">choose_route</span> <span class="n">destination</span>
+  <span class="n">follow_orders</span>
+<span class="k">end</span>
+
+<span class="c1"># when programming is exiting. better term?</span>
+<span class="no">Robot</span><span class="o">.</span><span class="n">when</span> <span class="ss">:destroyed</span> <span class="k">do</span> <span class="o">|</span><span class="n">data</span><span class="o">|</span>
+  <span class="c1"># save data</span>
+<span class="k">end</span>
+
+<span class="no">Robot</span><span class="o">.</span><span class="n">choose_route</span> <span class="no">Point</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="no">Robot</span><span class="o">.</span><span class="n">follow_orders</span></code></pre></div>
+
+<p>Besides some obvious work on algorithms (A*), there are a few fine points that need to be fleshed out.</p>
+
+<ul>
+  <li>Naming conventions for hooks, user-defined functionality as well as normal functions</li>
+  <li>What level of functionality should be baked in</li>
+  <li>Units! Should angles be degrees or radians? Should distance be measured in the steps of the motor or in cm/m?</li>
+  <li>How should commands be represented? How large should one command be?</li>
+</ul>
+
+<p>As far as implementation, my current plan is to have a class <code>Robot</code> that forwards messages to a singleton Robot object, where all functionality will actually be stored.</p>
+
+<p>Some points that were not addressed in these examples: the representation of the map. I think it will probably be a class that is a thin wrapper over a 2d array. Unsure if it should be singleton, depending on how I handle loading and saving data.</p>
+
+<p>Another consideration is the representation of the Raspberry Pi. By abstracting the pins to a seperate class, two benefits are gained. Attempting to assign multiple uses to the same pin can be stopped. More importantly, the class can have a virtual mode for debugging, that outputs information on how the pins are theoretically being used, and allows for “voltage readings” at the pins using a user-defined block of some sort.</p>
+</div>
+      </li>
+    
+      <li class="post">
+        <div class="post-header">
           <h2 class="title">Learning from the past</h2>
           <h3 class="date">February 28, 2015</h3>
         </div>
