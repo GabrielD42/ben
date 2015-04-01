@@ -1,0 +1,94 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+<title>BEN the Robot</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab|Raleway' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="/js/script.js"></script>
+
+  <link rel="stylesheet" href="/css/page.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav">
+  <ul>
+    <li class="item"><h1 class="title"><span class="color3">B</span><span class="color5">E</span><span class="color7">N</span></h1></li>
+    <li class="item"><a href="/about">about</a></li>
+<li class="item"><a href="/blog">(b)log</a></li>
+<li class="item"><a href="https://github.com/GabrielD42/ben">github</a></li>
+
+  </ul>
+</nav>
+
+  </header>
+  <main>
+    <h1 class="page-title">Classes</h1>
+    <h1 id="environment">Environment</h1>
+<p>The environment this program will be run in. Currently planned environments: physical, and virtual. <code>Environment</code> should contain implementations of <code>Motor</code>, <code>BumpSensor</code> and <code>DistanceSensor</code> appropriate to the environment. To store state in the environment, put references in the <code>Motor</code>, <code>BumpSensor</code> and <code>DistanceSensor</code> classes. The classes should contain a simple creation DSL, as discussed in the last post:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">DistanceSensor</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span>
+  <span class="n">on_pin</span> <span class="n">number</span>
+  <span class="n">at_angle</span> <span class="n">theta</span>
+<span class="k">end</span></code></pre></div>
+
+<h2 id="motor">Motor</h2>
+<p>Represents a drive motor. Stores pin number and can turn the motor.</p>
+
+<h2 id="bumpsensor">BumpSensor</h2>
+<p>Represents a bump sensor. Stores pin number and contains predicate for if it detects anything.</p>
+
+<h2 id="distancesensor">DistanceSensor</h2>
+<p>Represents an ultrasonic sensor. Stores pin number and can read the current distance from the sensor.</p>
+
+<h1 id="logger">Logger</h1>
+<p>A wrapper around a hash of arrays of IO streams for logging information. The hash takes the form</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">{</span> <span class="ss">standard</span><span class="p">:</span> <span class="o">[</span><span class="no">File</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;log.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">),</span> <span class="no">STDOUT</span><span class="o">]</span><span class="p">,</span> <span class="ss">warning</span><span class="p">:</span> <span class="o">[</span><span class="no">STDERR</span><span class="o">]</span> <span class="p">}</span></code></pre></div>
+
+<p>where the keys are different types of things to be logged, and the values are the locations that type of information to be logged to. This class then provides a logging method, invoked like so</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">logger</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="ss">:type</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">)</span></code></pre></div>
+
+<h1 id="algorithm">Algorithm</h1>
+<p>A wrapper around a hash of lambdas for describing the <code>Robot</code>’s complex behaviour. The keys of the hash are the triggers, when the code should be run by <code>Robot</code>, and the values are the code to run. This class provides a DSL that looks something like this:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Algorithm</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span>
+  <span class="n">define</span> <span class="ss">:choose_route</span> <span class="k">do</span> <span class="o">|</span><span class="n">destination</span><span class="o">|</span>
+    <span class="c1"># A* search algorithm</span>
+  <span class="k">end</span>
+
+  <span class="k">when</span> <span class="ss">:hit_wall</span> <span class="k">do</span> <span class="o">|</span><span class="n">sensor</span><span class="o">|</span>
+    <span class="mi">2</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span> <span class="n">turn_left</span><span class="p">(</span><span class="no">Math</span><span class="o">::</span><span class="no">PI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="p">}</span>
+    <span class="n">go_forwards</span> <span class="mi">10</span>
+    <span class="n">full_scan</span>
+    <span class="n">choose_route</span> <span class="n">destination</span>
+    <span class="n">follow_orders</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
+
+<p>This translates into the hash</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">{</span> <span class="ss">trigger</span><span class="p">:</span> <span class="nb">lambda</span> <span class="p">{</span>
+    <span class="c1"># reaction</span>
+  <span class="p">}</span> <span class="p">}</span></code></pre></div>
+
+<h1 id="robot">Robot</h1>
+<p>Main “God” class. Its constructor takes an <code>Environment</code> object, a ‘Logger’ object and an <code>Algorithm</code> object. Should have a creation DSL similar to that I discussed in the last post:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Robot</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">environment</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">,</span> <span class="n">logger</span><span class="p">)</span> <span class="k">do</span>
+  <span class="n">has_a</span> <span class="ss">:distance_sensor</span> <span class="k">do</span>
+    <span class="n">on_pin</span> <span class="n">pin</span>
+    <span class="n">at_angle</span> <span class="n">theta</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
+
+
+  </main>
+  
+</body>

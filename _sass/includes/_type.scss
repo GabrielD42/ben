@@ -54,6 +54,7 @@ small {
 }
 
 p {
+  margin: 0;
 	margin-bottom: 1.3em;
 }
 
@@ -74,6 +75,11 @@ img {
   border-bottom: $block-width solid nth($shades, 1);
 }
 
+p code {
+  color: nth($shades, 7);
+  background: $off-white;
+}
+
 pre {
 	white-space: pre-wrap;
 	white-space: -moz-pre-wrap;
@@ -87,6 +93,7 @@ pre {
 blockquote, pre {
   border-left: $block-width solid nth($shades, 1);
   margin: 0;
+  margin-bottom: 1.3em;
 	padding: $block-width;
 }
 
