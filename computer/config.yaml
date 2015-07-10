@@ -1,0 +1,8 @@
+screen:
+  width: 1000
+  height: 1000
+  resizable: true
+
+connection:
+  host: 'localhost'
+  port: 2000
