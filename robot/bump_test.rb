@@ -7,7 +7,7 @@ include PiPiper
 
 #Or
 
-after :pin => 23, :goes => :high do
+after pin: 17, goes: :high do
   puts "Button pressed"
 end
 
