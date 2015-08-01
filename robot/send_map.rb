@@ -65,7 +65,7 @@ Thread.new do
   server = TCPServer.open(2000)
   loop do
     client = server.accept
-    p robot.pos
+    # p robot.pos
     client.puts Marshal.dump robot.pos
     client.puts Marshal.dump robot.map.to_a
     client.close
