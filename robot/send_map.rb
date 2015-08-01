@@ -69,7 +69,7 @@ Thread.new do
     client.puts Marshal.dump robot.pos
     client.puts Marshal.dump robot.map.to_a
     client.close
-    # robot.map[rand(0...robot.map.width)][rand(0...robot.map.height)] = rand
+    robot.map[rand(0...robot.map.width)][rand(0...robot.map.height)] = rand
   end
 end
 
