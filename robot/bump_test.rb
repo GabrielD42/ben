@@ -32,7 +32,7 @@ PiPiper.once_after pin: 17, goes: :high do
     ti = Time.now
     puts "Starting timer..."
 end
-PiPiper.once_after pin: 17, goes: :high do
+PiPiper.once_after pin: 17, goes: :low do
     tf = Time.now
     puts "Stopping timer..."
 end
