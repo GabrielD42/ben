@@ -2,14 +2,6 @@ require 'pi_piper'
 
 puts "Watching pin 17..."
 
-# PiPiper.watch pin: 17 do |pin|
-#   puts "Pin changed from #{pin.last_value} to #{pin.value}"
-# end
-
-# PiPiper.after pin: 17, goes: :high do
-#   puts "Button pressed"
-# end
-
 module PiPiper
   def wait_for_change(options, &block)
     pin = PiPiper::Pin.new(options)
@@ -31,10 +23,17 @@ end
 #   puts "Pin changed from #{pin.last_value} to #{pin.value}"
 # end
 
+# PiPiper.once_after pin: 17, goes: :high do
+#   puts "Button pressed"
+# end
+
+ti, tf = 0, 0
 PiPiper.once_after pin: 17, goes: :high do
-  puts "Button pressed"
+    ti = Time.now
+    puts "Starting timer..."
 end
-
-puts "Out of block"
-
-PiPiper.wait
+PiPiper.once_after pin: 17, goes: :high do
+    tf = Time.now
+    puts "Stopping timer..."
+end
+puts "Button pressed for #{tf - ti} seconds"
