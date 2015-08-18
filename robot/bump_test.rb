@@ -12,17 +12,13 @@ puts "Watching pin 17..."
 
 module PiPiper
   def wait_for_change(options, &block)
-    new_thread = Thread.new do
-      pin = PiPiper::Pin.new(options)
-      pin.wait_for_change
-      if block.arity > 0
-        block.call pin
-      else
-        pin.instance_exec &block
-      end
+    pin = PiPiper::Pin.new(options)
+    pin.wait_for_change
+    if block.arity > 0
+      block.call pin
+    else
+      pin.instance_exec &block
     end
-    new_thread.abort_on_exception = true
-    new_thread
   end
 
   def once_after(options, &block)
