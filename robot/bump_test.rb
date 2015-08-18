@@ -6,8 +6,8 @@ puts "Watching pin 17..."
 #   puts "Pin changed from #{pin.last_value} to #{pin.value}"
 # end
 
-# PiPiper.wait
-
 PiPiper.after pin: 17, goes: :high do
   puts "Button pressed"
 end
+
+PiPiper.wait
