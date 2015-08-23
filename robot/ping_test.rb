@@ -34,7 +34,7 @@ def sleep_microseconds(t)
   sleep t * (10 ^ -6)
 end
 
-def distance(trigger_pin:, echo_pin:)
+def distance(trigger_pin, echo_pin)
   trigger_pin = PiPiper::Pin.new(pin: trigger_pin, direction: :out)
   trigger_pin.off
   sleep_microseconds 2
@@ -48,4 +48,4 @@ def distance(trigger_pin:, echo_pin:)
   puts "Distance: #{(tf - ti) / 29 / 2} cm"
 end
 
-loop { distance trigger_pin: 17, echo_pin: 18 }
+loop { distance 17, 18 }
