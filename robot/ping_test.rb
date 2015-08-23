@@ -31,7 +31,7 @@ module PiPiper
 end
 
 def sleep_microseconds(t)
-  sleep t * (10 ^ -6)
+  sleep t * (10**-6)
 end
 
 def distance(trigger_pin, echo_pin)
