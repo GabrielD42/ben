@@ -35,6 +35,7 @@ def sleep_microseconds(t)
 end
 
 def distance(trigger_pin, echo_pin)
+  puts "in distance"
   trigger_pin = PiPiper::Pin.new(pin: trigger_pin, direction: :out)
   trigger_pin.off
   sleep_microseconds 2
@@ -49,6 +50,7 @@ def distance(trigger_pin, echo_pin)
 end
 
 loop do
+  puts "in loop"
   distance 17, 18
   sleep 1
 end
