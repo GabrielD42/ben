@@ -48,4 +48,7 @@ def distance(trigger_pin, echo_pin)
   puts "Distance: #{(tf - ti) / 29 / 2} cm"
 end
 
-loop { distance 17, 18 }
+loop do
+  distance 17, 18
+  sleep 1
+end
