@@ -44,7 +44,9 @@ def distance(trigger_pin, echo_pin)
   trigger_pin.off
 
   ti, tf = 0, 0
+  puts "waiting for high"
   PiPiper.once_after(pin: echo_pin, goes: :high) { ti = Time.now }
+  puts "waiting for low"
   PiPiper.once_after(pin: echo_pin, goes: :low)  { tf = Time.now }
   puts "Distance: #{(tf - ti) / 29 / 2} cm"
 end
