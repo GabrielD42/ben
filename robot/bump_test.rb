@@ -1,7 +1,5 @@
 require 'pi_piper'
 
-puts "Watching pin 17..."
-
 module PiPiper
   def wait_for_change(options, &block)
     pin = PiPiper::Pin.new(options)
@@ -18,6 +16,8 @@ module PiPiper
     wait_for_change options, &block
   end
 end
+
+puts "Watching pin 17..."
 
 # PiPiper.wait_for_change pin: 17 do |pin|
 #   puts "Pin changed from #{pin.last_value} to #{pin.value}"
