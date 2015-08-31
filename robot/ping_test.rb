@@ -30,17 +30,11 @@ module PiPiper
   end
 end
 
-def sleep_microseconds(t)
-  sleep t * (10**-6)
-end
-
 def distance(trigger_pin, echo_pin)
   puts "in distance"
   trigger_pin = PiPiper::Pin.new(pin: trigger_pin, direction: :out)
-  trigger_pin.off
-  sleep_microseconds 2
   trigger_pin.on
-  sleep_microseconds 5
+  sleep 0.00001
   trigger_pin.off
 
   ti, tf = 0, 0
@@ -48,11 +42,11 @@ def distance(trigger_pin, echo_pin)
   PiPiper.once_after(pin: echo_pin, goes: :high) { ti = Time.now }
   puts "waiting for low"
   PiPiper.once_after(pin: echo_pin, goes: :low)  { tf = Time.now }
-  puts "Distance: #{(tf - ti) / 29 / 2} cm"
+  puts "Distance: #{(tf - ti) * 34000 / 2} cm"
 end
 
 loop do
   puts "in loop"
+  sleep 0.5
   distance 17, 18
-  sleep 1
 end
