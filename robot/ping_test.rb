@@ -48,5 +48,5 @@ end
 loop do
   puts "in loop"
   sleep 0.5
-  distance 17, 18
+  distance 14, 15
 end
